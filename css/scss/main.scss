@@ -1,0 +1,10 @@
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "settings/mixins";
+@import "settings/font-awesome/font-awesome";
+
+button, a, img {
+  cursor: pointer;
+}
+
+/* Partials project */
+@import "partials/header";
