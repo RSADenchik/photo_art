@@ -2,9 +2,33 @@
 @import "settings/mixins";
 @import "settings/font-awesome/font-awesome";
 
-button, a, img {
-  cursor: pointer;
-}
+  img, a, button {
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  /* Include Fonts  */
+  @font-face {
+    font-family: "MuseoSansCyrl";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/museoSansCyrl/museoSansCyrl.ttf");
+  }
+  /*  Global Fonts   */
+$global-museo-sans: "MuseoSansCyrl";
+
+
+  /* Global colors    */
 
 /* Partials project */
 @import "partials/header";
+@import "partials/navbar";

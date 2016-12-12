@@ -1,0 +1,62 @@
+.header {
+  height: 130px;
+  font-family: $global-museo-sans;
+  color: #343333;
+  background-color: #f1f5f8;
+  .logo-block {
+    padding: 0;
+    margin-top: 34px;
+    .logo-img {
+      float: left;
+    }
+    .logo-title {
+      padding: 10px 0 0 20px;
+      margin: 0;
+      float: left;
+      font-size: 1em;
+      line-height: 21px;
+    }
+  }
+  .adress-block {
+    padding: 0;
+    margin-top: 37px;
+    .adress-img {
+      float: left;
+    }
+    .adress-title {
+      padding-left: 15px;
+      margin: 0;
+      float: left;
+      font-size: 0.875em;
+      font-weight: bold;
+      line-height: 20px;
+    }
+    .adress-target {
+      width: 90%;
+      padding-left: 15px;
+      margin: 0;
+      float: left;
+      font-size: 0.875em;
+      line-height: 20px;
+    }
+  }
+  .contact-block {
+    padding: 0;
+    text-align: right;
+    .contact-title {
+      margin-top: 20px;
+      font-size: 1em;
+      line-height: 27px;
+    }
+    .contact-target {
+      font-size: 1.5em;
+      font-weight: bold;
+      line-height: 27px;
+    }
+    .contact-footer {
+      font-size: 1.125em;
+      font-weight: bold;
+      line-height: 27px;
+    }
+  }
+}
