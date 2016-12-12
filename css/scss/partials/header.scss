@@ -1,10 +1,10 @@
 .header {
   height: 130px;
-  font-family: $global-museo-sans;
+  font-family: $museo-sans-regular;
   color: #343333;
   background-color: #f1f5f8;
   .logo-block {
-    padding: 0;
+    padding-left: 60px;
     margin-top: 34px;
     .logo-img {
       float: left;
@@ -18,21 +18,12 @@
     }
   }
   .adress-block {
-    padding: 0;
+    padding-left: 70px;
     margin-top: 37px;
     .adress-img {
       float: left;
     }
-    .adress-title {
-      padding-left: 15px;
-      margin: 0;
-      float: left;
-      font-size: 0.875em;
-      font-weight: bold;
-      line-height: 20px;
-    }
     .adress-target {
-      width: 90%;
       padding-left: 15px;
       margin: 0;
       float: left;
@@ -41,7 +32,7 @@
     }
   }
   .contact-block {
-    padding: 0;
+    padding-right: 65px;
     text-align: right;
     .contact-title {
       margin-top: 20px;
@@ -57,6 +48,20 @@
       font-size: 1.125em;
       font-weight: bold;
       line-height: 27px;
+      img:last-child {
+        padding: 0 5px;
+      }
     }
+  }
+}
+@media #{$bootstrap-md} {
+  .header .logo-block {
+    padding-left: 15px;
+  }
+  .header .adress-block {
+    padding-left: 15px;
+  }
+.header .contact-block {
+  padding-right: 15px;
   }
 }

@@ -1,0 +1,94 @@
+ .home {
+   width: 100%;
+   height: 768px;
+   background: url('/img/home-bg-main.png') center top no-repeat;
+    .home-image {
+      background: url('/img/home2pic.png') 87% 16% no-repeat;
+    }
+    .home-content {
+      margin-top: 70px;
+      .home-title {
+        padding-top: 31px;
+        font-family: $museo-sans-black;
+        font-size: 1.875em;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 44px;
+        .days {
+          background-color: #ffa947;
+          color: white;
+          white-space: pre-wrap;
+        }
+      }
+      .home-description {
+        color: #5a5a5a;
+        font-family: $gotham-pro-regular;
+        font-size: 1.1875em;
+        font-weight: 400;
+        line-height: 27px;
+      }
+      .perfect-img {
+        position: relative;
+        left: -47px;
+        top: 75px;
+      }
+    }
+    .upload-block {
+      position: relative;
+      height: 305px;
+      margin-top: 290px;
+      background-color: #126b6e;
+      border: 2px dashed #ffa947;
+      border-radius: 5px;
+      box-shadow: 1.8px 14.9px 43.7px 10.3px rgba(0, 0, 0, 0.1);
+      .round-block {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -50px;
+        width: 106px;
+        height: 106px;
+        background-color: #085457;
+        border: 2px dashed #ffa947;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      .round-img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 25px;
+      }
+      .upload-content {
+        margin-top: 80px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: white;
+        font-family: $gotham-pro-regular;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+      }
+      .upload-bottom {
+        width: 300px;
+        height: 76px;
+        display: block;
+        margin: 0 auto;
+        color: white;
+        background-color: #de393d;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        box-shadow: 0 0 28.5px 3.5px rgba(0, 0, 0, 0.18);
+        border-bottom: 3px solid #d12f32;
+        &:active, &:hover {
+          opacity: 0.8;
+        }
+        .button-cloud {
+          margin-right: 11px;
+        }
+      }
+    }
+ }
+@media #{$bootstrap-md} {
+
+}

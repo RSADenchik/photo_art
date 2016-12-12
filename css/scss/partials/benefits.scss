@@ -1,0 +1,51 @@
+.benefits {
+  height: 1000px;
+  background-color: whitesmoke;
+  background: url('/img/paints.png') left bottom no-repeat,
+              url('/img/baget.png') right top no-repeat;
+  .benefits-title {
+    margin-top: 63px;
+    margin-bottom: 20px;
+    color: #2a2a2a;
+    font-family: $museo-sans-black;
+    font-size: 2.25em;
+    line-height: 46px;
+  }
+  .benefits-description {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    color: #343c3b;
+    font-family: $gotham-pro-regular;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 44px;
+  }
+  .benefits-card:nth-child(even) {
+    background-color: #fafafa;
+  }
+  .benefits-card {
+    height: 280px;
+    background-color: #f3f3f3;
+    background: url('/img/benefits-rectangl.png') left bottom no-repeat;
+    .card-icon {
+      float: left;
+      padding: 15px;
+      padding-top: 60px;
+    }
+    .card-title {
+      padding-top: 60px;
+      color: #302e2e;
+      font-family: $museo-sans-bold;
+      font-size: 1.5em;
+      line-height: 32px;
+    }
+    .card-description {
+      color: #4d4d4d;
+      text-align: left;
+      font-family: $gotham-pro-regular;
+      font-size: 1em;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+}
