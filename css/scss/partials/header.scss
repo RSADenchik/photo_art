@@ -65,3 +65,58 @@
   padding-right: 15px;
   }
 }
+@media #{$bootstrap-xs} {
+  .header {
+    height: 230px;
+    .m-navbar {
+      background: transparent;
+      .m-toggle {
+        position: absolute;
+        margin: 20px 0 0 35px;
+        float: left;
+        border: none;
+        background: transparent;
+        &:hover, &:focus {
+          background: transparent;
+        }
+        .icon-bar {
+          background: #da0c31;
+          margin-top: 8px;
+        }
+      }
+    }
+    .art-collapse {
+      width: 60%;
+      margin: 0 auto;
+      border: none;
+    }
+    .logo-block {
+      padding: 0;
+      margin-top: 30px;
+      text-align: center;
+      .logo-img {
+        float: none;
+      }
+      .whatsapp-mobile {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 20px 20px 0 0;
+      }
+      .logo-title {
+        padding: 10px 0 17px;
+        float: none;
+      }
+      .contact-mobile {
+        font-size: 1.5em;
+        font-weight: bold;
+        line-height: 27px;
+      }
+      .contact-mobile-2 {
+        font-size: 1.125em;
+        font-weight: bold;
+        line-height: 27px;
+      }
+    }
+  }
+}
