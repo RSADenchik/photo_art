@@ -6,6 +6,9 @@
   ul, p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
+button {
+  border: none;
+}
   ul {
     list-style: none;
   }
@@ -25,6 +28,7 @@
     height: 2px;
     background-color: #ffa947;
   }
+
 
 
   /* Include Fonts  */
@@ -125,3 +129,4 @@ $proxima-nova-black: "ProximaNovaBlack";
 @import "partials/benefits";
 @import "partials/gallery";
 @import "partials/picture-property";
+@import "partials/example";

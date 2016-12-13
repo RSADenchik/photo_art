@@ -1,34 +1,67 @@
-.gallery-title {
-  margin-top: 63px;
-  margin-bottom: 20px;
-  color: #2a2a2a;
-  font-family: $museo-sans-black;
-  font-size: 2.25em;
-  line-height: 46px;
-}
-.gallery-description {
-  margin-top: 15px;
-  color: #343c3b;
-  font-family: $gotham-pro-regular;
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 44px;
-}
-.gallery-item {
-  display: inline-block;
-}
-.gallery-button {
-  width: 301px;
-  height: 70px;
-  display: block;
-  margin: 50px auto;
-  color: white;
-  background-color: #de393d;
-  border: none;
-  border-radius: 5px;
-  text-transform: uppercase;
-  border-bottom: 3px solid #d12f32;
-  &:active, &:hover {
-    opacity: 0.8;
+.gallery {
+  padding: 80px 0 66px;
+  .gallery-title {
+    padding-bottom: 15px;
+    color: #2a2a2a;
+    font-family: $museo-sans-black;
+    font-size: 2.25em;
+    line-height: 46px;
+  }
+  .gallery-description {
+    padding-top: 10px;
+    color: #343c3b;
+    font-family: $gotham-pro-regular;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 44px;
+  }
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .flex-column {
+      flex: 1;
+      .gallery-item {
+        padding: 10px;
+        &:hover .image-block-hover {
+          display: block;
+        }
+        .gallery-img {
+          width: 100%;
+          height: 100%;
+        }
+        .image-block-hover {
+          position: absolute;
+          text-align: center;
+          display: none;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.6;
+          background-color: #926752;
+          border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+  .gallery-button {
+    width: 301px;
+    height: 70px;
+    display: block;
+    margin: 50px auto 0;
+    color: white;
+    background-color: #de393d;
+    border: none;
+    border-radius: 5px;
+    font-family: $gotham-pro-regular;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    font-weight: 700;
+    line-height: 27px;
+    border-bottom: 3px solid #d12f32;
+    &:active, &:hover {
+      opacity: 0.8;
+    }
   }
 }
