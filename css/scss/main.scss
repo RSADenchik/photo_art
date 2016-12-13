@@ -22,14 +22,6 @@ button {
       outline: none;
     }
   }
-  // Orange line
-  .line {
-    width: 80px;
-    height: 2px;
-    background-color: #ffa947;
-  }
-
-
 
   /* Include Fonts  */
 
@@ -122,6 +114,31 @@ $proxima-nova-black: "ProximaNovaBlack";
   /* Global colors    */
 
 
+// Orange line
+.line {
+  width: 80px;
+  height: 2px;
+  background-color: #ffa947;
+}
+// Title block
+.title {
+  padding-bottom: 15px;
+  color: #2a2a2a;
+  font-family: $museo-sans-black;
+  font-size: 2.25em;
+  line-height: 46px;
+}
+
+// Description block
+.description {
+  padding-top: 10px;
+  color: #343c3b;
+  font-family: $gotham-pro-regular;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 44px;
+}
+
   /* Partials project */
 @import "partials/header";
 @import "partials/navbar";
@@ -130,3 +147,6 @@ $proxima-nova-black: "ProximaNovaBlack";
 @import "partials/gallery";
 @import "partials/picture-property";
 @import "partials/example";
+@import "partials/video";
+@import "partials/contact-map";
+@import "partials/footer";

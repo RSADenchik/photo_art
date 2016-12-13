@@ -1,0 +1,53 @@
+.examples {
+  padding-top: 90px;
+  background: url('/img/example-right-img.png') center right no-repeat;
+
+  .add-row-padding {
+    padding-top: 30px;
+  }
+  .example-block {
+    padding-bottom: 50px;
+    .example-title {
+      color: #343c3b;
+      font-family: $museo-sans-bold;
+      font-size: 1.5em;
+      line-height: 44px;
+    }
+    .example-description {
+      color: #343c3b;
+      font-family: $gotham-pro-regular;
+      font-size: 1.125em;
+      font-weight: 400;
+      line-height: 27px;
+      .example-link {
+        color: #3097c5;
+      }
+    }
+    .example-img {
+      margin-top: 30px;
+      margin-left: 10px;
+      width: 310px;
+      height: 330px;
+      border: 10px solid white;
+      outline: 10px solid #926752;
+    }
+    .example-button {
+      margin: 45px auto 0 55px;
+      width: 230px;
+      height: 65px;
+      background-image: linear-gradient(to top, #e84246 0%, #d12f32 100%);
+      border-radius: 5px;
+      border-bottom: 3px solid #d12f32;
+      box-shadow: 0 0 27.5px 3.5px rgba(0, 0, 0, 0.43);
+      color: white;
+      font-family: $gotham-pro-regular;
+      font-size: 1.125em;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 27px;
+      &:active, &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

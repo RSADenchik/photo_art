@@ -1,25 +1,10 @@
 .benefits {
+  padding-top: 84px;
   height: 1000px;
   background-color: whitesmoke;
   background: url('/img/paints.png') left bottom no-repeat,
               url('/img/baget.png') right top no-repeat;
-  .benefits-title {
-    padding-top: 80px;
-    padding-bottom: 15px;
-    color: #2a2a2a;
-    font-family: $museo-sans-black;
-    font-size: 2.25em;
-    line-height: 46px;
-  }
-  .benefits-description {
-    margin-top: 10px;
-    margin-bottom: 35px;
-    color: #343c3b;
-    font-family: $gotham-pro-regular;
-    font-size: 1.5em;
-    font-weight: 400;
-    line-height: 44px;
-  }
+
   .benefits-card:nth-child(even) {
     background-color: #fafafa;
   }
