@@ -51,3 +51,48 @@
     }
   }
 }
+@media #{$bootstrap-xs} {
+  .examples {
+    background-size: 30%;
+    background-position: bottom right;
+    padding-top: 60px;
+    .title {
+      width: 55%;
+      margin: 0 auto;
+      font-size: 1.5em;
+      padding-bottom: 35px;
+      text-align: center;
+      line-height: 34px;
+    }
+    .line {
+      margin: 0 auto;
+    }
+    .description {
+      width: 75%;
+      margin: 0 auto;
+      padding-top: 30px;
+      padding-bottom: 40px;
+      font-size: 1.125em;
+      line-height: 27px;
+      text-align: center;
+    }
+    .add-row-padding {
+      padding-top: 0;
+    }
+    .example-block {
+      text-align: center;
+      padding-bottom: 25px;
+      .example-title {
+        font-size: 1.125em;
+      }
+      .example-img {
+        width: 290px;
+        display: block;
+        margin: 30px auto 0;
+      }
+      .example-button {
+        margin: 45px auto;
+      }
+    }
+  }
+}

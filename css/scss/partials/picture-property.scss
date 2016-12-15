@@ -50,13 +50,82 @@
     background-image: linear-gradient(to top, #e84246 0%, #d12f32 100%);
     border-radius: 5px;
     border-bottom: 3px solid #d12f32;
-    font-family: $gotham-pro-regular;
+    font-family: $gotham-pro-bold;
     text-transform: uppercase;
     font-size: 1.125em;
     font-weight: 700;
     line-height: 27px;
     &:active, &:hover {
       opacity: 0.8;
+    }
+  }
+}
+@media #{$bootstrap-xs} {
+  .pic-property {
+    background: none;
+    padding: 60px 0 63px 0;
+    .title {
+      width: 60%;
+      margin: 0 auto;
+      font-size: 1.5em;
+      padding-bottom: 35px;
+      text-align: center;
+      line-height: 34px;
+    }
+    .line {
+      margin: 0 auto;
+    }
+    .description {
+      width: 65%;
+      margin: 0 auto;
+      padding-top: 30px;
+      padding-bottom: 40px;
+      font-size: 1.125em;
+      line-height: 27px;
+      text-align: center;
+    }
+    .prop-option-1, .prop-option-2,
+    .prop-option-3, .prop-option-4 {
+      .option-title {
+        font-family: $gotham-pro-bold;
+        font-size: 0.875em;
+      }
+      .option-info br {
+        content: "";
+      }
+    }
+    .prop-option-1 {
+      margin: 0;
+      padding-left: 20px;
+      .option-info {
+        width: 90%;
+      }
+
+    }
+    .prop-option-2 {
+      margin: 0;
+      padding-left: 15px;
+      padding-right: 21px;
+    }
+    .pic-mobile {
+    width: 95%;
+  }
+    .prop-option-3 {
+      padding-left: 19px;
+      margin-top: 36px;
+      .option-info {
+        width: 90%;
+      }
+    }
+    .prop-option-4 {
+      margin-top: 42px;
+      padding-right: 20px;
+      padding-left: 15px;
+    }
+    .prop-button {
+      width: 70%;
+      max-width: 380px;
+      margin-top: 45px;
     }
   }
 }

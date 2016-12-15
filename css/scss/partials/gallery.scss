@@ -39,7 +39,7 @@
     background-color: #de393d;
     border: none;
     border-radius: 5px;
-    font-family: $gotham-pro-regular;
+    font-family: $gotham-pro-bold;
     text-transform: uppercase;
     font-size: 1.125em;
     font-weight: 700;
@@ -47,6 +47,34 @@
     border-bottom: 3px solid #d12f32;
     &:active, &:hover {
       opacity: 0.8;
+    }
+  }
+}
+@media #{$bootstrap-xs} {
+  .gallery {
+    padding-top: 60px;
+    .title {
+      width: 75%;
+      margin: 0 auto;
+      font-size: 1.5em;
+      padding-bottom: 35px;
+      text-align: center;
+      line-height: 34px;
+    }
+    .line {
+      margin: 0 auto;
+    }
+    .description {
+      width: 65%;
+      margin: 0 auto;
+      padding: 30px 0;
+      font-size: 1.125em;
+      line-height: 27px;
+      text-align: center;
+    }
+    .gallery-button {
+      width: 90%;
+      max-width: 300px;
     }
   }
 }

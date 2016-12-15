@@ -1,8 +1,34 @@
 .video {
   padding-top: 40px;
+  padding-bottom: 165px;
   background: url('/img/video-left-hand.png') center left no-repeat;
   .youtube-block {
-    width: 770px;
+    text-align: center;
     margin: 41px auto 0;
+  }
+}
+@media #{$bootstrap-xs} {
+  .video {
+    background-size: 50%;
+    background-position: left bottom;
+    .title {
+      width: 75%;
+      margin: 0 auto;
+      font-size: 1.5em;
+      padding-bottom: 35px;
+      text-align: center;
+      line-height: 34px;
+    }
+    .line {
+      margin: 0 auto;
+    }
+    .description {
+      width: 65%;
+      margin: 0 auto;
+      padding-top: 30px;
+      font-size: 1.125em;
+      line-height: 27px;
+      text-align: center;
+    }
   }
 }
