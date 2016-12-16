@@ -89,6 +89,14 @@
       }
     }
  }
+ @media #{$bootstrap-md} {
+   .home {
+     .upload-block {
+       padding-left: 10px;
+       padding-right: 10px;
+     }
+   }
+ }
 @media #{$bootstrap-xs} {
  .home {
    padding: 60px 0 86px;

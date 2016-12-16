@@ -3,6 +3,16 @@
 @import "settings/font-awesome/font-awesome";
 
   // Global properties tags and class
+
+// fix js modal right padding
+html, body {
+  padding-right:0 !important;
+}
+
+body.modal-open {
+  overflow: auto;
+}
+
   ul, p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
@@ -96,6 +106,12 @@ button {
   src: url("/fonts/ProximaNova/ProximaNovaBlack/ProximaNovaBlack.eot#iefix") format("embedded-opentype");
   src: url("/fonts/ProximaNova/ProximaNovaBlack/ProximaNovaBlack.woff") format("woff");
 }
+@font-face {
+  font-family: "ALSRubl";
+  src: url("/fonts/AlsRubl/rouble.otf");
+  src: url("/fonts/AlsRubl/rouble.otf") format("truetype");
+  src: url("/fonts/AlsRubl/rouble.woff");
+}
 
 
   /*  Global Fonts   */
@@ -110,6 +126,8 @@ $museo-sans-black: "MuseoSansBlack";
 $proxima-nova-regular: "ProximaNovaRegular";
 $proxima-nova-bold: "ProximaNovaBold";
 $proxima-nova-black: "ProximaNovaBlack";
+
+$als-rubl-regular: "ALSRubl";
 
   /* Global colors    */
 
@@ -141,6 +159,7 @@ $proxima-nova-black: "ProximaNovaBlack";
 
 
   /* Partials project */
+@import "partials/popups";
 @import "partials/header";
 @import "partials/navbar";
 @import "partials/home";

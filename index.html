@@ -81,7 +81,7 @@
                      <p class="upload-content">Загрузите фотографию (или несколько) <br>
                          и получите бесплатный макет <br>будущей картины через 3 часа
                      </p>
-                     <button class="upload-bottom" type="submit"><img class="button-cloud" src="img/button-cloud-img.png" alt="">загрузить фото</button>
+                     <button class="btn btn-primary btn-lg upload-bottom" type="button" data-toggle="modal" data-target="#pop-email"><img class="button-cloud" src="img/button-cloud-img.png" alt="">загрузить фото</button>
                  </div>
              </div>
          </div>
@@ -372,9 +372,126 @@
              </div>
          </div>
      </footer>
+     <!-- email-popup  -->
+     <div class="modal fade" id="pop-email" tabindex="-1" role="dialog" aria-labelledby="pop-email-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h4 class="modal-title" id="pop-email-title">Куда выслать готовый макет?</h4>
+                 </div>
+                 <div class="modal-body">
+                    <form class="form-email">
+                        <label class="label-email" for="email">Введите электропочту:</label>
+                        <input class="input-email" type="email" id="email" placeholder="Введите вашу надежную почту">
+                        <button class="button-email" type="button" data-toggle="modal" data-target="#pop-phone" data-dismiss="modal">Почта указана верно!
+                            <img class="button-icon" src="/img/popups/work-done-botton.png" alt="">
+                        </button>
+                    </form>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- phone-popup -->
+
+     <div class="modal fade" id="pop-phone" tabindex="-1" role="dialog" aria-labelledby="pop-phone-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h4 class="modal-title" id="pop-phone-title">Как с вами связаться для уточнения деталей?</h4>
+                 </div>
+                 <div class="modal-body">
+                     <form class="form-phone">
+                         <label class="label-phone" for="phone">Введите ваш телефон:</label>
+                         <input class="input-phone" type="number" id="phone" placeholder="Введите ваш номер телефона">
+                         <button class="button-phone" type="button" data-toggle="modal" data-target="#pop-size" data-dismiss="modal">Да, это мой телефон</button>
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <!-- size-popup -->
+
+     <div class="modal fade" id="pop-size" tabindex="-1" role="dialog" aria-labelledby="pop-size-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h4 class="modal-title" id="pop-size-title">Какой размер картины был бы идеален?</h4>
+                 </div>
+                 <div class="modal-body">
+                     <form class="form-size">
+                         <input class="radio-size" id="radio-1" type="radio" name="size">
+                         <label class="label-size" for="radio-1">30 х 40 см</label><br>
+                         <input class="radio-size" id="radio-2" type="radio" name="size">
+                         <label class="label-size" for="radio-2">40 х 60 см</label><br>
+                         <input class="radio-size" id="radio-3" type="radio" name="size" checked>
+                         <label class="label-size" for="radio-3">50 х 70 см — Хит!</label><br>
+                         <input class="radio-size" id="radio-4" type="radio" name="size">
+                         <label class="label-size" for="radio-4">60 х 80 см</label><br>
+                         <input class="radio-size" id="radio-5" type="radio" name="size">
+                         <label class="label-size" for="radio-5">75 х 105 см</label><br>
+                         <input class="radio-size" id="radio-6" type="radio" name="size">
+                         <label class="label-size" for="radio-6">90 х 110 см</label><br>
+                         <button class="button-size" type="button" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">Хочу этот размер</button>
+                     </form>
+                     <div class="pic-size">
+                         <p class="size-title">50 х 70 см — Хит!</p>
+                         <img src="/img/popups/img-ajax.png" alt="">
+                     </div>
+                     <p class="price-size">Стоимость: <span class="price">3090<span class="rub">i</span></span></p>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <!-- picture-type-popup -->
+
+     <div class="modal fade" id="pop-type" tabindex="-1" role="dialog" aria-labelledby="pop-type-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h4 class="modal-title" id="pop-type-title">Какой тип картины вы хотите?</h4>
+                     <p class="price-sum">Итого: <span class="price">8580<span class="rub">i</span></span></p>
+                 </div>
+                 <div class="modal-body">
+                     <div class="pic-type">
+                         <p class="type-title">Картина карандашом</p>
+                         <img src="/img/popups/type-1.png" alt="">
+                         <p class="price-type">+2800 руб.</p>
+                     </div>
+                     <div class="pic-type">
+                         <p class="type-title">Картина маслом</p>
+                         <img src="/img/popups/type-2.png" alt="">
+                         <p class="price-type">+5400 руб.</p>
+                     </div>
+                     <div class="pic-type">
+                         <p class="type-title">Простая печать</p>
+                         <img src="/img/popups/type-3.png" alt="">
+                         <p class="price-type">+0 руб.</p>
+                     </div>
+                     <div class="pic-type">
+                         <p class="type-title">Поп Арт</p>
+                         <img src="/img/popups/type-4.png" alt="">
+                         <p class="price-type">+2800 руб.</p>
+                     </div>
+                     <div class="pic-type">
+                         <p class="type-title">Постель</p>
+                         <img src="/img/popups/type-5.png" alt="">
+                         <p class="price-type">+2800 руб.</p>
+                     </div>
+                     <div class="pic-type">
+                         <p class="type-title">Полигональный</p>
+                         <img src="/img/popups/type-6.png" alt="">
+                         <p class="price-type">+2800 руб.</p>
+                     </div>
+                     <button class="button-type" type="button" data-toggle="modal" data-target="#pop-type-option" data-dismiss="modal">Хочу этот тип картины</button>
+                 </div>
+             </div>
+         </div>
+     </div>
 
 
-    <script src="js/jquery-2.0.0.min.js"></script>
+     <script src="js/jquery-2.0.0.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
  </body>

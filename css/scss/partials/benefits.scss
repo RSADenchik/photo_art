@@ -1,5 +1,5 @@
 .benefits {
-  padding-top: 84px;
+  padding: 84px 0 146px;
   background-color: whitesmoke;
   background: url('/img/paints.png') left bottom no-repeat,
               url('/img/baget.png') right top no-repeat;
@@ -7,12 +7,22 @@
   .benefits-card:nth-child(even) {
     background-color: #fafafa;
   }
+  .benefits-card:nth-child(odd) {
+    background-color: #f3f3f3;
+  }
+  .benefits-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 76px solid #0e8084;
+    border-right: 122px solid transparent;
+  }
   .benefits-card {
     height: 280px;
     padding: 64px 10px 60px 9px;
-    background-color: #f3f3f3;
-
-    background: url('/img/benefits-rectangl.png') left bottom no-repeat;
     .card-icon {
       float: left;
       padding: 0 25px 120px 0;
@@ -33,6 +43,7 @@
     }
   }
 }
+
 @media #{$bootstrap-xs} {
   .benefits {
     padding: 60px 0 65px;

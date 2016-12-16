@@ -60,6 +60,18 @@
     }
   }
 }
+@media #{$bootstrap-md} {
+  .pic-property {
+    .prop-option-1 {
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: 15px;
+    }
+    .prop-option-3 {
+      margin-left: 0;
+    }
+  }
+}
 @media #{$bootstrap-xs} {
   .pic-property {
     background: none;
