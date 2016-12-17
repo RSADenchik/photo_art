@@ -42,6 +42,13 @@ $(document).ready(function() {
 
     }
 
+    addEventListener('DOMContentLoaded', function () {
+        pickmeup('.single', {
+            flat : true
+        });
+
+
+    });
     // moda dialog center
     // $(function() {
     //     function reposition() {

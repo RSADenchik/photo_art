@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/pickmeup.css" rel="stylesheet" type="text/css">
      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
  </head>
  <body>
@@ -490,9 +491,209 @@
          </div>
      </div>
 
+     <!-- picture-type-option popup -->
+
+     <div class="modal fade" id="pop-type-option" tabindex="-1" role="dialog" aria-labelledby="pop-option-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                     <p class="pic-size">70 х 50 см</p>
+                     <p class="price-sum">Итого: <span class="price">9970<span class="rub">i</span></span></p>
+                     <h4 class="modal-title" id="pop-option-title">Добавить стилизацию под живопись или прорисовку фактурным гелем?</h4>
+                 </div>
+                 <div class="modal-body">
+                     <div class="pic-type">
+                         <p class="type-title">Стилизация под живопись</p>
+                         <div class="img-hover-block">
+                             <img class="type-img" src="/img/popups/type-1.png" alt="">
+                             <div class="hover-bg"></div>
+                         </div>
+                         <p class="price-type">+990 руб.</p>
+                     </div>
+                     <div class="pic-type">
+                         <p class="type-title">Прорисовка фактурным гелем</p>
+                         <div class="img-hover-block">
+                             <img class="type-img" src="/img/popups/type-2.png" alt="">
+                             <div class="hover-bg"></div>
+                         </div>
+                         <p class="price-type">+1390 руб.</p>
+                     </div>
+                     <button class="button-type" type="button" data-toggle="modal" data-target="#pop-baget" data-dismiss="modal">Добавить</button>
+                     <span class="option-no" data-toggle="modal" data-target="#pop-baget" data-dismiss="modal">Спасибо, не нужно</span>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <!-- baget-popup -->
+
+     <div class="modal fade" id="pop-baget" tabindex="-1" role="dialog" aria-labelledby="pop-baget-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                     <p class="pic-size">70 х 50 см</p>
+                     <p class="price-sum">Итого: <span class="price">9970<span class="rub">i</span></span></p>
+                     <h4 class="modal-title" id="pop-baget-title">Выберите тип рамки (багета):</h4>
+                     <span class="post-title">Наш дизайнер подберет подходящий багет под вашу картину и утвердит его с вами</span>
+                 </div>
+                 <div class="modal-body">
+                     <div class="baget-type">
+                         <p class="baget-title">Эконом</p>
+                         <div class="img-hover-block">
+                             <div id="Carousel-1" class="carousel slide" style="width: 220px; margin: 0 auto" data-ride="carousel" data-interval="false">
+                                 <div class="carousel-inner" role="listbox">
+                                     <div class="item active">
+                                         <img src="/img/popups/baget-eco.png" alt="Chania">
+                                     </div>
+                                     <div class="item">
+                                         <img src="/img/popups/baget-standart.png" alt="Chania">
+                                     </div>
+
+                                     <div class="item">
+                                         <img src="/img/popups/baget-premium.png" alt="Flower">
+                                     </div>
+                                 </div>
+                                 <a class="left carousel-control stop-carousel" href="#Carousel-1" data-slide="prev">
+                                     <img class="icon-prev icon-left" src="img/popups/button-left.png" alt="">
+                                 </a>
+                                 <a class="right carousel-control stop-carousel" href="#Carousel-1" data-slide="next">
+                                     <img class="icon-prev icon-right" src="img/popups/button-right.png" alt="">
+                                 </a>
+                             </div>
+                             <!--<img class="baget-img" src="/img/popups/baget-eco.png" alt="">-->
+                             <!--<div class="hover-bg"></div>-->
+                         </div>
+                         <p class="price-baget">+1200 руб.</p>
+                     </div>
+                     <div class="baget-type">
+                         <p class="baget-title">Стандарт</p>
+                         <div class="img-hover-block">
+                             <div id="Carousel-2" class="carousel slide" data-ride="carousel" data-interval="false">
+                                 <div class="carousel-inner" role="listbox">
+                                     <div class="item active">
+                                         <img src="/img/popups/baget-eco.png" alt="Chania">
+                                     </div>
+                                     <div class="item">
+                                         <img src="/img/popups/baget-standart.png" alt="Chania">
+                                     </div>
+
+                                     <div class="item">
+                                         <img src="/img/popups/baget-premium.png" alt="Flower">
+                                     </div>
+                                 </div>
+                                 <a class="left carousel-control stop-carousel" href="#Carousel-2" data-slide="prev">
+                                     <img class="icon-prev icon-left" src="img/popups/button-left.png" alt="">
+                                 </a>
+                                 <a class="right carousel-control stop-carousel" href="#Carousel-2" data-slide="next">
+                                     <img class="icon-prev icon-right" src="img/popups/button-right.png" alt="">
+                                 </a>
+                             </div>
+                             <!--<img class="baget-img" src="/img/popups/baget-standart.png" alt="">-->
+                             <!--<div class="hover-bg"></div>-->
+                         </div>
+                         <p class="price-baget">+1500 руб.</p>
+                     </div>
+                     <div class="baget-type">
+                         <p class="baget-title">Премиум</p>
+                         <div class="img-hover-block">
+                             <div id="Carousel-3" class="carousel slide" data-ride="carousel" data-interval="false">
+                                 <div class="carousel-inner" role="listbox">
+                                     <div class="item active">
+                                         <img src="/img/popups/baget-eco.png" alt="Chania">
+                                     </div>
+                                     <div class="item">
+                                         <img src="/img/popups/baget-standart.png" alt="Chania">
+                                     </div>
+
+                                     <div class="item">
+                                         <img src="/img/popups/baget-premium.png" alt="Flower">
+                                     </div>
+                                 </div>
+                                 <a class="left carousel-control stop-carousel" href="#Carousel-3" data-slide="prev">
+                                     <img class="icon-prev icon-left" src="img/popups/button-left.png" alt="">
+                                 </a>
+                                 <a class="right carousel-control stop-carousel" href="#Carousel-3" data-slide="next">
+                                     <img class="icon-prev icon-right" src="img/popups/button-right.png" alt="">
+                                 </a>
+                             </div>
+                             <!--<img class="baget-img" src="/img/popups/baget-premium.png" alt="">-->
+                             <!--<div class="hover-bg"></div>-->
+                         </div>
+                         <p class="price-baget">+2300 руб.</p>
+                     </div>
+                     <button class="button-baget" type="button" data-toggle="modal" data-target="#pop-package" data-dismiss="modal">Выбрать рамку (багет)</button>
+                     <span class="option-no" data-toggle="modal" data-target="#pop-package" data-dismiss="modal">Рамка не нужна (галерейная натяжка)</span>
+                     <div class="hover-block-small">
+                         <img class="type-img" src="/img/popups/bg-small.png" alt="">
+                         <div class="hover-bg"></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <!-- package popup -->
+
+     <div class="modal fade" id="pop-package" tabindex="-1" role="dialog" aria-labelledby="pop-package-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                     <p class="pic-size">70 х 50 см</p>
+                     <p class="price-sum">Итого: <span class="price">11470<span class="rub">i</span></span></p>
+                     <h4 class="modal-title" id="pop-package-title">Выберите упаковку для вашей картины:</h4>
+                 </div>
+                 <div class="modal-body">
+                     <div class="pic-type">
+                         <p class="type-title">Картонная коробка</p>
+                         <div class="img-hover-block">
+                             <img class="type-img" src="/img/popups/type-1.png" alt="">
+                             <div class="hover-bg"></div>
+                         </div>
+                         <p class="price-type">+300 руб.</p>
+                     </div>
+                     <div class="pic-type">
+                         <p class="type-title">Коробка + подарочная упаковка</p>
+                         <div class="img-hover-block">
+                             <img class="type-img" src="/img/popups/type-2.png" alt="">
+                             <div class="hover-bg"></div>
+                         </div>
+                         <p class="price-type">+500 руб.</p>
+                     </div>
+                     <button class="button-type" type="button" data-toggle="modal" data-target="#pop-date" data-dismiss="modal">Выбрать упаковку</button>
+                     <span class="option-no" data-toggle="modal" data-target="#pop-date" data-dismiss="modal">Спасибо, подойдет обычный пакет</span>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <!-- date popup -->
+
+     <div class="modal fade" id="pop-date" tabindex="-1" role="dialog" aria-labelledby="pop-date-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h4 class="modal-title" id="pop-date-title">К какой дате нужно изготовить картину?</h4>
+                 </div>
+                 <div class="modal-body">
+                     <section>
+                         <p class="datepicker-title">Выберите дату доставки или самовывоза</p>
+                         <article>
+                             <div class="single"></div>
+                         </article>
+                     </section>
+                     <button class="button-date" type="button" data-toggle="modal" data-target="#" data-dismiss="modal">Дата указана верно</button>
+                 </div>
+             </div>
+         </div>
+     </div>
+
 
      <script src="js/jquery-2.0.0.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/pickmeup.js"></script>
  </body>
 </html>
