@@ -106,15 +106,27 @@ button {
   src: url("/fonts/ProximaNova/ProximaNovaBlack/ProximaNovaBlack.eot#iefix") format("embedded-opentype");
   src: url("/fonts/ProximaNova/ProximaNovaBlack/ProximaNovaBlack.woff") format("woff");
 }
+
+    // Font-face rus rubl
 @font-face {
   font-family: "ALSRubl";
   src: url("/fonts/AlsRubl/rouble.otf");
   src: url("/fonts/AlsRubl/rouble.otf") format("truetype");
   src: url("/fonts/AlsRubl/rouble.woff");
 }
+    //Font-face Montserrat
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("/fonts/Montserrat/montserrat-regular.ttf");
+  src: url("/fonts/Montserrat/montserrat-regular.eot#iefix") format("embedded-opentype");
+  src: url("/fonts/Montserrat/montserrat-regular.woff") format("woff");
+  src: url("/fonts/Montserrat/montserrat-regular.ttf") format("truetype");
+  src: url("/fonts/Montserrat/montserrat-regular.svg#Montserrat-Regular") format("svg");
+}
 
 
   /*  Global Fonts   */
+
 $gotham-pro-regular: "GothamProRegular";
 $gotham-pro-bold: "GothamProBold";
 $gotham-pro-black: "GothamProBlack";
@@ -128,6 +140,7 @@ $proxima-nova-bold: "ProximaNovaBold";
 $proxima-nova-black: "ProximaNovaBlack";
 
 $als-rubl-regular: "ALSRubl";
+$montserrat-regular: "Montserrat-Regular";
 
   /* Global colors    */
 

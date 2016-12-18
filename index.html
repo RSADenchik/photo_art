@@ -378,6 +378,7 @@
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
+                     <div class="up-header"><img class="work-done" src="/img/popups/work-done.png" alt="">Фото загружено!</div>
                      <h4 class="modal-title" id="pop-email-title">Куда выслать готовый макет?</h4>
                  </div>
                  <div class="modal-body">
@@ -419,7 +420,7 @@
                  <div class="modal-header">
                      <h4 class="modal-title" id="pop-size-title">Какой размер картины был бы идеален?</h4>
                  </div>
-                 <div class="modal-body">
+                 <div class="modal-body clearfix">
                      <form class="form-size">
                          <input class="radio-size" id="radio-1" type="radio" name="size">
                          <label class="label-size" for="radio-1">30 х 40 см</label><br>
@@ -438,8 +439,8 @@
                      <div class="pic-size">
                          <p class="size-title">50 х 70 см — Хит!</p>
                          <img src="/img/popups/img-ajax.png" alt="">
+                         <p class="price-size">Стоимость: <span class="price">3090<span class="rub">i</span></span></p>
                      </div>
-                     <p class="price-size">Стоимость: <span class="price">3090<span class="rub">i</span></span></p>
                  </div>
              </div>
          </div>
@@ -684,12 +685,82 @@
                              <div class="single"></div>
                          </article>
                      </section>
-                     <button class="button-date" type="button" data-toggle="modal" data-target="#" data-dismiss="modal">Дата указана верно</button>
+                     <button class="button-date" type="button" data-toggle="modal" data-target="#pop-stock" data-dismiss="modal">Дата указана верно</button>
                  </div>
              </div>
          </div>
      </div>
 
+     <!-- stock popup -->
+
+     <div class="modal fade" id="pop-stock" tabindex="-1" role="dialog" aria-labelledby="pop-stock-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                     <p class="pic-size">70 х 50 см</p>
+                     <p class="price-sum">Итого: <span class="price">11470<span class="rub">i</span></span></p>
+                     <img class="stock-img" src="/img/popups/stock-flag.png" alt="">
+                     <h4 class="modal-title" id="pop-stock-title">Ограниченное предложение!</h4>
+                 </div>
+                 <div class="modal-body">
+                     <div class="stock-left-block">
+                         <p class="stock-content">Внесите предоплату 1000 руб. и получите картину 30х40 в подарок!</p>
+                         <p class="stock-info">Вы можете выбрать любое фото для печати на этой картине.</p>
+                         <button class="button-stock" type="button" data-toggle="modal" data-target="#pop-prepay" data-dismiss="modal">Внести предоплату</button>
+                         <p class="option-no" data-toggle="modal" data-target="#pop-pay" data-dismiss="modal">Мне это не интересно</p>
+                     </div>
+                     <div class="pic-size">
+                         <img src="/img/popups/stock-right-img.png" alt="">
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <!-- prepayment popup -->
+
+     <div class="modal fade" id="pop-prepay" tabindex="-1" role="dialog" aria-labelledby="pop-prepay-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h4 class="modal-title" id="pop-prepay-title">Благодарим за предоплату</h4>
+                     <p class="print-page">Напечатать страницу</p>
+                 </div>
+                 <div class="modal-body">
+                     <p class="prepay-info">Скоро с вами свяжется наш дизайнер для уточнения нюансов и адреса доставки.</p>
+                     <p class="prepay-info">Номер вашего заказа: <span class="order-number">3781</span></p>
+                     <p class="prepay-info">Стоимость картины:<span class="price-number">11 470 руб.</span></p>
+                     <p class="prepay-info">При возникновении любых вопросов, звоните: <br><span class="us-number">+7 (495) 745-43-53</span></p>
+                     <span class="prepay-info">Адрес пункта самовывоза: Фрунзенская наб. д. 30 пав. 3А место 12</span>
+                     <img src="/img/popups/location.png" alt="">
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+
+     <!-- payment popup -->
+
+     <div class="modal fade" id="pop-pay" tabindex="-1" role="dialog" aria-labelledby="pop-pay-title">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h4 class="modal-title" id="pop-pay-title">Благодарим за заказ</h4>
+                     <p class="print-page">Напечатать страницу</p>
+                 </div>
+                 <div class="modal-body">
+                     <p class="prepay-info">Скоро с вами свяжется наш дизайнер для уточнения нюансов и адреса доставки.</p>
+                     <p class="prepay-info">Номер вашего заказа: <span class="order-number">3781</span></p>
+                     <p class="prepay-info">Стоимость картины:<span class="price-number">11 470 руб.</span></p>
+                     <p class="prepay-info">При возникновении любых вопросов, звоните: <br><span class="us-number">+7 (495) 745-43-53</span></p>
+                     <span class="prepay-info">Адрес пункта самовывоза: Фрунзенская наб. д. 30 пав. 3А место 12</span>
+                     <img src="/img/popups/location.png" alt="">
+                 </div>
+             </div>
+         </div>
+     </div>
 
      <script src="js/jquery-2.0.0.min.js"></script>
     <script src="js/main.js"></script>

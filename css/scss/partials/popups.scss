@@ -1,276 +1,303 @@
 #pop-email {
-  .modal-dialog::before {
-    background: url(/img/popups/work-done.png) left center no-repeat;
-    display: block;
-    height: 75px;
-    padding-left: 68px;
-    padding-top: 23px;
-    margin-bottom: 20px;
-    content: "Фото загружено!";
-    font-size: 1.875em;
-    color: white;
-    font-family: $gotham-pro-bold;
-    line-height: 27px;
-  }
-  .modal-dialog {
-    position: absolute;
-    left: calc(50% - 274px);
-    top: 15vh;
-    width: 554px;
-    @media #{$bootstrap-xs} {
-      width: 90%;
-      min-height: 453px;
-      margin-left: -45%;
-      top: 10vh;
-    }
-    @media #{$bootstrap-sm} {
-      top: 50%;
-      width: 430px;
-      min-height: 453px;
-      margin-top: -226.5px;
-      margin-left: -215px;
-    }
-    .modal-content {
-      border-radius: 6px;
-      background-color: #ffffff;
-      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
 
-      @media #{$bootstrap-xs} {
-        width: 100%;
-        min-height: 453px;
-      }
-      @media #{$bootstrap-sm} {
-        width: 430px;
-        min-height: 453px;
-      }
+  .modal-dialog {
+    width: 100%;
+    max-width: 559px;
+    margin: 0;
+    position: absolute;
+    top: 19vh;
+    left: calc(50% - 277px);
+
+    @media #{$bootstrap-xs} {
+      margin: 0 auto;
+      left: 0;
+      right: 0;
     }
-  }
-  .modal-content {
-    background-color: white;
-    border: 3px solid #ffc27c;
-    border-radius: 5px;
-    box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
-    .modal-header {
-      background-color: #126b6e;
-      border-radius: 3px 3px 0 0;
-      padding: 29px 0 29px 60px;
-      .modal-title {
-        color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.5em;
-        font-weight: 700;
-        line-height: 27px;
-      }
-    }
-    .modal-body {
-      padding: 35px 0 54px 60px;
+
+    .modal-content {
+      border: 3px solid #ffc27c;
       border-radius: 5px;
       box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
-      .form-email {
-        width: 340px;
-        .label-email {
-          color: #444749;
-          font-family: $gotham-pro-regular;
-          font-size: 0.875em;
-          line-height: 27px;
+
+      .modal-header {
+        position: relative;
+        padding: 24px 0 22px 56px;
+        background-color: #126b6e;
+        border: none;
+        font-family: $gotham-pro-bold;
+
+        @media #{$bootstrap-nano} {
+          padding-left: 0;
+          text-align: center;
         }
-        .input-email {
-          width: 100%;
-          height: 70px;
-          background-color: white;
-          border: 2px solid #ddd;
-          border-radius: 5px;
-          line-height: 71px;
-        }
-        .input-email[placeholder] {
-          color: #9ea5aa;
-          padding-left: 31px;
-          font-family: $gotham-pro-regular;
-          font-size: 1em;
-        }
-        .button-email {
-          width: 100%;
-          height: 70px;
-          margin-top: 20px;
-          background-color: #df3b3e;
-          border-bottom: 3px solid #d12f32;
-          border-radius: 5px;
+
+        .modal-title {
+          font-size: 1.7em;
           color: white;
-          font-family: $gotham-pro-bold;
-          font-size: 1.125em;
-          line-height: 27px;
-          .button-icon {
-            padding-left: 20px;
+
+          @media #{$bootstrap-nano} {
+           font-size: 1.2em;
+          }
+        }
+        .up-header {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: -85px;
+          font-size: 2.1em;
+          color: #fff;
+
+          img {
+            margin-right: 20px;
+          }
+
+          @media #{$bootstrap-xs} {
+            text-align: center;
+          }
+          @media #{$bootstrap-nano} {
+            font-size: 1.7em;
+          }
+        }
+      }
+      .modal-body {
+        padding: 30px 0 54px 55px;
+        box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
+        @media #{$bootstrap-xs} {
+          padding-left: 0;
+        }
+
+        .form-email {
+          width: 80%;
+          max-width: 340px;
+          font-family: $gotham-pro-regular;
+
+          @media #{$bootstrap-xs} {
+            margin: 0 auto;
+          }
+
+          .label-email {
+            font-size: 1em;
+            line-height: 27px;
+            color: #444749;
+          }
+          .input-email {
+            width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            line-height: 60px;
+          }
+          .input-email[placeholder] {
+            padding-left: 30px;
+            font-size: 1.12em;
+            color: #9ea5aa;
+
+            @media #{$bootstrap-nano} {
+              font-size: 0.9em;
+              padding-left: 20px;
+            }
+          }
+          .button-email {
+            width: 100%;
+            margin-top: 22px;
+            font-family: $gotham-pro-bold;
+            line-height: 68px;
+            font-size: 1.25em;
+            border-bottom: 3px solid #d12f32;
+            border-radius: 5px;
+            color: white;
+            background-color: #df3b3e;
+            .button-icon {
+              padding-left: 15px;
+            }
+            @media #{$bootstrap-nano} {
+              font-size: 1em;
+            }
           }
         }
       }
     }
   }
 }
-#pop-phone {
-  .modal-dialog {
-    position: absolute;
-    left: calc(50% - 274px);
-    top: 15vh;
-    width: 554px;
-    @media #{$bootstrap-xs} {
-      width: 90%;
-      min-height: 453px;
-      margin-left: -45%;
-      top: 10vh;
-    }
-    @media #{$bootstrap-sm} {
-      top: 50%;
-      width: 430px;
-      min-height: 453px;
-      margin-top: -226.5px;
-      margin-left: -215px;
-    }
-    .modal-content {
-      border-radius: 6px;
-      background-color: #ffffff;
-      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
 
-      @media #{$bootstrap-xs} {
-        width: 100%;
-        min-height: 453px;
-      }
-      @media #{$bootstrap-sm} {
-        width: 430px;
-        min-height: 453px;
-      }
+#pop-phone {
+
+  .modal-dialog {
+    width: 100%;
+    max-width: 559px;
+    margin: 0;
+    position: absolute;
+    top: 20vh;
+    left: calc(50% - 277px);
+
+    @media #{$bootstrap-xs} {
+      margin: 0 auto;
+      left: 0;
+      right: 0;
     }
   }
   .modal-content {
-    background-color: white;
     border: 3px solid #ffc27c;
     border-radius: 5px;
     box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
     .modal-header {
+      padding: 29px 0;
       background-color: #126b6e;
-      border-radius: 3px 3px 0 0;
-      padding: 29px 0 29px 60px;
+      border: none;
+
+      @media #{$bootstrap-nano} {
+        text-align: center;
+      }
       .modal-title {
-        width: 60%;
-        color: white;
+        width: 80%;
+        padding-left: 59px;
         font-family: $gotham-pro-bold;
-        font-size: 1.5em;
-        font-weight: 700;
-        line-height: 27px;
+        font-size: 1.7em;
+        line-height: 28px;
+        color: white;
+
+        @media #{$bootstrap-nano} {
+          margin: 0 auto;
+          padding-left: 0;
+          text-align: center;
+          font-size: 1.2em;
+        }
       }
     }
     .modal-body {
-      padding: 35px 0 54px 60px;
-      border-radius: 5px;
+      padding: 32px 0 45px 57px;
       box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
+      @media #{$bootstrap-xs} {
+        padding-left: 0;
+      }
+
       .form-phone {
-        width: 340px;
+        width: 80%;
+        max-width: 340px;
+        font-family: $gotham-pro-regular;
+
+        @media #{$bootstrap-xs} {
+          margin: 0 auto;
+        }
+
         .label-phone {
+          font-size: 1em;
           color: #444749;
-          font-family: $gotham-pro-regular;
-          font-size: 0.875em;
-          line-height: 27px;
         }
         .input-phone {
           width: 100%;
-          height: 70px;
-          background-color: white;
           border: 2px solid #ddd;
           border-radius: 5px;
-          line-height: 71px;
+          line-height: 68px;
 
         }
         .input-phone[placeholder] {
+          padding-left: 30px;
+          font-size: 1.25em;
           color: #9ea5aa;
-          padding-left: 31px;
-          font-family: $gotham-pro-regular;
-          font-size: 1em;
+
+          @media #{$bootstrap-nano} {
+            font-size: 0.9em;
+            padding-left: 20px;
+          }
         }
         .button-phone {
           width: 100%;
-          height: 70px;
           margin-top: 20px;
-          background-color: #df3b3e;
+          font-family: $gotham-pro-bold;
+          font-size: 1.25em;
+          line-height: 69px;
           border-bottom: 3px solid #d12f32;
           border-radius: 5px;
           color: white;
-          font-family: $gotham-pro-bold;
-          font-size: 1.125em;
-          line-height: 27px;
+          background-color: #df3b3e;
         }
       }
     }
   }
 }
 #pop-size {
+
   .modal-dialog::before {
     content: "Дизайнер уже получил файлы и начал работу!";
+    padding-bottom: 40px;
     display: block;
-    margin-bottom: 22px;
-    font-size: 1.875em;
-    color: white;
     font-family: $gotham-pro-bold;
-    line-height: 27px;
+    font-size: 2.15em;
+    line-height: 38px;
+    color: white;
+
+    @media #{$bootstrap-xs} {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    @media #{$bootstrap-nano} {
+      font-size: 1.4em;
+    }
   }
   .modal-dialog {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
     position: absolute;
-    padding-right: 0!important;
     left: calc(50% - 400px);
-    top: 8vh;
-    width: 800px;
-    @media #{$bootstrap-xs} {
-      width: 90%;
-      min-height: 453px;
-      margin-left: -45%;
-      top: 10vh;
-    }
-    @media #{$bootstrap-sm} {
-      top: 50%;
-      width: 430px;
-      min-height: 453px;
-      margin-top: -226.5px;
-      margin-left: -215px;
-    }
-    .modal-content {
-      border-radius: 6px;
-      background-color: #ffffff;
-      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
+    top: 3vh;
 
-      @media #{$bootstrap-xs} {
-        width: 100%;
-        min-height: 453px;
-      }
-      @media #{$bootstrap-sm} {
-        width: 430px;
-        min-height: 453px;
-      }
+    @media #{$bootstrap-xs} {
+      margin: 0 auto;
+      left: 0;
+      right:0;
     }
   }
   .modal-content {
-    background-color: white;
     border: 3px solid #ffc27c;
     border-radius: 5px;
     box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
     .modal-header {
+      padding: 26px 0;
       background-color: #126b6e;
-      border-radius: 3px 3px 0 0;
-      padding: 29px 0 29px 60px;
+      border: none;
+
       .modal-title {
-        color: white;
+        padding-left: 59px;
         font-family: $gotham-pro-bold;
-        font-size: 1.5em;
-        font-weight: 700;
-        line-height: 27px;
+        font-size: 1.7em;
+        line-height: 28px;
+        color: white;
+
+        @media #{$bootstrap-xs} {
+          width: 75%;
+          padding-left: 28px;
+        }
+        @media #{$bootstrap-nano} {
+          font-size: 1.3em;
+          margin: 0 auto;
+          padding: 0;
+        }
       }
     }
     .modal-body {
-      height: 450px;
-      padding: 35px 70px 70px 60px;
-      border-radius: 5px;
+      padding: 36px 70px 58px 58px;
       box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
+      @media #{$bootstrap-xs} {
+        padding: 35px 30px 54px 30px;
+      }
+
       .form-size {
         width: 260px;
         float: left;
+        display: inline-block;
+
+        @media #{$bootstrap-xs} {
+          max-width: 220px;
+          width: 50%;
+        }
+
         .radio-size {
           width: 26px;
           height: 26px;
@@ -279,44 +306,48 @@
         }
         .label-size {
           display: inline;
-          color: #535556;
           font-family: $gotham-pro-regular;
-          font-size: 1em;
+          font-size: 1.15em;
+          color: #535556;
+          @media #{$bootstrap-nano} {
+            font-size: 0.65em;
+          }
+        }
+        .radio-size:checked + .label-size {
+          font-family: $gotham-pro-bold;
+          color: #3962b5;
         }
         .radio-size + .label-size {
           cursor: pointer;
         }
-        .radio-size:checked + .label-size {
-          color: #3962b5;
-          font-family: $gotham-pro-bold;
-        }
+
         .radio-size:not(checked) {
           position: absolute;
           opacity: 0;
         }
         .radio-size:not(checked) + .label-size {
+          padding: 5px 0 0 35px;
           position: relative;
           line-height: 40px;
-          padding: 5px 0 0 35px;
         }
         .radio-size:not(checked) + .label-size:before {
           content: '';
+          width: 26px;
+          height: 26px;
           position: absolute;
           top: -3px;
           left: 0;
-          width: 26px;
-          height: 26px;
           border: 3px solid #3962b5;
           border-radius: 50%;
           background: #FFF;
         }
         .radio-size:not(checked) + .label-size:after {
           content: '';
+          width: 14px;
+          height: 14px;
           position: absolute;
           top: 3px;
           left: 6px;
-          width: 14px;
-          height: 14px;
           border-radius: 50%;
           background: #3962b5;
           opacity: 0;
@@ -327,59 +358,103 @@
         }
         .button-size {
           width: 100%;
-          height: 70px;
-          margin-top: 34px;
-          background-color: #df3b3e;
+          margin-top: 37px;
+          font-family: $gotham-pro-bold;
+          font-size: 1.28em;
+          line-height: 68px;
           border-bottom: 3px solid #d12f32;
           border-radius: 5px;
+          background-color: #df3b3e;
           color: white;
-          font-family: $gotham-pro-bold;
-          font-size: 1.125em;
-          line-height: 27px;
+
+          @media #{$bootstrap-nano} {
+            font-size: 0.85em;
+            width: 220px;
+          }
         }
       }
       .pic-size {
         float: right;
-        height: 276px;
+        display: inline-block;
         width: 400px;
-        background: url("/img/popups/fom-size-right.png") center right no-repeat;
-        background-position-y: -20px;
+        height: 276px;
+        padding: 9px 0 0 38px;
+        background: url("/img/popups/form-size-right.png") center right no-repeat;
+        background-position-y: -16px;
+
+        @media #{$bootstrap-xs} {
+          background: none;
+          padding: 0;
+          vertical-align: top;
+          text-align: center;
+          max-width: 400px;
+          width: 47%;
+        }
+        @media #{$bootstrap-sm} {
+          background: none;
+          padding-left: 0;
+          width: 45%;
+        }
+
+        img {
+          @media #{$bootstrap-nano} {
+            width: 100%;
+          }
+        }
         .size-title::before {
           content: "";
           width: 15px;
+          height: 15px;
           margin: 0 10px -2px;
           display: inline-block;
-          height: 15px;
-          background-color: #f7741d;
           border-radius: 50%;
+          background-color: #f7741d;
         }
         .size-title {
-          color: #3962b5;
           font-family: $gotham-pro-bold;
-          font-size: 1em;
+          font-size: 1.15em;
           line-height: 40px;
+          color: #3962b5;
+          @media #{$bootstrap-nano} {
+            font-size: 0.6em;
+            text-align: left;
+          }
         }
-      }
-      .price-size {
-        float: left;
-        width: 235px;
-        margin-left: 78px;
-        padding: 13px 0 20px 20px;
-        border-bottom: 1px solid #ddd;
-        border-radius: 0;
-        color: #413e3e;
-        font-family: $gotham-pro-regular;
-        font-size: 1.125em;
-        line-height: 27px;
-        .price {
-          vertical-align: middle;
-          font-family: $gotham-pro-bold;
-          font-size: 1.875em;
-          color: #ff8a04;
-          line-height: 27px;
-          .rub {
-            font-family: $als-rubl-regular;
-            font-size: 1em;
+        .price-size {
+          width: 250px;
+          margin: 120px 0 0 37px;
+          padding: 22px 0 10px 20px;
+          display: block;
+          border-bottom: 1px solid #ddd;
+          border-radius: 0;
+          font-family: $gotham-pro-regular;
+          font-size: 1.25em;
+          color: #413e3e;
+
+          @media #{$bootstrap-sm} {
+            margin-left: 0;
+          }
+          @media #{$bootstrap-xs} {
+            padding: 0;
+            width: 100%;
+            max-width: 110px;
+            margin: 110px auto 0;
+          }
+          @media #{$bootstrap-nano} {
+            margin-top: 25px;
+          }
+
+          .price {
+            vertical-align: middle;
+            font-family: $gotham-pro-bold;
+            font-size: 1.8em;
+            line-height: 27px;
+            color: #ff8a04;
+
+            .rub {
+              font-family: $als-rubl-regular;
+              font-size: 1em;
+            }
           }
         }
       }
@@ -1165,7 +1240,162 @@
     position: absolute;
     left: calc(50% - 274px);
     top: 12vh;
-    width: 554px;
+    width: 561px;
+    @media #{$bootstrap-xs} {
+      width: 90%;
+      min-height: 453px;
+      margin-left: -45%;
+      top: 10vh;
+    }
+    @media #{$bootstrap-sm} {
+      top: 50%;
+      width: 430px;
+      min-height: 453px;
+      margin-top: -226.5px;
+      margin-left: -215px;
+    }
+    .modal-content {
+      border-radius: 6px;
+      background-color: #ffffff;
+      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
+
+      @media #{$bootstrap-xs} {
+        width: 100%;
+        min-height: 453px;
+      }
+      @media #{$bootstrap-sm} {
+        width: 430px;
+        min-height: 453px;
+      }
+    }
+  }
+  .modal-content {
+    background-color: white;
+    border: 3px solid #ffc27c;
+    border-radius: 5px;
+    box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+    .modal-header {
+      background-color: #126b6e;
+      border-radius: 3px 3px 0 0;
+      padding: 28px 0 27px 58px;
+      .modal-title {
+        width: 60%;
+        color: white;
+        font-family: $gotham-pro-bold;
+        font-size: 1.5em;
+        line-height: 27px;
+      }
+    }
+    .modal-body {
+      padding: 42px 80px 60px;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+      section .datepicker-title {
+        padding-bottom: 42px;
+        color: #444749;
+        font-family: $gotham-pro-regular;
+        font-size: 1.285em;
+      }
+
+      section article .single {
+        width: 255px;
+        margin: 0 auto;
+        border-radius: 6px;
+        box-shadow: 0 20px 45px rgba(1, 1, 1, 0.15);
+        .pickmeup {
+          background-color: white;
+          .pmu-instance {
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            nav {
+             height: 34px;
+             .pmu-prev,
+             .pmu-next {
+               width: 24px;
+               height: 30px;
+             }
+            .pmu-month {
+              width: 85%;
+              color: black;
+              font-family: $gotham-pro-bold;
+              font-size: .875em;
+              line-height: 30px;
+              text-transform: uppercase;
+            }
+            }
+            .pmu-day-of-week {
+              height: 50px;
+              padding: 0 20px;
+              background-color: #126b6e;
+              div {
+                font-size: 11px;
+                font-family: $montserrat-regular;
+                color: white;
+                padding-top: 15px;
+                padding-left: 10px;
+                width: 30px;
+              }
+            }
+            .pmu-years,
+            .pmu-months {
+              div {
+                color: #7d888a;
+              }
+              .pmu-selected {
+                color: white !important;
+                background-color: #ffa947;
+              }
+            }
+            .pmu-days {
+              padding: 15px 20px;
+              color: #7d888a;
+               div {
+                 width: 30px;
+                 padding: 6px;
+                 color: #7d888a;
+                 font-family:  $montserrat-regular;
+                 font-size: 11px;
+               }
+              .pmu-today {
+                color: #fff!important;
+                background-color: #126b6e;
+                border-radius: 50%;
+              }
+               .pmu-not-in-month {
+                 color: #000 !important;
+               }
+                .pmu-selected {
+                  color: white !important;
+                  background-color: #ffa947;
+                  border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+      .button-date {
+        width: 255px;
+        margin-top: 40px;
+        background-color: #df3b3e;
+        border-bottom: 3px solid #d12f32;
+        border-radius: 5px;
+        color: white;
+        font-family: $gotham-pro-bold;
+        font-size: 1.125em;
+        line-height: 70px;
+      }
+    }
+  }
+}
+#pop-stock {
+  .modal-dialog {
+    position: absolute;
+    padding-right: 0!important;
+    left: calc(50% - 400px);
+    top: 8vh;
+    width: 900px;
     @media #{$bootstrap-xs} {
       width: 90%;
       min-height: 453px;
@@ -1203,58 +1433,354 @@
       background-color: #126b6e;
       border-radius: 3px 3px 0 0;
       padding: 29px 0 29px 60px;
-      .modal-title {
-        width: 60%;
+      .option-back {
+        position: absolute;
+        cursor: pointer;
+        left: 0;
+        top: -68px;
+        color: white;
+        font-size: 0.875em;
+        line-height: 27px;
+        font-family: $gotham-pro-regular;
+        text-decoration: underline;
+      }
+      .pic-size {
+        width: 180px;
+        position: absolute;
+        top: -88px;
+        right: 450px;
+        padding: 18px 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 5px;
         color: white;
         font-family: $gotham-pro-bold;
         font-size: 1.5em;
+      }
+      .price-sum {
+        position: absolute;
+        top: -88px;
+        right: 0;
+        padding: 4px 22px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        color: white;
+        font-family: $gotham-pro-regular;
+        font-size: 1.5em;
+        .price {
+          color: #df3b3e;
+          font-family: $gotham-pro-bold;
+          font-size: 1.875em;
+          vertical-align: middle;
+        }
+        .rub {
+          color: #df3b3e;
+          font-family: $als-rubl-regular;
+          font-size: 1em;
+        }
+      }
+      .stock-img {
+        position: absolute;
+        top: 0;
+      }
+      .modal-title {
+        padding-left: 100px;
+        color: white;
+        font-family: $gotham-pro-bold;
+        font-size: 1.5em;
+        font-weight: 700;
         line-height: 27px;
       }
     }
     .modal-body {
-      padding: 45px 90px 60px;
-      text-align: center;
+      padding: 55px 90px 62px 58px;
       border-radius: 5px;
       box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
-      section .datepicker-title {
-        padding-bottom: 42px;
-        color: #444749;
+      background: url("/img/popups/limit-edition.png") right bottom no-repeat;
+      .stock-left-block {
+        display: inline-block;
+        width: 305px;
+        font-family: $gotham-pro-regular;
+        .stock-content {
+          color: #0d7477;
+          font-size: 1.375em;
+          line-height: 34px;
+        }
+        .stock-info {
+          color: #636363;
+          margin-top: 36px;
+          margin-bottom: 82px;
+          font-size: 1em;
+          line-height: 24px;
+        }
+        .button-stock {
+          width: 300px;
+          background-color: #df3b3e;
+          border-bottom: 3px solid #d12f32;
+          border-radius: 5px;
+          color: white;
+          font-family: $gotham-pro-bold;
+          font-size: 1.125em;
+          line-height: 70px;
+        }
+        .option-no {
+          color: #ff6000;
+          padding-top: 35px;
+          text-align: center;
+          cursor: pointer;
+          font-family: $gotham-pro-regular;
+          font-size: 1.125em;
+          line-height: 27px;
+          text-decoration: underline;
+        }
+      }
+      .pic-size {
+        float: right;
+        width: 310px;
+      }
+      .price-size {
+        float: left;
+        width: 235px;
+        margin-left: 78px;
+        padding: 13px 0 20px 20px;
+        border-bottom: 1px solid #ddd;
+        border-radius: 0;
+        color: #413e3e;
         font-family: $gotham-pro-regular;
         font-size: 1.125em;
         line-height: 27px;
       }
+    }
+  }
+}
+#pop-prepay {
+  .modal-dialog {
+    position: absolute;
+    padding-right: 0!important;
+    left: calc(50% - 400px);
+    top: 8vh;
+    width: 900px;
+    @media #{$bootstrap-xs} {
+      width: 90%;
+      min-height: 453px;
+      margin-left: -45%;
+      top: 10vh;
+    }
+    @media #{$bootstrap-sm} {
+      top: 50%;
+      width: 430px;
+      min-height: 453px;
+      margin-top: -226.5px;
+      margin-left: -215px;
+    }
+    .modal-content {
+      border-radius: 6px;
+      background-color: #ffffff;
+      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
 
-      section article .single {
-        width: 255px;
-        margin: 0 auto;
-        border-radius: 6px;
-        box-shadow: 0 20px 45px rgba(1, 1, 1, 0.15);
-
-        .pickmeup .pmu-instance {
-          width: 100%;
-          height: 100%;
-          padding: 10px 20px;
-          .nav {
-            padding-left: 10px;
-          }
-          .pmu-day-of-week {
-            padding-left: 10px;
-          }
-        }
+      @media #{$bootstrap-xs} {
+        width: 100%;
+        min-height: 453px;
       }
-
-      .button-date {
-        width: 255px;
-        margin-top: 40px;
-        background-color: #df3b3e;
-        border-bottom: 3px solid #d12f32;
-        border-radius: 5px;
+      @media #{$bootstrap-sm} {
+        width: 430px;
+        min-height: 453px;
+      }
+    }
+  }
+  .modal-content {
+    background-color: white;
+    border: 3px solid #ffc27c;
+    border-radius: 5px;
+    box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+    .modal-header {
+      background-color: #126b6e;
+      border-radius: 3px 3px 0 0;
+      padding: 35px 149px 35px 60px;
+      .modal-title {
+        display: inline-block;
         color: white;
         font-family: $gotham-pro-bold;
-        font-size: 1.125em;
-        line-height: 70px;
+        font-size: 1.5em;
+        font-weight: 700;
+        line-height: 27px;
+      }
+      .print-page {
+        float: right;
+        color: #ff815f;
+        font-family: $gotham-pro-regular;
+        font-size: 0.875em;
+        line-height: 27px;
+        text-decoration: underline;
+      }
+    }
+    .modal-body {
+      padding: 55px 50px 53px;
+      border-radius: 5px;
+      box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+      .prepay-info {
+        color: #636363;
+        font-family: $gotham-pro-regular;
+        font-size: 1em;
+        line-height: 24px;
+        &:first-child {
+          width: 475px;
+          padding-bottom: 30px;
+          color: #0d7477;
+          font-size: 1.375em;
+          line-height: 34px;
+        }
+        &:nth-child(2) {
+          width: 385px;
+          padding: 25px 0;
+          border-top: 1px solid #ebebeb;
+        }
+        &:nth-child(4) {
+          padding: 30px 0;
+        }
+        &:last-child {
+          line-height: 50px;
+        }
+        .order-number,
+        .us-number {
+          color: #212121;
+          vertical-align: middle;
+          padding-left: 20px;
+          font-family: $gotham-pro-bold;
+          font-size: 1.875em;
+          line-height: 24px;
+        }
+        .us-number {
+          color: #1b1b1b;
+        }
+        .us-number {
+          padding: 20px 0;
+          line-height: 50px;
+        }
+        .price-number {
+          color: #393939;
+          padding-left: 20px;
+          font-family: $gotham-pro-bold;
+          font-size: 1.125em;
+          line-height: 24px;
+        }
       }
     }
   }
 }
+#pop-prepay,
+#pop-pay {
+  .modal-dialog {
+    position: absolute;
+    padding-right: 0!important;
+    left: calc(50% - 400px);
+    top: 8vh;
+    width: 900px;
+    @media #{$bootstrap-xs} {
+      width: 90%;
+      min-height: 453px;
+      margin-left: -45%;
+      top: 10vh;
+    }
+    @media #{$bootstrap-sm} {
+      top: 50%;
+      width: 430px;
+      min-height: 453px;
+      margin-top: -226.5px;
+      margin-left: -215px;
+    }
+    .modal-content {
+      border-radius: 6px;
+      background-color: #ffffff;
+      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
 
+      @media #{$bootstrap-xs} {
+        width: 100%;
+        min-height: 453px;
+      }
+      @media #{$bootstrap-sm} {
+        width: 430px;
+        min-height: 453px;
+      }
+    }
+  }
+  .modal-content {
+    background-color: white;
+    border: 3px solid #ffc27c;
+    border-radius: 5px;
+    box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+    .modal-header {
+      background-color: #126b6e;
+      border-radius: 3px 3px 0 0;
+      padding: 35px 149px 35px 60px;
+      .modal-title {
+        display: inline-block;
+        color: white;
+        font-family: $gotham-pro-bold;
+        font-size: 1.5em;
+        font-weight: 700;
+        line-height: 27px;
+      }
+      .print-page {
+        float: right;
+        color: #ff815f;
+        font-family: $gotham-pro-regular;
+        font-size: 0.875em;
+        line-height: 27px;
+        text-decoration: underline;
+      }
+    }
+    .modal-body {
+      padding: 55px 50px 53px;
+      border-radius: 5px;
+      box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+      .prepay-info {
+        color: #636363;
+        font-family: $gotham-pro-regular;
+        font-size: 1em;
+        line-height: 24px;
+        &:first-child {
+          width: 475px;
+          padding-bottom: 30px;
+          color: #0d7477;
+          font-size: 1.375em;
+          line-height: 34px;
+        }
+        &:nth-child(2) {
+          width: 385px;
+          padding: 25px 0;
+          border-top: 1px solid #ebebeb;
+        }
+        &:nth-child(4) {
+          padding: 30px 0;
+        }
+        &:last-child {
+          line-height: 50px;
+        }
+        .order-number,
+        .us-number {
+          color: #212121;
+          vertical-align: middle;
+          padding-left: 20px;
+          font-family: $gotham-pro-bold;
+          font-size: 1.875em;
+          line-height: 24px;
+        }
+        .us-number {
+          color: #1b1b1b;
+        }
+        .us-number {
+          padding: 20px 0;
+          line-height: 50px;
+        }
+        .price-number {
+          color: #393939;
+          padding-left: 20px;
+          font-family: $gotham-pro-bold;
+          font-size: 1.125em;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
