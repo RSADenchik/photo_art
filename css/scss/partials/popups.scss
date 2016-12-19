@@ -1,223 +1,386 @@
-#pop-email {
+
+// General settings
+#pop-email,
+#pop-phone,
+#pop-size,
+#pop-type,
+#pop-type-option,
+#pop-baget,
+#pop-package,
+#pop-date,
+#pop-stock,
+#pop-prepay,
+#pop-pay {
 
   .modal-dialog {
     width: 100%;
-    max-width: 559px;
-    margin: 0;
     position: absolute;
-    top: 19vh;
-    left: calc(50% - 277px);
+    margin: 0;
 
+    @media #{$bootstrap-sm} {
+      margin: 0 auto;
+      left: 0 !important;
+      right: 0 !important;
+    }
     @media #{$bootstrap-xs} {
       margin: 0 auto;
-      left: 0;
-      right: 0;
-    }
-
-    .modal-content {
-      border: 3px solid #ffc27c;
-      border-radius: 5px;
-      box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
-
-      .modal-header {
-        position: relative;
-        padding: 24px 0 22px 56px;
-        background-color: #126b6e;
-        border: none;
-        font-family: $gotham-pro-bold;
-
-        @media #{$bootstrap-nano} {
-          padding-left: 0;
-          text-align: center;
-        }
-
-        .modal-title {
-          font-size: 1.7em;
-          color: white;
-
-          @media #{$bootstrap-nano} {
-           font-size: 1.2em;
-          }
-        }
-        .up-header {
-          width: 100%;
-          position: absolute;
-          left: 0;
-          top: -85px;
-          font-size: 2.1em;
-          color: #fff;
-
-          img {
-            margin-right: 20px;
-          }
-
-          @media #{$bootstrap-xs} {
-            text-align: center;
-          }
-          @media #{$bootstrap-nano} {
-            font-size: 1.7em;
-          }
-        }
-      }
-      .modal-body {
-        padding: 30px 0 54px 55px;
-        box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
-
-        @media #{$bootstrap-xs} {
-          padding-left: 0;
-        }
-
-        .form-email {
-          width: 80%;
-          max-width: 340px;
-          font-family: $gotham-pro-regular;
-
-          @media #{$bootstrap-xs} {
-            margin: 0 auto;
-          }
-
-          .label-email {
-            font-size: 1em;
-            line-height: 27px;
-            color: #444749;
-          }
-          .input-email {
-            width: 100%;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            line-height: 60px;
-          }
-          .input-email[placeholder] {
-            padding-left: 30px;
-            font-size: 1.12em;
-            color: #9ea5aa;
-
-            @media #{$bootstrap-nano} {
-              font-size: 0.9em;
-              padding-left: 20px;
-            }
-          }
-          .button-email {
-            width: 100%;
-            margin-top: 22px;
-            font-family: $gotham-pro-bold;
-            line-height: 68px;
-            font-size: 1.25em;
-            border-bottom: 3px solid #d12f32;
-            border-radius: 5px;
-            color: white;
-            background-color: #df3b3e;
-            .button-icon {
-              padding-left: 15px;
-            }
-            @media #{$bootstrap-nano} {
-              font-size: 1em;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-#pop-phone {
-
-  .modal-dialog {
-    width: 100%;
-    max-width: 559px;
-    margin: 0;
-    position: absolute;
-    top: 20vh;
-    left: calc(50% - 277px);
-
-    @media #{$bootstrap-xs} {
-      margin: 0 auto;
-      left: 0;
-      right: 0;
+      left: 0 !important;
+      right: 0 !important;
     }
   }
   .modal-content {
     border: 3px solid #ffc27c;
     border-radius: 5px;
     box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+  }
+  .modal-header {
+    padding: 0;
+    font-family: $gotham-pro-bold;
+    background-color: #126b6e;
+    border: none;
+  }
 
-    .modal-header {
-      padding: 29px 0;
-      background-color: #126b6e;
-      border: none;
+  // Блок над popapom
+  .under-header {
+   position: relative;
 
+    .option-back {
+      position: absolute;
+      left: 0;
+      top: -68px;
+      cursor: pointer;
+      font-family: $gotham-pro-regular;
+      font-size: 1em;
+      line-height: 27px;
+      text-decoration: underline;
+      color: white;
+
+      @media #{$bootstrap-xs} {
+        left: 20px;
+        top: -165px;
+        color: #ff6000;
+      }
       @media #{$bootstrap-nano} {
+        left: 0;
+        right: 0;
+        top: -210px;
         text-align: center;
       }
-      .modal-title {
-        width: 80%;
-        padding-left: 59px;
+    }
+    .pic-size {
+      width: 180px;
+      position: absolute;
+      top: -83px;
+      right: 445px;
+      font-family: $gotham-pro-bold;
+      font-size: 1.75em;
+      line-height: 58px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      color: white;
+
+      @media #{$bootstrap-sm} {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+      @media #{$bootstrap-xs} {
+        right: 22px;
+        top: -174px;
+      }
+      @media #{$bootstrap-nano} {
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+      }
+    }
+    .price-sum {
+      width: 217px;
+      position: absolute;
+      top: -85px;
+      right: -2px;
+      font-family: $gotham-pro-regular;
+      font-size: 1.7em;
+      line-height: 62px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      color: white;
+
+      @media #{$bootstrap-sm} {
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+      }
+      @media #{$bootstrap-xs} {
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #212121;
+        background-color: white;
+      }
+      .price {
+        vertical-align: middle;
         font-family: $gotham-pro-bold;
-        font-size: 1.7em;
-        line-height: 28px;
-        color: white;
+        font-size: 1.35em;
+        color: #df3b3e;
+      }
+      .rub {
+        font-family: $als-rubl-regular;
+        font-size: 1em;
+        color: #df3b3e;
+      }
+    }
+
+    @media #{$bootstrap-xs} {
+      text-align: center;
+    }
+  }
+  .modal-title {
+    font-size: 1.7em;
+    color: white;
+
+    @media #{$bootstrap-nano} {
+      padding-left: 0 !important;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 1.2em;
+    }
+  }
+  .modal-body {
+    box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
+    // Picture width title and price
+    .pic-type {
+      text-align: center;
+
+      &:hover {
+        outline: 3px solid #ffc27c;
+        box-shadow: 0 7px 34.8px 5.2px rgba(0, 0, 0, 0.1);
+      }
+
+      .type-title {
+        font-family: $gotham-pro-regular;
+        font-size: 1.1em;
+        line-height: 51px;
+        color: #141313;
 
         @media #{$bootstrap-nano} {
-          margin: 0 auto;
-          padding-left: 0;
-          text-align: center;
-          font-size: 1.2em;
+          font-size: 0.85em;
+          line-height: 40px;
+        }
+      }
+      .price-type {
+        font-family: $gotham-pro-bold;
+        font-size: 1.7em;
+        line-height: 68px;
+        color: #f47c47;
+
+        @media #{$bootstrap-nano} {
+          font-size: 1em;
+          line-height: 44px;
+        }
+      }
+        // Hover efect background
+
+      .img-hover-block {
+        width: 240px;
+        height: 192px;
+        display: inline-block;
+        position: relative;
+
+        @media #{$bootstrap-xs} {
+          width: 90%;
+          height: auto;
+        }
+      }
+      .img-hover-block:hover .hover-bg,
+      .img-hover-block:hover .hover-lypa {
+        display: block;
+      }
+      .hover-bg, .hover-lypa {
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .hover-bg {
+        -moz-opacity: .7;
+        opacity: .7;
+        background-color: rgba(95, 115, 136, 0.7);
+        background-image: url("/img/popups/lypa.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 4.16%;
+          top: 4.16%;
+          right: 4.16%;
+          bottom: 4.16%;
+          border: 1px solid rgba(255, 255, 255, 0.4);
         }
       }
     }
-    .modal-body {
-      padding: 32px 0 45px 57px;
-      box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+      // Red Button
+
+    .button-true {
+      width: 100%;
+      font-family: $gotham-pro-bold;
+      line-height: 68px;
+      font-size: 1.25em;
+      border-bottom: 3px solid #d12f32;
+      border-radius: 5px;
+      color: white;
+      background-color: #df3b3e;
+
+      @media #{$bootstrap-nano} {
+        font-size: 1em;
+      }
+    }
+        // Text width NO option
+    .option-no {
+      font-family: $gotham-pro-regular;
+      font-size: 1.125em;
+      line-height: 27px;
+      text-decoration: underline;
+      cursor: pointer;
+      color: #ff6000;
+    }
+  }
+}
+
+ // First-popup
+
+#pop-email {
+
+  .modal-dialog {
+    max-width: 559px;
+    top: 19vh;
+    left: calc(50% - 277px);
+  }
+  .modal-title {
+    padding: 24px 0 22px 56px;
+  }
+  .up-header {
+    width: 100%;
+    position: absolute;
+    top: -85px;
+    font-size: 2.1em;
+    color: #fff;
+
+    @media #{$bootstrap-nano} {
+      font-size: 1.7em;
+    }
+    img {
+      margin-right: 20px;
+    }
+  }
+  .modal-body {
+    padding: 30px 0 54px 55px;
+
+    @media #{$bootstrap-xs} {
+      padding-left: 0;
+    }
+    .form-email {
+      max-width: 370px;
+      font-family: $gotham-pro-regular;
 
       @media #{$bootstrap-xs} {
-        padding-left: 0;
+        margin: 0 auto;
       }
+      .label-email {
+        font-size: 1em;
+        line-height: 27px;
+        color: #444749;
+      }
+      .input-email {
+        width: 100%;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        line-height: 60px;
+      }
+      .input-email[placeholder] {
+        padding-left: 30px;
+        font-size: 1.12em;
+        color: #9ea5aa;
 
-      .form-phone {
-        width: 80%;
-        max-width: 340px;
-        font-family: $gotham-pro-regular;
-
-        @media #{$bootstrap-xs} {
-          margin: 0 auto;
+        @media #{$bootstrap-nano} {
+          font-size: 0.9em;
+          padding-left: 20px;
         }
+      }
+      .button-true {
+        margin-top: 22px;
 
-        .label-phone {
-          font-size: 1em;
-          color: #444749;
-        }
-        .input-phone {
-          width: 100%;
-          border: 2px solid #ddd;
-          border-radius: 5px;
-          line-height: 68px;
-
-        }
-        .input-phone[placeholder] {
-          padding-left: 30px;
-          font-size: 1.25em;
-          color: #9ea5aa;
-
-          @media #{$bootstrap-nano} {
-            font-size: 0.9em;
-            padding-left: 20px;
-          }
-        }
-        .button-phone {
-          width: 100%;
-          margin-top: 20px;
-          font-family: $gotham-pro-bold;
-          font-size: 1.25em;
-          line-height: 69px;
-          border-bottom: 3px solid #d12f32;
-          border-radius: 5px;
-          color: white;
-          background-color: #df3b3e;
+        .button-icon {
+          padding-left: 15px;
         }
       }
     }
   }
 }
+
+
+  // Second popup
+
+#pop-phone {
+
+  .modal-dialog {
+    max-width: 559px;
+    top: 20vh;
+    left: calc(50% - 277px);
+  }
+  .modal-title {
+    width: 80%;
+    padding: 20px 0 23px 60px;
+    line-height: 36px;
+  }
+  .modal-body {
+    padding: 32px 0 45px 41px;
+
+    @media #{$bootstrap-xs} {
+      padding-left: 0;
+    }
+    .form-phone {
+      max-width: 370px;
+      font-family: $gotham-pro-regular;
+
+      @media #{$bootstrap-xs} {
+        margin: 0 auto;
+      }
+      .label-phone {
+        font-size: 1em;
+        color: #444749;
+      }
+      .input-phone {
+        width: 100%;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        line-height: 68px;
+      }
+      .input-phone[placeholder] {
+        padding-left: 30px;
+        font-size: 1.25em;
+        color: #9ea5aa;
+
+        @media #{$bootstrap-nano} {
+          font-size: 0.9em;
+          padding-left: 20px;
+        }
+      }
+      .button-true {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+  //Third Popup
 #pop-size {
 
   .modal-dialog::before {
@@ -229,6 +392,9 @@
     line-height: 38px;
     color: white;
 
+    @media #{$bootstrap-sm} {
+      text-align: center;
+    }
     @media #{$bootstrap-xs} {
       width: 80%;
       margin: 0 auto;
@@ -236,263 +402,351 @@
     }
     @media #{$bootstrap-nano} {
       font-size: 1.4em;
+      padding-bottom: 10px;
+      line-height: 30px;
     }
   }
   .modal-dialog {
-    width: 100%;
     max-width: 800px;
-    margin: 0;
-    position: absolute;
     left: calc(50% - 400px);
     top: 3vh;
+  }
+  .modal-title {
+    padding: 26px 0 26px 58px;
+    line-height: 28px;
 
     @media #{$bootstrap-xs} {
+      width: 75%;
+      padding-left: 28px;
+    }
+    @media #{$bootstrap-nano} {
+      font-size: 1.2em;
       margin: 0 auto;
-      left: 0;
-      right:0;
     }
   }
-  .modal-content {
-    border: 3px solid #ffc27c;
-    border-radius: 5px;
-    box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+  .modal-body {
+    padding: 36px 70px 58px 58px;
 
-    .modal-header {
-      padding: 26px 0;
-      background-color: #126b6e;
-      border: none;
+    @media #{$bootstrap-xs} {
+      padding: 35px 30px 54px 30px;
+    }
+    .form-size {
 
-      .modal-title {
-        padding-left: 59px;
-        font-family: $gotham-pro-bold;
-        font-size: 1.7em;
-        line-height: 28px;
-        color: white;
+      .radio-size {
+        width: 26px;
+        height: 26px;
+        margin: 0;
+        margin-top: 8px;
+      }
+      .label-size {
+        display: inline;
+        font-family: $gotham-pro-regular;
+        font-size: 1.15em;
+        color: #535556;
 
-        @media #{$bootstrap-xs} {
-          width: 75%;
-          padding-left: 28px;
-        }
         @media #{$bootstrap-nano} {
-          font-size: 1.3em;
-          margin: 0 auto;
-          padding: 0;
+          font-size: 0.65em;
+        }
+      }
+      .radio-size:checked + .label-size {
+        font-family: $gotham-pro-bold;
+        color: #3962b5;
+      }
+      .radio-size + .label-size {
+        cursor: pointer;
+      }
+      .radio-size:not(checked) {
+        position: absolute;
+        opacity: 0;
+      }
+      .radio-size:not(checked) + .label-size {
+        padding: 5px 0 0 35px;
+        position: relative;
+        line-height: 40px;
+      }
+      .radio-size:not(checked) + .label-size:before {
+        content: '';
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: -3px;
+        left: 0;
+        border: 3px solid #3962b5;
+        border-radius: 50%;
+        background: #FFF;
+      }
+      .radio-size:not(checked) + .label-size:after {
+        content: '';
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 3px;
+        left: 6px;
+        border-radius: 50%;
+        background: #3962b5;
+        opacity: 0;
+        transition: all .2s;
+      }
+      .radio-size:checked + .label-size:after {
+        opacity: 1;
+      }
+      .button-true {
+        max-width: 260px;
+        margin-top: 37px;
+
+        @media #{$bootstrap-nano} {
+          width: 220px;
         }
       }
     }
-    .modal-body {
-      padding: 36px 70px 58px 58px;
-      box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+    .pic-size {
+      padding: 8px 0 0 25px;
+      background: url("/img/popups/form-size-right.png") center right no-repeat;
+      background-position-y: -16px;
 
       @media #{$bootstrap-xs} {
-        padding: 35px 30px 54px 30px;
+        padding: 0;
+        background: none;
       }
-
-      .form-size {
-        width: 260px;
-        float: left;
-        display: inline-block;
-
-        @media #{$bootstrap-xs} {
-          max-width: 220px;
-          width: 50%;
-        }
-
-        .radio-size {
-          width: 26px;
-          height: 26px;
-          margin: 0;
-          margin-top: 8px;
-        }
-        .label-size {
-          display: inline;
-          font-family: $gotham-pro-regular;
-          font-size: 1.15em;
-          color: #535556;
-          @media #{$bootstrap-nano} {
-            font-size: 0.65em;
-          }
-        }
-        .radio-size:checked + .label-size {
-          font-family: $gotham-pro-bold;
-          color: #3962b5;
-        }
-        .radio-size + .label-size {
-          cursor: pointer;
-        }
-
-        .radio-size:not(checked) {
-          position: absolute;
-          opacity: 0;
-        }
-        .radio-size:not(checked) + .label-size {
-          padding: 5px 0 0 35px;
-          position: relative;
-          line-height: 40px;
-        }
-        .radio-size:not(checked) + .label-size:before {
-          content: '';
-          width: 26px;
-          height: 26px;
-          position: absolute;
-          top: -3px;
-          left: 0;
-          border: 3px solid #3962b5;
-          border-radius: 50%;
-          background: #FFF;
-        }
-        .radio-size:not(checked) + .label-size:after {
-          content: '';
-          width: 14px;
-          height: 14px;
-          position: absolute;
-          top: 3px;
-          left: 6px;
-          border-radius: 50%;
-          background: #3962b5;
-          opacity: 0;
-          transition: all .2s;
-        }
-        .radio-size:checked + .label-size:after {
-          opacity: 1;
-        }
-        .button-size {
+      img {
+        @media #{$bootstrap-nano} {
           width: 100%;
-          margin-top: 37px;
-          font-family: $gotham-pro-bold;
-          font-size: 1.28em;
-          line-height: 68px;
-          border-bottom: 3px solid #d12f32;
-          border-radius: 5px;
-          background-color: #df3b3e;
-          color: white;
-
-          @media #{$bootstrap-nano} {
-            font-size: 0.85em;
-            width: 220px;
-          }
         }
       }
-      .pic-size {
-        float: right;
+      .size-title::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        margin: 0 10px -2px;
         display: inline-block;
-        width: 400px;
-        height: 276px;
-        padding: 9px 0 0 38px;
-        background: url("/img/popups/form-size-right.png") center right no-repeat;
-        background-position-y: -16px;
+        border-radius: 50%;
+        background-color: #f7741d;
+      }
+      .size-title {
+        font-family: $gotham-pro-bold;
+        font-size: 1.15em;
+        line-height: 40px;
+        color: #3962b5;
 
-        @media #{$bootstrap-xs} {
-          background: none;
-          padding: 0;
-          vertical-align: top;
+        @media #{$bootstrap-nano} {
+          font-size: 0.7em;
           text-align: center;
-          max-width: 400px;
-          width: 47%;
         }
+      }
+      .price-size {
+        width: 250px;
+        margin: 120px 0 0 37px;
+        padding: 22px 0 10px 20px;
+        border-bottom: 1px solid #ddd;
+        font-family: $gotham-pro-regular;
+        font-size: 1.25em;
+        color: #413e3e;
+
         @media #{$bootstrap-sm} {
-          background: none;
-          padding-left: 0;
-          width: 45%;
+          margin-left: 0;
         }
-
-        img {
-          @media #{$bootstrap-nano} {
-            width: 100%;
-          }
+        @media #{$bootstrap-xs} {
+          width: 100%;
+          max-width: 110px;
+          padding: 0;
+          margin: 140px 0 0 40px;
         }
-        .size-title::before {
-          content: "";
-          width: 15px;
-          height: 15px;
-          margin: 0 10px -2px;
-          display: inline-block;
-          border-radius: 50%;
-          background-color: #f7741d;
+        @media #{$bootstrap-nano} {
+          margin: 25px auto 0;
         }
-        .size-title {
+        .price {
+          vertical-align: middle;
           font-family: $gotham-pro-bold;
-          font-size: 1.15em;
-          line-height: 40px;
-          color: #3962b5;
-          @media #{$bootstrap-nano} {
-            font-size: 0.6em;
-            text-align: left;
-          }
-        }
-        .price-size {
-          width: 250px;
-          margin: 120px 0 0 37px;
-          padding: 22px 0 10px 20px;
-          display: block;
-          border-bottom: 1px solid #ddd;
-          border-radius: 0;
-          font-family: $gotham-pro-regular;
-          font-size: 1.25em;
-          color: #413e3e;
+          font-size: 1.8em;
+          line-height: 27px;
+          color: #ff8a04;
 
-          @media #{$bootstrap-sm} {
-            margin-left: 0;
-          }
-          @media #{$bootstrap-xs} {
-            padding: 0;
-            width: 100%;
-            max-width: 110px;
-            margin: 110px auto 0;
-          }
-          @media #{$bootstrap-nano} {
-            margin-top: 25px;
-          }
-
-          .price {
-            vertical-align: middle;
-            font-family: $gotham-pro-bold;
-            font-size: 1.8em;
-            line-height: 27px;
-            color: #ff8a04;
-
-            .rub {
-              font-family: $als-rubl-regular;
-              font-size: 1em;
-            }
+          .rub {
+            font-family: $als-rubl-regular;
+            font-size: 1em;
           }
         }
       }
     }
   }
 }
+
+ //Third Popup
+
 #pop-type {
+
   .modal-dialog {
+    max-width: 898px;
+    left: calc(50% - 450px);
+    top: 7vh;
+  }
+
+  .modal-title {
+    padding: 26px 0 26px 60px;
+    line-height: 27px;
+
+    @media #{$bootstrap-sm} {
+      padding-left: 0;
+      text-align: center;
+    }
+    @media #{$bootstrap-xs} {
+      padding-left: 0;
+      text-align: center;
+    }
+    @media #{$bootstrap-nano} {
+      font-size: 1.2em;
+    }
+  }
+
+  .under-header {
+    .price-sum {
+      @media #{$bootstrap-xs} {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 23px 52px 40px;
+
+    @media #{$bootstrap-xs} {
+      padding: 40px 30px 52px;
+    }
+    @media #{$bootstrap-nano} {
+      padding: 40px 25px 52px;
+    }
+
+    .pic-type {
+
+      @media #{$bootstrap-nano} {
+        padding: 0;
+      }
+
+      &:nth-child(2) .price-type,
+      &:nth-child(5) .price-type {
+        color: #ff3a13;
+      }
+
+      img {
+        @media #{$bootstrap-xs} {
+          width: 90%
+        }
+      }
+    }
+
+    .button-true {
+      max-width: 300px;
+      margin: 6px auto 0;
+      display: block;
+    }
+  }
+}
+
+    // fourth popup
+
+#pop-type-option {
+
+  .modal-dialog {
+    max-width: 898px;
+    left: calc(50% - 450px);
+    top: 7vh;
+  }
+  .modal-title {
+    width: 535px;
+    padding: 30px 0 25px 60px;
+    line-height: 32px;
+
+    @media #{$bootstrap-sm} {
+      padding-left: 40px;
+    }
+    @media #{$bootstrap-xs} {
+      width: 100%;
+      max-width: 500px;
+      padding-left: 40px;
+    }
+    @media #{$bootstrap-nano} {
+      width: 90%;
+      margin: 0 auto;
+      padding-left: 0;
+      font-size: 1.2em;
+      text-align: center;
+    }
+  }
+
+  .under-header {
+   .price-sum {
+      @media #{$bootstrap-sm} {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 41px 174px 50px 165px;
+
+    @media #{$bootstrap-sm} {
+      padding: 41px 100px 50px;
+    }
+    @media #{$bootstrap-xs} {
+      padding: 41px 30px 35px;
+    }
+
+    .pic-type {
+      text-align: center;
+
+      @media #{$bootstrap-xs} {
+        padding: 0;
+      }
+
+      &:nth-child(2) .price-type {
+        color: #ff3a13;
+      }
+
+      .type-img {
+        width: 100%;
+        height: 100%;
+      }
+      .type-title {
+
+        @media #{$bootstrap-nano} {
+          width: 130px;
+          margin: 0 auto;
+          font-size: 0.95em;
+          line-height: 24px;
+        }
+      }
+    }
+      .button-true {
+        max-width: 220px;
+        margin: 48px 35px 0 -13px;
+
+        @media #{$bootstrap-nano} {
+          margin: 20px auto;
+          display: block;
+        }
+      }
+    }
+}
+  // Fifth popup
+#pop-baget {
+
+  .modal-dialog {
+    width: 100%;
+    max-width: 899px;
+    margin: 0;
     position: absolute;
     left: calc(50% - 450px);
     top: 7vh;
-    width: 900px;
+
     @media #{$bootstrap-xs} {
-      width: 90%;
-      min-height: 453px;
-      margin-left: -45%;
-      top: 10vh;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
     }
     @media #{$bootstrap-sm} {
-      top: 50%;
-      width: 430px;
-      min-height: 453px;
-      margin-top: -226.5px;
-      margin-left: -215px;
-    }
-    .modal-content {
-      border-radius: 6px;
-      background-color: #ffffff;
-      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
-
-      @media #{$bootstrap-xs} {
-        width: 100%;
-        min-height: 453px;
-      }
-      @media #{$bootstrap-sm} {
-        width: 430px;
-        min-height: 453px;
-      }
+      left: 0;
+      right: 0;
+      margin: 0 auto;
     }
   }
   .modal-content {
@@ -504,421 +758,178 @@
       background-color: #126b6e;
       position: relative;
       border-radius: 3px 3px 0 0;
-      padding: 29px 0 29px 60px;
-      .modal-title {
-        color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.5em;
-        font-weight: 700;
-        line-height: 27px;
-      }
-      .price-sum {
-        position: absolute;
-        top: -88px;
-        right: 0;
-        padding: 4px 22px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        color: white;
-        font-family: $gotham-pro-regular;
-        font-size: 1.5em;
-        .price {
-          color: #df3b3e;
-          font-family: $gotham-pro-bold;
-          font-size: 1.875em;
-          vertical-align: middle;
-        }
-        .rub {
-          color: #df3b3e;
-          font-family: $als-rubl-regular;
-          font-size: 1em;
-        }
-      }
-    }
-    .modal-body {
-      padding: 20px 52px 47px;
-      border-radius: 5px;
-      box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
-      .pic-type {
-        text-align: center;
-        width: 260px;
-        height: 275px;
-        display: inline-block;
-        &:hover {
-          border: 3px solid #ffc27c;
-          margin: -3px auto;
-          border-radius: 2px;
-          box-shadow: 0 7px 34.8px 5.2px rgba(0, 0, 0, 0.1);
-        }
-        &:nth-child(2) .price-type,
-        &:nth-child(5) .price-type{
-          color: #ff3a13;
-        }
-        .type-title {
-          padding: 15px 0 5px;
-          color: #141313;
-          font-family: $gotham-pro-regular;
-          font-size: 1em;
-          line-height: 27px;
-        }
-        .price-type {
-          padding: 10px 0 20px;
-          color: #f47c47;
-          font-family: $gotham-pro-bold;
-          font-size: 1.5em;
-          line-height: 34px;
-        }
-      }
-      .button-type {
-        width: 80%;
-        max-width: 300px;
-        margin: 0 auto;
-        display: block;
-        height: 70px;
-        background-color: #df3b3e;
-        border-bottom: 3px solid #d12f32;
-        border-radius: 5px;
-        color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.125em;
-        line-height: 27px;
-      }
-    }
-  }
-}
-#pop-type-option {
-  .modal-dialog {
-    position: absolute;
-    left: calc(50% - 450px);
-    top: 8vh;
-    width: 900px;
-    @media #{$bootstrap-xs} {
-      width: 90%;
-      min-height: 453px;
-      margin-left: -45%;
-      top: 10vh;
-    }
-    @media #{$bootstrap-sm} {
-      top: 50%;
-      width: 430px;
-      min-height: 453px;
-      margin-top: -226.5px;
-      margin-left: -215px;
-    }
-    .modal-content {
-      border-radius: 6px;
-      background-color: #ffffff;
-      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
+      padding: 27px 0 25px 60px;
 
-      @media #{$bootstrap-xs} {
-        width: 100%;
-        min-height: 453px;
-      }
-      @media #{$bootstrap-sm} {
-        width: 430px;
-        min-height: 453px;
-      }
-    }
-  }
-  .modal-content {
-    background-color: white;
-    border: 3px solid #ffc27c;
-    border-radius: 5px;
-    box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
-    .modal-header {
-      background-color: #126b6e;
-      position: relative;
-      border-radius: 3px 3px 0 0;
-      padding: 29px 0 29px 60px;
-      .modal-title {
-        width: 50%;
-        color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.5em;
-        font-weight: 700;
+      @media #{$bootstrap-nano} {
+        padding-left: 0;
       }
       .option-back {
         position: absolute;
-        cursor: pointer;
         left: 0;
         top: -68px;
-        color: white;
-        font-size:  0.875em;
-        line-height: 27px;
-        font-family: $gotham-pro-regular;
-        text-decoration: underline;
-      }
-      .pic-size {
-        width: 180px;
-        position: absolute;
-        top: -88px;
-        right: 450px;
-        padding: 18px 10px;
-        text-align: center;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.5em;
-      }
-      .price-sum {
-        position: absolute;
-        top: -88px;
-        right: 0;
-        padding: 4px 22px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        color: white;
-        font-family: $gotham-pro-regular;
-        font-size: 1.5em;
-        .price {
-          color: #df3b3e;
-          font-family: $gotham-pro-bold;
-          font-size: 1.875em;
-          vertical-align: middle;
-        }
-        .rub {
-          color: #df3b3e;
-          font-family: $als-rubl-regular;
-          font-size: 1em;
-        }
-      }
-    }
-    .modal-body {
-      padding: 41px 165px 54px 170px;
-      border-radius: 5px;
-      box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
-      .pic-type {
-        width: 270px;
-        height: 310px;
-        text-align: center;
-        display: inline-block;
-        &:nth-child(2) .price-type {
-          color: #ff3a13;
-        }
-        &:hover {
-          outline: 3px solid #ffc27c;
-          border-radius: 2px;
-          box-shadow: 0 7px 34.8px 5.2px rgba(0, 0, 0, 0.1);
-        }
-        .type-img {
-          width: 100%;
-          height: 100%;
-          position: relative;
-        }
-        .type-title {
-          padding: 20px 0 15px;
-          color: #141313;
-          font-family: $gotham-pro-regular;
-          font-size: 1em;
-          line-height: 27px;
-        }
-        .img-hover-block {
-          width: 240px;
-          height: 192px;
-          display: inline-block;
-          position: relative;
-        }
-        .img-hover-block:hover .hover-bg,
-        .img-hover-block:hover .hover-lypa {
-          display: block;
-        }
-        .hover-bg, .hover-lypa {
-          position: absolute;
-          display: none;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-        }
-        .hover-bg {
-          -moz-opacity: .7;
-          opacity: .7;
-          background-color: rgba(95, 115, 136, 0.7);
-          background-image: url("/img/popups/lypa.png");
-          background-position: center center;
-          background-repeat: no-repeat;
-          &::before {
-            content: '';
-            position: absolute;
-            left: 4.16%;
-            top: 4.16%;
-            right: 4.16%;
-            bottom: 4.16%;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-          }
-        }
-        .price-type {
-          padding: 23px 0;
-          color: #f47c47;
-          font-family: $gotham-pro-bold;
-          font-size: 1.5em;
-          line-height: 34px;
-        }
-      }
-      .button-type {
-        width: 220px;
-        margin: 50px 40px 0 60px;
-        background-color: #df3b3e;
-        border-bottom: 3px solid #d12f32;
-        border-radius: 5px;
-        color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.125em;
-        line-height: 70px;
-      }
-      .option-no {
-        color: #ff6000;
         cursor: pointer;
-        font-family: $gotham-pro-regular;
-        font-size: 1.125em;
-        line-height: 27px;
-        text-decoration: underline;
-      }
-    }
-  }
-}
-#pop-baget {
-  .modal-dialog {
-    position: absolute;
-    left: calc(50% - 450px);
-    top: 8vh;
-    width: 900px;
-    @media #{$bootstrap-xs} {
-      width: 90%;
-      min-height: 453px;
-      margin-left: -45%;
-      top: 10vh;
-    }
-    @media #{$bootstrap-sm} {
-      top: 50%;
-      width: 430px;
-      min-height: 453px;
-      margin-top: -226.5px;
-      margin-left: -215px;
-    }
-    .modal-content {
-      border-radius: 6px;
-      background-color: #ffffff;
-      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
-
-      @media #{$bootstrap-xs} {
-        width: 100%;
-        min-height: 453px;
-      }
-      @media #{$bootstrap-sm} {
-        width: 430px;
-        min-height: 453px;
-      }
-    }
-  }
-  .modal-content {
-    background-color: white;
-    border: 3px solid #ffc27c;
-    border-radius: 5px;
-    box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
-    .modal-header {
-      background-color: #126b6e;
-      position: relative;
-      border-radius: 3px 3px 0 0;
-      padding: 29px 0 29px 60px;
-      .option-back {
-        position: absolute;
-        cursor: pointer;
-        left: 0;
-        top: -68px;
-        color: white;
-        font-size:  0.875em;
-        line-height: 27px;
-        font-family: $gotham-pro-regular;
-        text-decoration: underline;
-      }
-      .pic-size {
-        width: 180px;
-        position: absolute;
-        top: -88px;
-        right: 450px;
-        padding: 18px 10px;
-        text-align: center;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.5em;
-      }
-      .price-sum {
-        position: absolute;
-        top: -88px;
-        right: 0;
-        padding: 4px 22px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        color: white;
-        font-family: $gotham-pro-regular;
-        font-size: 1.5em;
-        .price {
-          color: #df3b3e;
-          font-family: $gotham-pro-bold;
-          font-size: 1.875em;
-          vertical-align: middle;
-        }
-        .rub {
-          color: #df3b3e;
-          font-family: $als-rubl-regular;
-          font-size: 1em;
-        }
-      }
-      .modal-title {
-        width: 50%;
-        color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.5em;
-        font-weight: 700;
-      }
-      .post-title {
-        color: white;
         font-family: $gotham-pro-regular;
         font-size: 1em;
+        line-height: 27px;
+        text-decoration: underline;
+        color: white;
+
+        @media #{$bootstrap-xs} {
+          left: 20px;
+          top: -165px;
+          color: #ff6000;
+        }
+        @media #{$bootstrap-nano} {
+          left: 0;
+          right: 0;
+          top: -210px;
+          text-align: center;
+        }
+      }
+      .pic-size {
+        width: 180px;
+        position: absolute;
+        top: -83px;
+        right: 400px;
+        font-family: $gotham-pro-bold;
+        font-size: 1.75em;
+        line-height: 58px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        color: white;
+
+        @media #{$bootstrap-sm} {
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+        @media #{$bootstrap-xs} {
+          right: 22px;
+          top: -174px;
+        }
+        @media #{$bootstrap-nano} {
+          right: 0;
+          left: 0;
+          margin: 0 auto;
+        }
+      }
+      .price-sum {
+        width: 217px;
+        position: absolute;
+        top: -85px;
+        right: -2px;
+        font-family: $gotham-pro-regular;
+        font-size: 1.7em;
+        line-height: 62px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        color: white;
+
+        @media #{$bootstrap-xs} {
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          text-align: center;
+          color: #212121;
+          background-color: white;
+        }
+        .price {
+          color: #df3b3e;
+          font-family: $gotham-pro-bold;
+          font-size: 1.35em;
+          vertical-align: middle;
+        }
+        .rub {
+          color: #df3b3e;
+          font-family: $als-rubl-regular;
+          font-size: 1em;
+        }
+      }
+      .modal-title {
+        font-family: $gotham-pro-bold;
+        font-size: 1.7em;
+        color: white;
+
+        @media #{$bootstrap-nano} {
+          text-align: center;
+        }
+      }
+      .post-title {
+        font-family: $gotham-pro-regular;
+        font-size: 1.15em;
         line-height: 34px;
+        color: white;
+
+        @media #{$bootstrap-sm} {
+          font-size: 1em;
+        }
+        @media #{$bootstrap-xs} {
+          width: 90%;
+          max-width: 400px;
+          display: block;
+          font-size: 1em;
+        }
+        @media #{$bootstrap-nano} {
+          margin: 0 auto;
+          text-align: center;
+        }
       }
     }
     .modal-body {
-      padding: 41px 20px 54px 25px;
-      border-radius: 5px;
+      padding: 41px 20px 54px;
       box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
+      @media #{$bootstrap-nano} {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
       .baget-type {
+        width: 33%;
         text-align: center;
         display: inline-block;
-        padding: 3px 30px;
+
+        @media #{$bootstrap-sm} {
+          width: 32.9%;
+          max-width: 282px;
+        }
+        @media #{$bootstrap-xs} {
+          width: 49%;
+        }
+
         &:first-child .price-baget {
           position: relative;
           top: 20px;
+
+          @media #{$bootstrap-xs} {
+            top: 10px;
+          }
         }
         &:nth-child(2) .price-baget {
           color: #ff3a13;
         }
         &:hover {
           outline: 3px solid #ffc27c;
-          border-radius: 2px;
           box-shadow: 0 7px 34.8px 5.2px rgba(0, 0, 0, 0.1);
         }
-        .baget-img {
-          width: 100%;
-          height: 100%;
-          position: relative;
-        }
         .baget-title {
-          padding: 20px 0 15px;
-          color: #141313;
           font-family: $gotham-pro-regular;
           font-size: 1em;
-          line-height: 27px;
+          line-height: 50px;
+          color: #141313;
+
+          @media #{$bootstrap-nano} {
+            line-height: 40px
+          }
         }
         .img-hover-block {
-          width: 220px;
-          height: 192px;
+          width: 80%;
           display: inline-block;
           position: relative;
+
+          @media #{$bootstrap-xs} {
+            width: auto;
+          }
         }
         .img-hover-block:hover .hover-bg,
         .img-hover-block:hover .hover-lypa {
@@ -953,20 +964,56 @@
         // Bootstrap carousel  style
         //Fix drag on slide move
         .carousel-inner>.item>img {
-          width: 220px;
+          width: 100%;
           height: 192px;
+
+          @media #{$bootstrap-xs} {
+            width: 180px;
+          }
+          @media #{$bootstrap-nano} {
+            max-width: 125px;
+            height: 125px;
+          }
         }
         .icon-left {
           width: 43px;
           height: 45px;
-          margin-top: 51px;
-          margin-left: -17px;
+          margin-top: 50px;
+          margin-left: -16px;
+
+          @media #{$bootstrap-sm} {
+            margin-left: -15px;
+          }
+          @media #{$bootstrap-xs} {
+            width: 35px;
+            height: 37px;
+            margin-top: 58px;
+            margin-left: -13px;
+          }
+          @media #{$bootstrap-nano} {
+            margin-top: 25px;
+            margin-left: -11px;
+          }
         }
         .icon-right {
           width: 43px;
           height: 45px;
-          margin-top: 51px;
-          margin-left: -27px;
+          margin-top: 50px;
+          margin-left: -26px;
+
+          @media #{$bootstrap-sm} {
+            margin-left: -29px;
+          }
+          @media #{$bootstrap-xs} {
+            width: 35px;
+            height: 37px;
+            margin-top: 58px;
+            margin-left: -21px;
+          }
+          @media #{$bootstrap-nano} {
+            margin-top: 25px;
+            margin-left: -26px;
+          }
         }
         #carousel-1, #carousel-2, #carousel-3 {
           height: auto;
@@ -974,68 +1021,112 @@
           overflow: hidden;
         }
         .price-baget {
-          padding: 23px 0;
-          color: #f47c47;
+          padding: 10px 0;
           font-family: $gotham-pro-bold;
-          font-size: 1.5em;
+          font-size: 1.7em;
           line-height: 34px;
+          color: #f47c47;
+
+          @media #{$bootstrap-xs} {
+            padding: 0;
+            line-height: 50px;
+          }
+          @media #{$bootstrap-nano} {
+            font-size: 1.4em;
+          }
         }
       }
-      .button-baget {
-        width: 300px;
-        margin: 50px 35px 0 55px;
-        height: 70px;
-        background-color: #df3b3e;
-        border-bottom: 3px solid #d12f32;
-        border-radius: 5px;
-        color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.125em;
-        line-height: 27px;
-      }
-      .option-no {
-        color: #ff6000;
-        cursor: pointer;
-        font-family: $gotham-pro-regular;
-        font-size: 1.125em;
-        line-height: 27px;
-        text-decoration: underline;
-      }
-      .hover-block-small {
-        width: 95px;
-        height: 64px;
-        float: right;
-        margin-top: 50px;
-        margin-right: 25px;
-        position: relative;
-      }
-      .hover-block-small:hover .hover-bg,
-      .hover-block-small:hover .hover-lypa {
-        display: block;
-      }
-      .hover-bg, .hover-lypa {
-        position: absolute;
-        display: none;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-      .hover-bg {
-        -moz-opacity: .7;
-        opacity: .7;
-        background-color: rgba(95, 115, 136, 0.7);
-        background-image: url("/img/popups/lypa-small.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        &::before {
-          content: '';
+      .xs-mobile {
+
+        @media #{$bootstrap-xs} {
+          width: 49%;
+          margin: 50px auto 0;
+          vertical-align: top;
+          display: inline-block;
+        }
+        @media #{$bootstrap-nano} {
+          margin-top: 42px;
+        }
+
+        .button-baget {
+          width: 300px;
+          margin: 57px 35px 0;
+          font-family: $gotham-pro-bold;
+          font-size: 1.3em;
+          line-height: 70px;
+          background-color: #df3b3e;
+          border-bottom: 3px solid #d12f32;
+          border-radius: 5px;
+          color: white;
+
+          @media #{$bootstrap-sm} {
+            width: 220px;
+            margin-left: 20px;
+            font-size: 1.1em;
+          }
+          @media #{$bootstrap-xs} {
+            width: 100%;
+            max-width: 220px;
+            margin: 0 auto 20px;
+            display: block;
+            font-size: 1.1em;
+          }
+          @media #{$bootstrap-nano} {
+            line-height: 30px;
+            font-size: 1em;
+          }
+        }
+        .option-no {
+          font-family: $gotham-pro-regular;
+          font-size: 1.125em;
+          line-height: 27px;
+          text-decoration: underline;
+          cursor: pointer;
+          color: #ff6000;
+        }
+        .hover-block-small {
+          margin-top: 62px;
+          margin-right: 24px;
+          float: right;
+          position: relative;
+
+          @media #{$bootstrap-sm} {
+            margin-right: 4%;
+          }
+          @media #{$bootstrap-xs} {
+            margin: 16px auto 0;
+            width: 95px;
+            float: none;
+          }
+        }
+        .hover-block-small:hover .hover-bg,
+        .hover-block-small:hover .hover-lypa {
+          display: block;
+        }
+        .hover-bg, .hover-lypa {
           position: absolute;
-          left: 2.08%;
-          top: 2.08%;
-          right: 2.08%;
-          bottom: 2.08%;
-          border: 1px solid rgba(255, 255, 255, 0.4);
+          display: none;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+        .hover-bg {
+          -moz-opacity: .7;
+          opacity: .7;
+          background-color: rgba(95, 115, 136, 0.7);
+          background-image: url("/img/popups/lypa-small.png");
+          background-position: center center;
+          background-repeat: no-repeat;
+          &::before {
+            content: '';
+            position: absolute;
+            left: 2.08%;
+            top: 2.08%;
+            right: 2.08%;
+            bottom: 2.08%;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+          }
         }
       }
     }
@@ -1044,40 +1135,25 @@
 #pop-package {
 
   .modal-dialog {
+    width: 100%;
+    max-width: 898px;
+    margin: 0;
     position: absolute;
     left: calc(50% - 450px);
-    top: 8vh;
-    width: 900px;
+    top: 7vh;
+
     @media #{$bootstrap-xs} {
-      width: 90%;
-      min-height: 453px;
-      margin-left: -45%;
-      top: 10vh;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
     }
     @media #{$bootstrap-sm} {
-      top: 50%;
-      width: 430px;
-      min-height: 453px;
-      margin-top: -226.5px;
-      margin-left: -215px;
-    }
-    .modal-content {
-      border-radius: 6px;
-      background-color: #ffffff;
-      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
-
-      @media #{$bootstrap-xs} {
-        width: 100%;
-        min-height: 453px;
-      }
-      @media #{$bootstrap-sm} {
-        width: 430px;
-        min-height: 453px;
-      }
+      left: 0;
+      right: 0;
+      margin: 0 auto;
     }
   }
   .modal-content {
-    background-color: white;
     border: 3px solid #ffc27c;
     border-radius: 5px;
     box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
@@ -1085,50 +1161,98 @@
       background-color: #126b6e;
       position: relative;
       border-radius: 3px 3px 0 0;
-      padding: 32px 0 36px 62px;
+      padding: 30px 0 30px 62px;
+
+      @media #{$bootstrap-nano} {
+        padding-left: 0;
+      }
       .modal-title {
         color: white;
         font-family: $gotham-pro-bold;
-        font-size: 1.5em;
+        font-size: 1.7em;
+        line-height: 30px;
+        @media #{$bootstrap-nano} {
+          width: 90%;
+          text-align: center;
+          margin: 0 auto;
+        }
       }
       .option-back {
         position: absolute;
-        cursor: pointer;
         left: 0;
         top: -68px;
-        color: white;
-        font-size: 0.875em;
-        line-height: 27px;
+        cursor: pointer;
         font-family: $gotham-pro-regular;
+        font-size: 1em;
+        line-height: 27px;
         text-decoration: underline;
+        color: white;
+
+        @media #{$bootstrap-xs} {
+          left: 20px;
+          top: -165px;
+          color: #ff6000;
+        }
+        @media #{$bootstrap-nano} {
+          left: 0;
+          right: 0;
+          top: -210px;
+          text-align: center;
+        }
       }
       .pic-size {
         width: 180px;
         position: absolute;
-        top: -88px;
-        right: 450px;
-        padding: 18px 10px;
+        top: -83px;
+        right: 400px;
+        font-family: $gotham-pro-bold;
+        font-size: 1.75em;
+        line-height: 58px;
         text-align: center;
         border: 1px solid #ddd;
         border-radius: 5px;
         color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.5em;
+
+        @media #{$bootstrap-sm} {
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+        @media #{$bootstrap-xs} {
+          right: 22px;
+          top: -174px;
+        }
+        @media #{$bootstrap-nano} {
+          right: 0;
+          left: 0;
+          margin: 0 auto;
+        }
       }
       .price-sum {
+        width: 217px;
         position: absolute;
-        top: -88px;
-        right: 0;
-        padding: 4px 22px;
+        top: -85px;
+        right: -2px;
+        font-family: $gotham-pro-regular;
+        font-size: 1.7em;
+        line-height: 62px;
         border: 1px solid #ddd;
         border-radius: 5px;
         color: white;
-        font-family: $gotham-pro-regular;
-        font-size: 1.5em;
+
+        @media #{$bootstrap-xs} {
+          width: 240px;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          text-align: center;
+          color: #212121;
+          background-color: white;
+        }
         .price {
           color: #df3b3e;
           font-family: $gotham-pro-bold;
-          font-size: 1.875em;
+          font-size: 1.35em;
           vertical-align: middle;
         }
         .rub {
@@ -1139,22 +1263,33 @@
       }
     }
     .modal-body {
-      padding: 60px 0 54px;
+      padding: 67px 72px 50px 50px;
       text-align: center;
       border-radius: 5px;
       box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
+      @media #{$bootstrap-sm} {
+        padding-left: 70px;
+        padding-right: 45px;
+      }
+      @media #{$bootstrap-xs} {
+        padding: 40px 13px 54px;
+      }
       .pic-type {
-        width: 290px;
+        width: 280px;
         height: 320px;
         text-align: center;
         display: inline-block;
+
+        @media #{$bootstrap-xs} {
+          width: 49%;
+          height: auto;
+        }
         &:nth-child(2) .price-type {
           color: #ff3a13;
         }
         &:hover {
-          padding: 0 15px;
           outline: 3px solid #ffc27c;
-          border-radius: 2px;
           box-shadow: 0 7px 34.8px 5.2px rgba(0, 0, 0, 0.1);
         }
         .type-img {
@@ -1163,17 +1298,31 @@
           position: relative;
         }
         .type-title {
-          padding: 20px 0 15px;
-          color: #141313;
           font-family: $gotham-pro-regular;
           font-size: 1em;
-          line-height: 27px;
+          line-height: 58px;
+          color: #141313;
+
+          @media #{$bootstrap-xs} {
+            font-size: 0.9em;
+          }
+          @media #{$bootstrap-nano} {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 0.95em;
+            line-height: 24px;
+          }
         }
         .img-hover-block {
           width: 240px;
           height: 192px;
           display: inline-block;
           position: relative;
+
+          @media #{$bootstrap-xs} {
+            width: 90%;
+            height: auto;
+          }
         }
         .img-hover-block:hover .hover-bg,
         .img-hover-block:hover .hover-lypa {
@@ -1205,85 +1354,122 @@
           }
         }
         .price-type {
-          padding: 23px 0;
           color: #f47c47;
           font-family: $gotham-pro-bold;
-          font-size: 1.5em;
-          line-height: 34px;
+          font-size: 1.7em;
+          line-height: 60px;
+
+          @media #{$bootstrap-nano} {
+            font-size: 1.4em;
+            line-height: 44px;
+          }
         }
       }
-      .button-type {
-        width: 300px;
-        margin: 50px 40px 0;
-        height: 70px;
-        background-color: #df3b3e;
-        border-bottom: 3px solid #d12f32;
-        border-radius: 5px;
-        color: white;
-        font-family: $gotham-pro-bold;
-        font-size: 1.125em;
-        line-height: 27px;
-      }
-      .option-no {
-        color: #ff6000;
-        cursor: pointer;
-        font-family: $gotham-pro-regular;
-        font-size: 1.125em;
-        line-height: 27px;
-        text-decoration: underline;
+      .links-block {
+        @media #{$bootstrap-xs} {
+          display: inline-block;
+        }
+        .button-type {
+          width: 300px;
+          float: left;
+          margin: 42px 27px 0 10%;
+          font-family: $gotham-pro-bold;
+          font-size: 1.3em;
+          line-height: 70px;
+          border-bottom: 3px solid #d12f32;
+          border-radius: 5px;
+          background-color: #df3b3e;
+          color: white;
+
+          @media #{$bootstrap-xs} {
+            max-width: 240px;
+            float: left;
+            margin: 60px 25px 0 10px;
+
+          }
+          @media #{$bootstrap-nano} {
+            float: none;
+            margin: 20px auto 10px;
+            display: block;
+          }
+        }
+        .option-no {
+          float: left;
+          margin-top: 64px;
+          color: #ff6000;
+          cursor: pointer;
+          font-family: $gotham-pro-regular;
+          font-size: 1.15em;
+          text-decoration: underline;
+
+          @media #{$bootstrap-sm} {
+            width: 39%;
+          }
+          @media #{$bootstrap-xs} {
+            float: left;
+            width: 38%;
+            margin-top: 75px;
+          }
+          @media #{$bootstrap-nano} {
+            width: 75%;
+            margin: 0 auto;
+            float: none;
+          }
+        }
       }
     }
   }
 }
+
 #pop-date {
+
   .modal-dialog {
+    width: 100%;
+    max-width: 561px;
+    margin: 0;
     position: absolute;
     left: calc(50% - 274px);
     top: 12vh;
-    width: 561px;
+
     @media #{$bootstrap-xs} {
-      width: 90%;
-      min-height: 453px;
-      margin-left: -45%;
-      top: 10vh;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
     }
     @media #{$bootstrap-sm} {
-      top: 50%;
-      width: 430px;
-      min-height: 453px;
-      margin-top: -226.5px;
-      margin-left: -215px;
-    }
-    .modal-content {
-      border-radius: 6px;
-      background-color: #ffffff;
-      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
-
-      @media #{$bootstrap-xs} {
-        width: 100%;
-        min-height: 453px;
-      }
-      @media #{$bootstrap-sm} {
-        width: 430px;
-        min-height: 453px;
-      }
+      left: 0;
+      right: 0;
+      margin: 0 auto;
     }
   }
   .modal-content {
-    background-color: white;
     border: 3px solid #ffc27c;
     border-radius: 5px;
     box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
     .modal-header {
       background-color: #126b6e;
-      border-radius: 3px 3px 0 0;
+      border: none;
       padding: 28px 0 27px 58px;
+
+      @media #{$bootstrap-xs} {
+        padding-left: 0;
+      }
       .modal-title {
         width: 60%;
         color: white;
         font-family: $gotham-pro-bold;
-        font-size: 1.5em;
-        line-height: 27px;
+        font-size: 1.7em;
+        line-height: 30px;
+
+        @media #{$bootstrap-xs} {
+          width: 90%;
+          margin: 0 auto;
+          text-align: center;
+        }
+        @media #{$bootstrap-nano} {
+          font-size: 1.2em;
+        }
       }
     }
     .modal-body {
@@ -1291,11 +1477,19 @@
       text-align: center;
       border-radius: 5px;
       box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
+      @media #{$bootstrap-nano} {
+        padding: 15px;
+      }
       section .datepicker-title {
         padding-bottom: 42px;
         color: #444749;
         font-family: $gotham-pro-regular;
         font-size: 1.285em;
+
+        @media #{$bootstrap-nano} {
+          font-size: 1em;
+        }
       }
 
       section article .single {
@@ -1310,18 +1504,20 @@
             width: 100%;
             height: 100%;
             nav {
-             height: 34px;
+             height: 20px;
              .pmu-prev,
              .pmu-next {
                width: 24px;
                height: 30px;
+               position: relative;
+               top: -18px;
              }
             .pmu-month {
               width: 85%;
               color: black;
               font-family: $gotham-pro-bold;
-              font-size: .875em;
-              line-height: 30px;
+              font-size: 1.15em;
+              line-height: 0;
               text-transform: uppercase;
             }
             }
@@ -1383,56 +1579,46 @@
         border-radius: 5px;
         color: white;
         font-family: $gotham-pro-bold;
-        font-size: 1.125em;
+        font-size: 1.3em;
         line-height: 70px;
       }
     }
   }
 }
 #pop-stock {
+
   .modal-dialog {
+    width: 100%;
+    max-width: 900px;
     position: absolute;
-    padding-right: 0!important;
     left: calc(50% - 400px);
     top: 8vh;
-    width: 900px;
+
+    @media #{$bootstrap-sm} {
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
     @media #{$bootstrap-xs} {
-      width: 90%;
-      min-height: 453px;
-      margin-left: -45%;
-      top: 10vh;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
     }
     @media #{$bootstrap-sm} {
-      top: 50%;
-      width: 430px;
-      min-height: 453px;
-      margin-top: -226.5px;
-      margin-left: -215px;
-    }
-    .modal-content {
-      border-radius: 6px;
-      background-color: #ffffff;
-      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.6);
-
-      @media #{$bootstrap-xs} {
-        width: 100%;
-        min-height: 453px;
-      }
-      @media #{$bootstrap-sm} {
-        width: 430px;
-        min-height: 453px;
-      }
+      left: 0;
+      right: 0;
+      margin: 0 auto;
     }
   }
   .modal-content {
-    background-color: white;
     border: 3px solid #ffc27c;
     border-radius: 5px;
     box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
+
     .modal-header {
+      height: 90px;
       background-color: #126b6e;
-      border-radius: 3px 3px 0 0;
-      padding: 29px 0 29px 60px;
+
       .option-back {
         position: absolute;
         cursor: pointer;
@@ -1482,61 +1668,54 @@
       .stock-img {
         position: absolute;
         top: 0;
+        left: 62px;
       }
       .modal-title {
-        padding-left: 100px;
-        color: white;
+        padding-left: 150px;
         font-family: $gotham-pro-bold;
-        font-size: 1.5em;
-        font-weight: 700;
-        line-height: 27px;
+        font-size: 1.7em;
+        line-height: 60px;
+        color: white;
       }
     }
     .modal-body {
-      padding: 55px 90px 62px 58px;
-      border-radius: 5px;
+      padding: 45px 85px 44px 60px;
       box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
       background: url("/img/popups/limit-edition.png") right bottom no-repeat;
+
       .stock-left-block {
-        display: inline-block;
-        width: 305px;
         font-family: $gotham-pro-regular;
+
         .stock-content {
+          font-size: 1.57em;
+          line-height: 35px;
           color: #0d7477;
-          font-size: 1.375em;
-          line-height: 34px;
         }
         .stock-info {
-          color: #636363;
-          margin-top: 36px;
-          margin-bottom: 82px;
-          font-size: 1em;
+          margin: 36px 0 82px;
+          font-size: 1.15em;
           line-height: 24px;
+          color: #636363;
         }
         .button-stock {
-          width: 300px;
-          background-color: #df3b3e;
+          width: 100%;
+          max-width: 300px;
+          font-family: $gotham-pro-bold;
+          font-size: 1.3em;
+          line-height: 70px;
           border-bottom: 3px solid #d12f32;
           border-radius: 5px;
+          background-color: #df3b3e;
           color: white;
-          font-family: $gotham-pro-bold;
-          font-size: 1.125em;
-          line-height: 70px;
         }
         .option-no {
           color: #ff6000;
-          padding-top: 35px;
-          text-align: center;
+          padding: 25px 0 0 63px;
           cursor: pointer;
-          font-family: $gotham-pro-regular;
-          font-size: 1.125em;
+          font-size: 1.15em;
           line-height: 27px;
           text-decoration: underline;
         }
-      }
-      .pic-size {
-        float: right;
-        width: 310px;
       }
       .price-size {
         float: left;
