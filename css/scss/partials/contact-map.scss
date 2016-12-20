@@ -1,20 +1,22 @@
 .contact {
-  padding: 50px 0 61px;
+  padding: 0 0 61px;
   .yandex-map {
     margin-top: 20px;
     margin-bottom: 60px;
   }
   .questions {
+    padding-left: 20px;
     text-transform: uppercase;
     color: #181818;
     font-family: $museo-sans-regular;
-    font-size: 2.25em;
+    font-size: 2.8em;
     line-height: 27px;
   }
   .questions-link {
+    padding-left: 40px;
     color: #3097c5;
     font-family: $museo-sans-regular;
-    font-size: 1.5em;
+    font-size: 1.7em;
     line-height: 27px;
     text-decoration: underline;
   }

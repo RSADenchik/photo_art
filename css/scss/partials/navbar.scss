@@ -1,34 +1,38 @@
-.navigation {
+.nav {
   height: 55px;
   background-color: #2d7274;
+   .fix-relative {
+     position: relative;
+     @media #{$bootstrap-xl} { right: 37px; }
+   }
   .nav-list {
-    margin: 0;
-    padding: 0;
     text-align: center;
+    padding: 0;
     .list-item {
       display: inline-block;
-      margin-right: -4px;
+      margin-right: -3px;
       &:last-child .list-item-link {
         border: none;
+        padding: 17px 24px;
       }
       .list-item-link {
-        padding: 17px 35px;
+        padding: 17px 37px;
         text-decoration: none;
         display: block;
         border-right: 1px solid rgba(255, 255, 255, 0.63);
         color: white;
         font-family: $museo-sans-regular;
-        font-size: 1em;
+        font-size: 1.2em;
         line-height: 20px;
         &:hover {
           background-color: #de393d;
+        }
+        @media #{$bootstrap-md} {
+          padding: 17px 13px;
         }
       }
     }
   }
 }
-@media #{$bootstrap-md} {
-  .navigation .nav-list .list-item .list-item-link {
-    padding: 17px 24px;
-  }
-}
+
+

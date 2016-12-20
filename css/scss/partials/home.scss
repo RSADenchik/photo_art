@@ -1,56 +1,68 @@
  .home {
    width: 100%;
    background: url('/img/home-bg-main.png') center top no-repeat;
-    .home-image {
-      background: url('/img/home2pic.png') 87% 16% no-repeat;
+   background-position-y: -55px;
+   background-position-x: -17px;
+
+   .home-image {
+      background: url('/img/home2pic.png') 86% 12% no-repeat;
     }
+
     .home-content {
       margin-top: 70px;
+
       .home-title {
-        padding-top: 31px;
+        padding-top: 25px;
         font-family: $museo-sans-black;
-        font-size: 1.875em;
+        font-size: 2.4em;
         text-transform: uppercase;
-        font-weight: bold;
-        line-height: 44px;
+        line-height: 41px;
+
         .days {
+          margin-left: -9px;
           background-color: #ffa947;
           color: white;
           white-space: pre-wrap;
         }
       }
+
       .home-description {
+        width: 90%;
+        padding-top: 26px;
         color: #5a5a5a;
         font-family: $gotham-pro-regular;
         font-size: 1.1875em;
-        font-weight: 400;
         line-height: 27px;
       }
+
       .perfect-img {
         position: relative;
         left: -47px;
-        top: 75px;
       }
     }
     .upload-block {
+      max-width: 462px;
+      padding-bottom: 49px;
+      margin-top: 278px;
       position: relative;
-      padding-bottom: 55px;
-      margin-top: 290px;
+      left: -11px;
       background-color: #126b6e;
       border: 2px dashed #ffa947;
       border-radius: 5px;
       box-shadow: 1.8px 14.9px 43.7px 10.3px rgba(0, 0, 0, 0.1);
+
       .round-block {
+        width: 106px;
+        height: 106px;
+        margin: 0 auto;
         position: absolute;
         left: 0;
         right: 0;
         top: -50px;
-        width: 106px;
-        height: 106px;
         background-color: #085457;
         border: 2px dashed #ffa947;
         border-radius: 50%;
-        margin: 0 auto;
+
       }
       .round-img {
         display: block;
@@ -59,27 +71,27 @@
       }
       .upload-content {
         margin-top: 80px;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         text-align: center;
-        color: white;
         font-family: $gotham-pro-regular;
-        font-size: 18px;
-        font-weight: 400;
+        font-size: 1.25em;
         line-height: 27px;
+        color: white;
       }
       .upload-bottom {
         width: 300px;
-        height: 76px;
         display: block;
         margin: 0 auto;
-        color: white;
         font-family: $gotham-pro-bold;
-        background-color: #de393d;
+        text-transform: uppercase;
+        font-size: 1.4em;
+        line-height: 57px;
         border: none;
         border-radius: 5px;
-        text-transform: uppercase;
-        box-shadow: 0 0 28.5px 3.5px rgba(0, 0, 0, 0.18);
         border-bottom: 3px solid #d12f32;
+        box-shadow: 0 0 28.5px 3.5px rgba(0, 0, 0, 0.18);
+        color: white;
+        background-color: #de393d;
         &:active, &:hover {
           opacity: 0.8;
         }

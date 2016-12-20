@@ -1,15 +1,21 @@
 .pic-property {
-  padding: 80px 0 106px;
-  background: rgba(244, 244, 244, 0.49) url('/img/pic-property-bg.png') center center no-repeat;
-  background-position-y: -20px;
+  padding: 98px 0 106px;
+  background: url(/img/pic-property-bg.png) top center no-repeat;
+  background-color: rgba(244,244,244,.49);
 
+  .prop-img {
+    position: absolute;
+    left: -41px;
+    right: 0;
+    top: 147px;
+    margin: 0 auto;
+  }
   .prop-option-1, .prop-option-2,
   .prop-option-3, .prop-option-4 {
     font-family: $gotham-pro-regular;
     .option-title {
       color: #1e2020;
-      font-size: 1.125em;
-      font-weight: 700;
+      font-size: 1.3em;
       line-height: 24px;
     }
     .line-big {
@@ -18,43 +24,46 @@
       background-color: #ffa947;
     }
     .option-info {
-      padding-top: 13px;
+      padding-top: 10px;
       color: #3d3d3d;
-      font-size: 0.875em;
-      font-weight: 400;
+      font-size: 1em;
       line-height: 21px;
     }
   }
   .prop-option-1 {
-    margin-top: 60px;
-    padding-left: 0;
+    max-width: 300px;
+    margin-top: 52px;
+    padding-left: 70px;
+    padding-right: 0;
   }
   .prop-option-2 {
-    margin-top: 60px;
-    padding-left: 50px;
+    margin-top: 51px;
+    padding-left: 30px;
+    .option-title { line-height: 24px; }
   }
   .prop-option-3 {
-    padding-left: 23px;
-    margin-top: 103px;
+    padding-left: 5px;
+    padding-right: 0;
+    margin-top: 106px;
   }
   .prop-option-4 {
-    margin-top: 90px;
-    padding-left: 75px;
+    margin-top: 98px;
+    padding-left: 54px;
   }
   .prop-button {
-    margin: 133px auto 0;
-    width: 420px;
+    width: 100%;
+    max-width: 415px;
+    margin: 133px 31% 0;
     display: block;
-    color: white;
-    height: 70px;
-    background-image: linear-gradient(to top, #e84246 0%, #d12f32 100%);
-    border-radius: 5px;
-    border-bottom: 3px solid #d12f32;
     font-family: $gotham-pro-bold;
     text-transform: uppercase;
-    font-size: 1.125em;
-    font-weight: 700;
-    line-height: 27px;
+    font-size: 1.4em;
+    line-height: 70px;
+    border-radius: 5px;
+    border-bottom: 3px solid #d12f32;
+    color: white;
+    background-image: linear-gradient(to top, #e84246 0%, #d12f32 100%);
+
     &:active, &:hover {
       opacity: 0.8;
     }

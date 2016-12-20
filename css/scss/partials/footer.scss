@@ -12,12 +12,12 @@
         padding: 10px 0 0 20px;
         margin: 0;
         float: left;
-        font-size: 1em;
+        font-size: 1.15em;
         line-height: 21px;
       }
     }
     .copyright-block {
-      padding-left: 70px;
+      padding-left: 63px;
       margin-top: 37px;
       .adress-img {
         float: left;
@@ -26,28 +26,30 @@
         padding-left: 15px;
         margin: 0;
         float: left;
-        font-size: 0.875em;
+        font-size: 1em;
         line-height: 20px;
       }
     }
     .contact-block {
       text-align: right;
+      margin-top: 5px;
+      padding-right: 45px;
       .contact-title {
         margin-top: 20px;
-        font-size: 1em;
+        font-size: 1.2em;
         line-height: 27px;
       }
       .contact-target {
-        font-size: 1.5em;
+        font-size: 1.8em;
         font-weight: bold;
         line-height: 27px;
       }
       .contact-footer {
-        font-size: 1.125em;
+        font-size: 1.4em;
         font-weight: bold;
         line-height: 27px;
         img:last-child {
-          padding: 0 5px;
+          padding: 0 3px;
         }
       }
     }
