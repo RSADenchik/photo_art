@@ -1,24 +1,83 @@
 .header {
-  height: 130px;
+  height: 102px;
   font-family: $museo-sans-regular;
   color: #343333;
   background-color: #f1f5f8;
+
+  @media #{$bootstrap-xs} { height: 230px; }
+
   .logo-block {
-    margin-top: 34px;
+    margin-top: 20px;
+
+    @media #{$bootstrap-md} { padding-left: 15px; }
+    @media #{$bootstrap-xs} {
+      padding: 0;
+      margin-top: 30px;
+      text-align: center;
+    }
+
     .logo-img {
       float: left;
+      @media #{$bootstrap-xs} {
+        float: none;
+        position: relative;
+        left: 10px;
+      }
     }
+
+    // Mobile navbar
+    .m-toggle {
+      position: absolute;
+      left: 23px;
+      top: 8px;
+
+      &:hover, &:focus {
+        background: transparent;
+      }
+      .icon-bar {
+        background: #da0c31;
+        margin-top: 8px;
+      }
+    }
+    .contact-mobile {
+      font-size: 1.5em;
+      font-weight: bold;
+      line-height: 27px;
+    }
+    .contact-mobile-2 {
+      font-size: 1.125em;
+      font-weight: bold;
+      line-height: 27px;
+    }
+    .whatsapp-mobile {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 20px 20px 0 0;
+    }
+    // End mobile navbar
+
     .logo-title {
       padding: 10px 0 0 20px;
       margin: 0;
       float: left;
       font-size: 1.15em;
       line-height: 21px;
+
+      @media #{$bootstrap-xs} {
+        padding: 6px 0 14px;
+        float: none;
+        font-size: 1.2em;
+      }
     }
   }
+
   .adress-block {
-    padding-left: 37px;
-    margin-top: 37px;
+    padding-left: 50px;
+    margin-top: 22px;
+
+    @media #{$bootstrap-md} { padding: 0; }
+
     .adress-img {
       float: left;
     }
@@ -30,12 +89,15 @@
       line-height: 20px;
     }
   }
+
   .contact-block {
     text-align: right;
-    padding-right: 42px;
+    padding-right: 10px;
     font-family: $museo-sans-bold;
+
+    @media #{$bootstrap-md} {  padding: 0 5px 0 0; }
+
     .contact-title {
-      margin-top: 20px;
       font-family: $museo-sans-regular;
       font-size: 1.15em;
       line-height: 27px;
@@ -53,70 +115,5 @@
     }
   }
 }
-@media #{$bootstrap-md} {
-  .header .logo-block {
-    padding-left: 15px;
-  }
-  .header .adress-block {
-    padding: 0;
-  }
-.header .contact-block {
-  padding: 0;
-  padding-right: 14px;
-  }
-}
-@media #{$bootstrap-xs} {
-  .header {
-    height: 230px;
-    .m-navbar {
-      background: transparent;
-      .m-toggle {
-        position: absolute;
-        margin: 20px 0 0 35px;
-        float: left;
-        border: none;
-        background: transparent;
-        &:hover, &:focus {
-          background: transparent;
-        }
-        .icon-bar {
-          background: #da0c31;
-          margin-top: 8px;
-        }
-      }
-    }
-    .art-collapse {
-      width: 60%;
-      margin: 0 auto;
-      border: none;
-    }
-    .logo-block {
-      padding: 0;
-      margin-top: 30px;
-      text-align: center;
-      .logo-img {
-        float: none;
-      }
-      .whatsapp-mobile {
-        position: absolute;
-        right: 0;
-        top: 0;
-        margin: 20px 20px 0 0;
-      }
-      .logo-title {
-        padding: 10px 0 17px;
-        float: none;
-      }
-      .contact-mobile {
-        font-size: 1.5em;
-        font-weight: bold;
-        line-height: 27px;
-      }
-      .contact-mobile-2 {
-        font-size: 1.125em;
-        font-weight: bold;
-        line-height: 27px;
-      }
-    }
-  }
-}
+
+

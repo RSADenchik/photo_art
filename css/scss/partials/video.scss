@@ -1,34 +1,26 @@
 .video {
-  padding-top: 8px;
-  padding-bottom: 165px;
-  background: url('/img/video-left-hand.png') -1% 76% no-repeat;
-  .youtube-block {
-    text-align: center;
-    margin: 41px auto 0;
-  }
-}
-@media #{$bootstrap-xs} {
-  .video {
+  padding: 8px 0 40px;
+  background: url('/img/video-left-hand.png') left 75% no-repeat;
+
+  @media #{$bootstrap-xs} {
+    padding: 125px 0 148px;
     background-size: 50%;
     background-position: left bottom;
-    .title {
-      width: 75%;
-      margin: 0 auto;
-      font-size: 1.5em;
-      padding-bottom: 35px;
-      text-align: center;
-      line-height: 34px;
-    }
-    .line {
-      margin: 0 auto;
-    }
-    .description {
-      width: 65%;
-      margin: 0 auto;
-      padding-top: 30px;
-      font-size: 1.125em;
-      line-height: 27px;
-      text-align: center;
-    }
+
+    .title { max-width: 380px; }
+    .description {  max-width: 300px; padding-top: 18px; }
+  }
+  .youtube-block {
+    margin-top: 20px;
+    position: relative;
+    left: 172px;
+  }
+  .youtube-block-mobile {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    left: 0;
+    top: 0;
   }
 }
+

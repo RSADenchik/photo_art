@@ -1,13 +1,25 @@
 .benefits {
-  margin-top: -105px;
-  padding: 135px 0 146px;
+  margin-top: -114px;
+  padding: 142px 0 146px;
   background-color: whitesmoke;
-  background: url('/img/paints.png') -1% bottom no-repeat,
-              url('/img/baget.png') 99% top no-repeat;
+  background: url('/img/paints.png') left bottom no-repeat, url('/img/baget.png') right 7% no-repeat;
 
-  .row-padding {
-    margin-top: 40px;
-    margin-left: -1px;
+  @media #{$bootstrap-md} {
+    margin: 0;
+    padding: 50px 0 146px;
+    background-position: -1% bottom, 108% -2%;
+  }
+  @media #{$bootstrap-xs} {
+    margin-top: 0;
+    padding: 60px 0 65px;
+    background-color: #f1f1f1;
+    background: url('/img/mobile/baget-mobile.png') top right no-repeat, url('/img/mobile/paint-mobile.png') bottom left no-repeat;
+  }
+
+  .margin-top {
+    margin-top: 30px;
+
+    @media #{$bootstrap-xs} { margin-top: 17px; }
 
     .benefits-card:nth-child(even) {
       background-color: #fafafa;
@@ -15,13 +27,23 @@
     .benefits-card:nth-child(odd) {
       background-color: #f3f3f3;
     }
+    .benefits-card:nth-child(2) {
+      padding-left: 55px;
+      @media #{$bootstrap-nano} { padding-left: 15px; }
+    }
     .benefits-card:nth-child(3) {
       padding: 60px 10px 27px 39px;
+      @media #{$bootstrap-nano} { padding-left: 15px; }
     }
     .benefits-card:nth-child(6) {
       padding: 53px 10px 27px 22px;
+
+      @media #{$bootstrap-md} { padding: 53px 5px; }
+      @media #{$bootstrap-nano} { padding-left: 15px; }
       .card-icon {
         padding: 6px 15px 120px 0;
+
+        @media #{$bootstrap-md} { padding: 6px 10px 120px 0; }
       }
     }
     .benefits-card::after {
@@ -35,9 +57,16 @@
       border-right: 124px solid transparent;
     }
     .benefits-card {
-      width: 380px;
+      max-width: 380px;
       height: 280px;
       padding: 57px 10px 27px 51px;
+
+      @media #{$bootstrap-xs} {
+        margin: 0 auto 30px;
+        box-shadow: 0 26px 33.1px 4.9px rgba(0, 0, 0, 0.08);
+      }
+      @media #{$bootstrap-nano} { padding-left: 15px; }
+
       .card-icon {
         padding: 0 15px 120px 0;
         float: left;
@@ -47,6 +76,9 @@
         font-size: 1.8em;
         line-height: 32px;
         color: #302e2e;
+
+        @media #{$bootstrap-md} { font-size: 1.6em; }
+        @media #{$bootstrap-nano} { font-size: 1.2em; }
       }
       .card-description {
         padding-top: 8px;
@@ -55,49 +87,14 @@
         font-size: 1.15em;
         line-height: 25px;
         color: #4d4d4d;
-      }
-    }
-  }
-}
 
-@media #{$bootstrap-xs} {
-  .benefits {
-    padding: 60px 0 65px;
-    background-color: #f1f1f1;
-    background: url('/img/mobile/baget-mobile.png') top right no-repeat, url('/img/mobile/paint-mobile.png') bottom left no-repeat;
-    .container-mobile {
-      padding-left: 12.75%;
-      padding-right: 12.75%;
-      .title {
-        width: 75%;
-        margin: 0 auto;
-        font-size: 1.5em;
-        padding-bottom: 35px;
-        text-align: center;
-        line-height: 34px;
-      }
-      .line {
-        margin: 0 auto;
-      }
-      .description {
-        width: 65%;
-        margin: 0 auto;
-        padding-top: 30px;
-        font-size: 1.125em;
-        line-height: 27px;
-        text-align: center;
-      }
-      .row-padding {
-        padding-top: 50px;
-        .benefits-card {
-          margin-bottom: 35px;
-          box-shadow: 0 26px 33.1px 4.9px rgba(0, 0, 0, 0.08);
-        }
+        @media #{$bootstrap-md} { font-size: 1em; }
+        @media #{$bootstrap-nano} { font-size: 1em; }
       }
     }
   }
 }
-@media (min-width: 315px) and (max-width: 465px) {
+@media #{$bootstrap-nano} {
   .benefits .container-mobile .row-padding .benefits-card {
     padding-left: 10px;
     padding-right: 10px;

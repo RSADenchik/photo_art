@@ -1,55 +1,120 @@
  .home {
    width: 100%;
-   background: url('/img/home-bg-main.png') center top no-repeat;
-   background-position-y: -55px;
-   background-position-x: -17px;
+   background: url('/img/home-bg-main.png') center center no-repeat;
+   background-position-y: -125px;
+   @media #{$bootstrap-xs} {
+     padding: 64px 0 86px;
+     background: url(/img/mobile/home-pic-mobile.png) top right no-repeat,
+     url(/img/mobile/home-left-img.png) bottom left no-repeat,
+     url(/img/mobile/home-bg-mobile.png) center top no-repeat;
+     background-position-y: -36px, 29%, -22%;
+     background-size: 75px 133px, 23% 22%, 100% 56%;
+   }
 
    .home-image {
-      background: url('/img/home2pic.png') 86% 12% no-repeat;
-    }
+     background: url(/img/home-center-pic.png) 64% -32% no-repeat;
+     @media #{$bootstrap-md} { background-size: 26%; }
+     @media #{$bootstrap-xs} { background: none; }
+   }
 
-    .home-content {
-      margin-top: 70px;
+   .home-content {
+     margin-top: 30px;
+     @media #{$bootstrap-md} { padding: 0 15px; }
+     @media #{$bootstrap-xs} { margin: 0;  padding: 0; }
 
-      .home-title {
-        padding-top: 25px;
-        font-family: $museo-sans-black;
-        font-size: 2.4em;
-        text-transform: uppercase;
-        line-height: 41px;
+     .home-title {
+       padding-top: 25px;
+       font-family: $museo-sans-black;
+       font-size: 2.4em;
+       text-transform: uppercase;
+       line-height: 41px;
 
-        .days {
-          margin-left: -9px;
-          background-color: #ffa947;
-          color: white;
-          white-space: pre-wrap;
-        }
+       @media #{$bootstrap-xs} {
+         font-size: 1.85em;
+         line-height: 34px;
+         text-align: center;
+       }
+       @media #{$bootstrap-nano} {  font-size: 1.5em; }
+
+       .days {
+         margin-left: -9px;
+         background-color: #ffa947;
+         color: white;
+         white-space: pre-wrap;
+         @media #{$bootstrap-xs} {
+           padding: 5px;
+           margin-left: -2px;
+           margin-right: -12px;
+         }
+       }
+     }
+
+     .home-description {
+       width: 90%;
+       padding-top: 26px;
+       color: #5a5a5a;
+       font-family: $gotham-pro-regular;
+       font-size: 1.1875em;
+       line-height: 27px;
+
+       @media #{$bootstrap-xs} {
+         max-width: 350px;
+         padding-top: 23px;
+         text-align: center;
+         margin: 0 auto;
+         font-size: 1.15em;
+         line-height: 24px;
+       }
+     }
+
+     .perfect-img {
+       width: 103%;
+       position: relative;
+       top: 5px;
+       left: -34px;
+
+       @media #{$bootstrap-md} { width: 100%; left: -28px; }
+       @media #{$bootstrap-sm} { top: 25px; }
+       @media #{$bootstrap-xs} {
+         width: 77%;
+         margin: 0 auto;
+         display: block;
+         left: 0;
+         top: 20px;
+       }
+     }
+   }
+   .right-home-pic {
+     position: absolute;
+     top: 156px;
+     z-index: 1;
+     right: 96px;
+
+     @media #{$bootstrap-lg} { right: 0; }
+     @media #{$bootstrap-md} { right: -10px;  }
+   }
+
+   .upload-block {
+     max-width: 462px;
+     padding-bottom: 45px;
+     margin-top: 120px;
+     position: relative;
+     left: 6px;
+     background-color: #126b6e;
+     border: 2px dashed #ffa947;
+     border-radius: 5px;
+     box-shadow: 1.8px 14.9px 43.7px 10.3px rgba(0, 0, 0, 0.1);
+     z-index: 2;
+
+      @media #{$bootstrap-md} { left: -13px; top: -40px; }
+      @media #{$bootstrap-sm} { margin-top: 70px; }
+      @media #{$bootstrap-xs} {
+        width: 100%;
+        max-width: 440px;
+        left: calc(50% - 218px);
+        margin-top: 75px;
       }
-
-      .home-description {
-        width: 90%;
-        padding-top: 26px;
-        color: #5a5a5a;
-        font-family: $gotham-pro-regular;
-        font-size: 1.1875em;
-        line-height: 27px;
-      }
-
-      .perfect-img {
-        position: relative;
-        left: -47px;
-      }
-    }
-    .upload-block {
-      max-width: 462px;
-      padding-bottom: 49px;
-      margin-top: 278px;
-      position: relative;
-      left: -11px;
-      background-color: #126b6e;
-      border: 2px dashed #ffa947;
-      border-radius: 5px;
-      box-shadow: 1.8px 14.9px 43.7px 10.3px rgba(0, 0, 0, 0.1);
+      @media #{$bootstrap-nano} { left: 0; }
 
       .round-block {
         width: 106px;
@@ -70,97 +135,30 @@
         padding-top: 25px;
       }
       .upload-content {
-        margin-top: 80px;
-        margin-bottom: 12px;
+        margin: 75px 0 10px;
         text-align: center;
         font-family: $gotham-pro-regular;
         font-size: 1.25em;
         line-height: 27px;
         color: white;
-      }
-      .upload-bottom {
-        width: 300px;
-        display: block;
-        margin: 0 auto;
-        font-family: $gotham-pro-bold;
-        text-transform: uppercase;
-        font-size: 1.4em;
-        line-height: 57px;
-        border: none;
-        border-radius: 5px;
-        border-bottom: 3px solid #d12f32;
-        box-shadow: 0 0 28.5px 3.5px rgba(0, 0, 0, 0.18);
-        color: white;
-        background-color: #de393d;
-        &:active, &:hover {
-          opacity: 0.8;
+
+        @media #{$bootstrap-xs} {
+          margin-bottom: 0;
+          font-size: 1.15em;
+          line-height: 26px;
         }
+        @media #{$bootstrap-nano} { font-size: 0.95em; }
+      }
+      .btn-global {
+        max-width: 300px;
+        line-height: 60px;
+
+        @media #{$bootstrap-xs} { margin-top: 20px; }
+
         .button-cloud {
           margin-right: 11px;
         }
       }
-    }
- }
- @media #{$bootstrap-md} {
-   .home {
-     .upload-block {
-       padding-left: 10px;
-       padding-right: 10px;
-     }
    }
  }
-@media #{$bootstrap-xs} {
- .home {
-   padding: 60px 0 86px;
-   background: url(/img/mobile/home-pic-mobile.png) top right no-repeat, url(/img/mobile/home-left-img.png) bottom left no-repeat, url(/img/mobile/home-bg-mobile.png) center top no-repeat;
-   //background-position-y: -75px, 38px;
-   background-position-y: -38px, 32%, -14%;
-   background-size: 75px 133px, 25% 20%, 100% 55%;
-   .home-image {
-    background: none;
-     .home-content {
-       margin: 0;
-       padding: 0;
-       .line {
-         margin: 0 auto;
-       }
-       .home-title {
-         font-size: 1.5em;
-         line-height: 34px;
-         text-align: center;
-         .days {
-           padding: 8px;
-         }
-       }
-       .home-description {
-         max-width: 350px;
-         padding-top: 20px;
-         text-align: center;
-         margin: 0 auto;
-         font-size: 1em;
-         line-height: 24px;
-       }
-       .perfect-img {
-         width: 77%;
-         margin: 0 auto;
-         display: block;
-         left: 0;
-         top: 14px;
-       }
-     }
-     .upload-block {
-       width: 90%;
-       left: 5%;
-       margin-top: 90px;
-       .upload-content {
-         font-size: 1em;
-         line-height: 24px;
-       }
-       .upload-bottom {
-         width: 90%;
-         max-width: 300px;
-       }
-     }
-   }
- }
-}
+

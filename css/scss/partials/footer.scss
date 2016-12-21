@@ -3,88 +3,90 @@
     font-family: $museo-sans-regular;
     color: #343333;
     background-color: #f1f5f8;
-    .logo-block {
-      margin-top: 34px;
-      .logo-img {
-        float: left;
-      }
-      .logo-title {
-        padding: 10px 0 0 20px;
-        margin: 0;
-        float: left;
-        font-size: 1.15em;
-        line-height: 21px;
-      }
-    }
-    .copyright-block {
-      padding-left: 63px;
-      margin-top: 37px;
-      .adress-img {
-        float: left;
-      }
-      .copyright-target {
-        padding-left: 15px;
-        margin: 0;
-        float: left;
-        font-size: 1em;
-        line-height: 20px;
-      }
-    }
-    .contact-block {
-      text-align: right;
-      margin-top: 5px;
-      padding-right: 45px;
-      .contact-title {
-        margin-top: 20px;
-        font-size: 1.2em;
-        line-height: 27px;
-      }
-      .contact-target {
-        font-size: 1.8em;
-        font-weight: bold;
-        line-height: 27px;
-      }
-      .contact-footer {
-        font-size: 1.4em;
-        font-weight: bold;
-        line-height: 27px;
-        img:last-child {
-          padding: 0 3px;
-        }
-      }
-    }
-}
-@media #{$bootstrap-xs} {
-  .footer {
-    height: 415px;
-    .logo-block {
+
+    @media #{$bootstrap-xs} { height: 415px; }
+
+  .logo-block {
+    margin-top: 30px;
+
+    @media #{$bootstrap-xs} {
       margin: 0 auto;
       padding: 25px;
       text-align: center;
       border-bottom: 1px solid rgba(130, 141, 145, 0.54);
-      .logo-img {
-        float: none;
-      }
-      .logo-title {
-        float: none;
-        padding-left: 0;
-      }
     }
-    .contact-block {
-      text-align: center;
-      padding: 25px 0 30px;
-      border-bottom: 1px solid rgba(130,141,145,.54);
-      .contact-title {
-        margin-top: 0;
-      }
+
+    .logo-img {
+      float: left;
+
+      @media #{$bootstrap-xs} { float: none; }
     }
-    .copyright-block {
+    .logo-title {
+      padding: 10px 0 0 20px;
+      margin: 0;
+      float: left;
+      font-size: 1.15em;
+      line-height: 21px;
+
+      @media #{$bootstrap-xs} { float: none; padding: 5px 0 0 0; }
+    }
+  }
+
+  .copyright-block {
+    padding-left: 70px;
+    margin-top: 30px;
+
+    @media #{$bootstrap-xs} {
       text-align: center;
-      padding: 25px 0 26px;
+      padding: 20px 0 26px;
       margin: 0 auto;
-      .copyright-target {
-        float: none;
-        padding-left: 0;
+    }
+
+    .adress-img {
+      float: left;
+    }
+
+    .copyright-target {
+      padding-left: 15px;
+      margin: 0;
+      float: left;
+      font-size: 1em;
+      line-height: 20px;
+
+      @media #{$bootstrap-xs} { float: none; padding-left: 0; }
+    }
+  }
+  .contact-block {
+    text-align: right;
+    padding-right: 20px;
+
+    @media #{$bootstrap-md} { padding-right: 0; }
+    @media #{$bootstrap-xs} {
+      text-align: center;
+      padding: 14px 3px 30px 0;
+      border-bottom: 1px solid rgba(130,141,145,.54);
+    }
+
+    .contact-title {
+      margin-top: 20px;
+      font-size: 1.2em;
+      line-height: 27px;
+
+      @media #{$bootstrap-xs} { margin-top: 0; }
+    }
+    .contact-target {
+      font-size: 1.8em;
+      font-weight: bold;
+      line-height: 27px;
+    }
+    .contact-footer {
+      font-size: 1.4em;
+      font-weight: bold;
+      line-height: 27px;
+
+      @media #{$bootstrap-xs} { padding-right: 58px; }
+      img:last-child {
+        padding: 0 9px 0 3px;
       }
     }
   }

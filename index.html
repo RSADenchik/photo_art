@@ -9,43 +9,43 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/pickmeup.css" rel="stylesheet" type="text/css">
-     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link href="css/lightbox.css" rel="stylesheet" type="text/css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
  </head>
  <body>
      <header class="header">
-         <div class="container fix-padding">
+         <div class="container">
              <div class="row">
+
+                    <!-- Logo block -->
+
                  <div class="logo-block col-xs-12 col-md-5">
-                     <nav class="navbar-default m-navbar visible-xs">
-                         <button type="button" class="navbar-toggle collapsed m-toggle visible-xs" data-toggle="collapse" data-target="#menu-list" aria-expanded="false">
-                             <span class="sr-only">Toggle navigation</span>
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                             <span class="icon-bar"></span>
-                         </button>
-                         <div class="collapse navbar-collapse art-collapse" id="menu-list">
-                             <ul class="nav navbar-nav float-sm-fix">
-                                 <li class="list-m-items"><a href="#">Наши работы</a></li>
-                                 <li class="list-m-items"><a href="#">Из чего состоит картина на холсте</a></li >
-                                 <li class="list-m-items"><a href="#">Идеи для печати</a></li>
-                                 <li class="list-m-items"><a href="#">Видео о производстве</a></li>
-                                 <li class="list-m-items"><a href="#">Каталог коллажей</a></li>
-                             </ul>
-                         </div>
-                     </nav>
+
+                     <!-- Mobile navbar -->
+
+                     <button type="button" class="navbar-toggle collapsed m-toggle visible-xs visible-sm">
+                         <span class="sr-only">Toggle navigation</span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                     </button>
+
+                     <!-- End Mobile navbar -->
+
                      <img class="logo-img" src="img/logo.png" alt="">
-                     <img class="whatsapp-mobile visible-xs" src="/img/mobile/whatsapp-mobile.png" alt="">
+                     <img class="whatsapp-mobile visible-xs visible-sm" src="/img/mobile/whatsapp-mobile.png" alt="">
                      <p class="logo-title">Печать фото на холсте с <br> доставкой по Москве и МО.</p>
-                     <span class="contact-mobile visible-xs">+7 (495) 745-43-53</span>
-                     <span class="contact-mobile-2 visible-xs">+7 (916) 969-60-10</span>
+
+                     <span class="contact-mobile visible-xs visible-sm">+7 (495) 745-43-53</span>
+                     <span class="contact-mobile-2 visible-xs visible-sm">+7 (916) 969-60-10</span>
                  </div>
-                 <div class="adress-block hidden-xs col-md-4">
+                 <div class="adress-block hidden-xs hidden-sm col-md-4">
                      <img class="adress-img" src="img/adress-img.png" alt="">
                      <p class="adress-target"><b>Адрес шоу рума:</b>
                          <br>м Фрунзенская, выставка "Стройэкспо" <br>наб. д. 30 пав. 3А место 12
                      </p>
                  </div>
-                 <div class="contact-block hidden-xs col-md-3">
+                 <div class="contact-block hidden-xs hidden-sm col-md-3">
                      <h4 class="contact-title">Есть вопросы? Звоните:</h4>
                      <span class="contact-target">+7 (495) 745-43-53</span>
                      <h4 class="contact-footer"><img src="img/whatsapp-icon.png" alt=""> <img src="img/viber-icon.png" alt=""> +7 (916) 969-60-10</h4>
@@ -53,10 +53,13 @@
              </div>
          </div>
      </header>
-     <nav class="nav hidden-xs">
+
+        <!-- Navbar -->
+
+     <nav class="nav hidden-xs hidden-sm">
          <div class="container-fluid">
              <div class="row">
-                 <div class="col-xs-12 fix-padding fix-relative">
+                 <div class="col-xs-12 fix-relative fix-padding">
                      <ul class="nav-list">
                          <li class="list-item"><a class="list-item-link" href="#">Наши работы</a></li>
                          <li class="list-item"><a class="list-item-link" href="#">Из чего состоит картина на холсте</a></li>
@@ -68,27 +71,35 @@
              </div>
          </div>
      </nav>
+
+        <!-- end navbar -->
+
+        <!-- home block -->
+
      <div class="home home-mobile">
          <div class="container home-image">
              <div class="row">
-                 <div class="home-content col-xs-12 col-md-6 fix-padding">
+                 <div class="home-content col-xs-12 col-md-6">
                      <div class="line"></div>
                      <h2 class="home-title">ПЕЧАТЬ НА ХОЛСТЕ по<br> фото клиента ЗА <span class="days"> 3 ДНЯ </span></h2>
                      <p class="home-description">Красивая картина на холсте — идеальный подарок на любой праздник</p>
                      <img class="perfect-img" src="/img/perfect-img.png" alt="">
                  </div>
-                 <div class="upload-block col-xs-12 col-md-5 col-md-offset-1 fix-padding">
+                 <div class="upload-block col-xs-12 col-md-5 col-md-offset-1">
                      <div class="round-block"><img class="round-img" src="img/round-photo.png" alt=""></div>
                      <p class="upload-content">Загрузите фотографию (или несколько) <br>
                          и получите бесплатный макет <br>будущей картины через 3 часа
                      </p>
-                     <button class="btn btn-primary btn-lg upload-bottom" type="button" data-toggle="modal" data-target="#pop-email"><img class="button-cloud" src="img/button-cloud-img.png" alt="">загрузить фото</button>
+                     <button class="btn btn-primary btn-lg btn-global" type="button" data-toggle="modal" data-target="#pop-email"><img class="button-cloud" src="img/button-cloud-img.png" alt="">загрузить фото</button>
                  </div>
+                 <img class="right-home-pic hidden-xs hidden-sm" src="img/home-right-pic.png" alt="">
              </div>
          </div>
      </div>
+            <!-- end home block -->
+
      <div class="benefits">
-         <div class="container container-mobile fix-padding">
+         <div class="container">
              <div class="row">
                  <div class="col-xs-12">
                     <h2 class="title">Почему стоит заказать фото на холсте у нас?</h2>
@@ -96,41 +107,43 @@
                      <p class="description">Наши преимущества и отличия от конкурентов</p>
                  </div>
              </div>
-             <div class="row row-padding">
-                 <div class="benefits-card col-md-4">
-                     <img class="card-icon" src="img/benefits-icon/card.png" alt="">
-                     <h4 class="card-title">9 лет</h4>
-                     <p class="card-description">Занимаемся печатью <br> фото на холсте</p>
-                 </div>
-                 <div class="benefits-card col-md-4">
-                     <img class="card-icon" src="img/benefits-icon/medal.png" alt="">
-                     <h4 class="card-title">5 лет</h4>
-                     <p class="card-description">Гарантия на картины.<br>Бесплатно переделаем,<br>если что-то случиться</p>
-                 </div>
-                 <div class="benefits-card col-md-4">
-                     <img class="card-icon" src="img/benefits-icon/forest.png" alt="">
-                     <h4 class="card-title">Натуральные материалы</h4>
-                     <p class="card-description">Натуральный холст<br> из Германии, без запаха.<br> Подрамник из сосны.<br> Пигментные чернила</p>
-                 </div>
-                 <div class="benefits-card col-md-4">
-                     <img class="card-icon" src="img/benefits-icon/changing-money.png" alt="">
-                     <h4 class="card-title">Вернем деньги</h4>
-                     <p class="card-description">Если картина вам<br> не понравится</p>
-                 </div>
-                 <div class="benefits-card col-md-4">
-                     <img class="card-icon" src="img/benefits-icon/picture.png" alt="">
-                     <h4 class="card-title">3640</h4>
-                     <p class="card-description">Довольных клиентов.<br> Только три раз <br> переделывали заказ<br> (переформулировать)</p>
-                 </div>
-                 <div class="benefits-card col-md-4">
-                     <img class="card-icon" src="img/benefits-icon/painter.png" alt="">
-                     <h4 class="card-title">Профессиональные <br> художники</h4>
-                     <p class="card-description">Закончили Институт <br> искусств, Строгановку <br> и Суриковское училище</p>
+             <div class="row">
+                 <div class="col-xs-12 margin-top">
+                     <div class="benefits-card col-md-4">
+                         <img class="card-icon" src="img/benefits-icon/card.png" alt="">
+                         <h4 class="card-title">9 лет</h4>
+                         <p class="card-description">Занимаемся печатью <br> фото на холсте</p>
+                     </div>
+                     <div class="benefits-card col-md-4">
+                         <img class="card-icon" src="img/benefits-icon/medal.png" alt="">
+                         <h4 class="card-title">5 лет</h4>
+                         <p class="card-description">Гарантия на картины.<br>Бесплатно переделаем,<br>если что-то случиться</p>
+                     </div>
+                     <div class="benefits-card col-md-4">
+                         <img class="card-icon" src="img/benefits-icon/forest.png" alt="">
+                         <h4 class="card-title">Натуральные материалы</h4>
+                         <p class="card-description">Натуральный холст<br> из Германии, без запаха.<br> Подрамник из сосны.<br> Пигментные чернила</p>
+                     </div>
+                     <div class="benefits-card col-md-4">
+                         <img class="card-icon" src="img/benefits-icon/changing-money.png" alt="">
+                         <h4 class="card-title">Вернем деньги</h4>
+                         <p class="card-description">Если картина вам<br> не понравится</p>
+                     </div>
+                     <div class="benefits-card col-md-4">
+                         <img class="card-icon" src="img/benefits-icon/picture.png" alt="">
+                         <h4 class="card-title">3640</h4>
+                         <p class="card-description">Довольных клиентов.<br> Только три раз <br> переделывали заказ<br> (переформулировать)</p>
+                     </div>
+                     <div class="benefits-card col-md-4">
+                         <img class="card-icon" src="img/benefits-icon/painter.png" alt="">
+                         <h4 class="card-title">Профессиональные <br> художники</h4>
+                         <p class="card-description">Закончили Институт <br> искусств, Строгановку <br> и Суриковское училище</p>
+                     </div>
                  </div>
              </div>
          </div>
      </div>
-     <div class="gallery fix-padding">
+     <div class="gallery">
          <div class="container">
              <div class="row">
                  <div class="col-xs-12">
@@ -140,12 +153,12 @@
                  </div>
              </div>
              <div class="row">
-                 <div class="col-xs-12 fix-padding">
+                 <div class="col-xs-12">
                      <div class="flex-container">
                          <div class="flex-column">
                              <div class="gallery-item">
-                                <img class="gallery-img" src="img/gallery/first-image.png" alt="">
-                                <div class="image-block-hover"></div>
+                                 <img class="gallery-img" src="img/gallery/first-image.png" alt="">
+                                 <div class="image-block-hover"></div>
                              </div>
                              <div class="gallery-item">
                                  <img class="gallery-img" src="img/gallery/2-women.png" alt="">
@@ -201,24 +214,22 @@
                      </div>
                  </div>
              </div>
-             <button class="gallery-button">ХОЧУ ТАКЖЕ</button>
+             <button class="btn-global">ХОЧУ ТАКЖЕ</button>
          </div>
      </div>
      <div class="pic-property">
-         <div class="container fix-padding">
+         <div class="container">
              <div class="row">
                  <div class="col-xs-12">
                      <h2 class="title">Из чего состоит картина на холсте</h2>
                      <div class="line"></div>
                      <p class="description">На примере работы маслом</p>
                      <div class="row">
-                         <img class="prop-img" src="/img/prop-img.png" alt="">
                          <div class="prop-option-1 col-xs-6 col-md-3">
                              <h4 class="option-title">Холст</h4>
                              <div class="line-big"></div>
                              <p class="option-info">Экологически чистый холст <br> без запаха. Покрыт грунтовкой <br> с лицевой стороны.</p>
                          </div>
-
                          <div class="prop-option-2 col-xs-6 col-md-4 col-md-offset-5">
                              <h4 class="option-title">Подрамник</h4>
                              <div class="line-big"></div>
@@ -226,19 +237,21 @@
                                  Крепеж -- <br> стальной тросик, выдержит любую <br> картину.
                              </p>
                          </div>
-                         <div class="col-xs-12 visible-xs">
-                             <img class="pic-mobile" src="/img/mobile/2pic-mobile.png" alt="">
+                     </div>
+                     <div class="row">
+                         <div class="col-xs-12">
+                             <img class="prop-img" src="/img/prop-img.png" alt="">
                          </div>
-
-                         <div class="prop-option-3 col-xs-6 col-md-3 col-md-offset-1">
+                     </div>
+                     <div class="row">
+                         <div class="prop-option-3 col-xs-6 col-md-4">
                              <h4 class="option-title">Печать изображения</h4>
                              <div class="line-big"></div>
                              <p class="option-info">Печать на принтере таком-то <br> в таком-то разрешении пигментными <br> красками.
                                  Все картины покрываем <br> защитным лаком.
                              </p>
                          </div>
-
-                         <div class="prop-option-4 col-xs-6 col-md-4 col-md-offset-4">
+                         <div class="prop-option-4 col-xs-5 col-md-4 col-md-offset-4">
                              <h4 class="option-title">Рамка (багет)</h4>
                              <div class="line-big"></div>
                              <p class="option-info">Пластиковый багет из Литвы. Не меняет <br> форму из-за температуры и влажности. <br>
@@ -246,13 +259,13 @@
                              </p>
                          </div>
                      </div>
-                     <button class="prop-button">ЗАКАЗАТЬ КАРТИНУ НА ХОЛСТЕ</button>
+                     <button class="btn-global">ЗАКАЗАТЬ КАРТИНУ НА ХОЛСТЕ</button>
                  </div>
              </div>
          </div>
      </div>
      <div class="examples">
-         <div class="container fix-padding">
+         <div class="container">
              <div class="row">
                  <div class="col-xs-12">
                      <h2 class="title">Что можно напечатать на холсте?</h2>
@@ -265,61 +278,61 @@
                      <h4 class="example-title">Портрет по фото</h4>
                      <p class="example-description">Подберем подходящие <br> образы <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-1.png" alt="">
-                     <button class="example-button">Заказать</button>
+                     <button class="btn-global">Заказать</button>
                  </div>
                  <div class="example-block col-xs-12 col-md-4">
                      <h4 class="example-title">Фотоколлаж</h4>
                      <p class="example-description">Много фотографий на одной <br> картине <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-2.png" alt="">
-                     <button class="example-button">Заказать</button>
+                     <button class="btn-global">Заказать</button>
                  </div>
                  <div class="example-block col-xs-12 col-md-4">
                      <h4 class="example-title">Печать в стиле Поп-Арт</h4>
                      <p class="example-description">Модный подарок <br><a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-3.png" alt="">
-                     <button class="example-button">Заказать</button>
+                     <button class="btn-global">Заказать</button>
                  </div>
                  <div class="example-block col-xs-12 col-md-4">
                      <h4 class="example-title">Репродукция картин</h4>
                      <p class="example-description">Напечатаем картину <br> любого автора <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-4.png" alt="">
-                     <button class="example-button">Заказать</button>
+                     <button class="btn-global">Заказать</button>
                  </div>
                  <div class="example-block col-xs-12 col-md-4">
                      <h4 class="example-title">Модульные картины</h4>
                      <p class="example-description">Картина из нескольких <br> частей <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-5.png" alt="">
-                     <button class="example-button">Заказать</button>
+                     <button class="btn-global">Заказать</button>
                  </div>
                  <div class="example-block col-xs-12 col-md-4">
                      <h4 class="example-title">Композиция из фото</h4>
                      <p class="example-description">Несколько фото на отдельных <br> холстах <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-6.png" alt="">
-                     <button class="example-button">Заказать</button>
+                     <button class="btn-global">Заказать</button>
                  </div>
                  <div class="example-block col-xs-12 col-md-4">
                      <h4 class="example-title">Репродукция картин</h4>
                      <p class="example-description">Напечатаем картину <br> любого автора <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-4.png" alt="">
-                     <button class="example-button">Заказать</button>
+                     <button class="btn-global">Заказать</button>
                  </div>
                  <div class="example-block col-xs-12 col-md-4">
                      <h4 class="example-title">Модульные картины</h4>
                      <p class="example-description">Картина из нескольких <br> частей <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-5.png" alt="">
-                     <button class="example-button">Заказать</button>
+                     <button class="btn-global">Заказать</button>
                  </div>
                  <div class="example-block col-xs-12 col-md-4">
                      <h4 class="example-title">Композиция из фото</h4>
                      <p class="example-description">Несколько фото на отдельных <br> холстах <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-6.png" alt="">
-                     <button class="example-button">Заказать</button>
+                     <button class="btn-global">Заказать</button>
                  </div>
              </div>
          </div>
      </div>
      <div class="video">
-         <div class="container fix-padding">
+         <div class="container">
              <div class="row">
                  <div class="col-xs-12">
                      <h2 class="title">Посмотрите видео с нашего производства</h2>
@@ -329,14 +342,17 @@
              </div>
              <div class="row">
                  <div class="col-xs-12">
-                     <div class="youtube-block">
-                         <iframe width="90%" height="315" src="https://www.youtube.com/embed/4KJpXriYC9A" frameborder="0" allowfullscreen></iframe>
+                     <!--<div class="youtube-block">-->
+                         <!--<iframe width="68%" height="440" src="https://www.youtube.com/embed/4KJpXriYC9A" frameborder="5" allowfullscreen></iframe>-->
+                     <!--</div>-->
+                     <div class="youtube-block visible xs visible-sm">
+                         <iframe width="90%" height="440" src="https://www.youtube.com/embed/4KJpXriYC9A" frameborder="5" allowfullscreen></iframe>
                      </div>
                  </div>
              </div>
          </div>
      </div>
-     <div class="contact fix-padding">
+     <div class="contact">
          <div class="container">
              <div class="row">
                  <div class="col-xs-12">
@@ -349,24 +365,24 @@
          <div class="yandex-map" id="map" style="width: 100%; height: 658px"></div>
          <div class="container">
              <div class="row">
-                 <div class="questions col-xs-12 col-md-6 text-center">Остались вопросы?</div>
-                 <div class="col-xs-12 col-md-4 col-md-offset-1 text-center"><a class="questions-link" href="#">Задать вопрос дизайнеру</a></div>
+                 <div class="questions col-xs-12 col-md-7 text-center">Остались вопросы?</div>
+                 <div class="col-xs-12 col-md-5"><a class="questions-link" href="#">Задать вопрос дизайнеру</a></div>
              </div>
          </div>
      </div>
      <footer class="footer">
-         <div class="container fix-padding">
+         <div class="container">
              <div class="row">
-                 <div class="logo-block col-xs-12 col-md-4">
+                 <div class="logo-block col-xs-12 col-md-5 col-lg-4">
                      <img class="logo-img" src="img/logo.png" alt="">
                      <p class="logo-title">Печать фото на холсте с <br> доставкой по Москве и МО.</p>
                  </div>
-                 <div class="contact-block col-xs-12 col-md-push-5 col-md-3 fix-padding">
+                 <div class="contact-block col-xs-12 col-md-push-4 col-md-3 col-lg-push-5 fix-padding">
                      <h4 class="contact-title">Есть вопросы? Звоните:</h4>
                      <span class="contact-target">+7 (495) 745-43-53</span>
                      <h4 class="contact-footer"><img src="img/whatsapp-icon.png" alt=""> <img src="img/viber-icon.png" alt=""> +7 (916) 969-60-10</h4>
                  </div>
-                 <div class="copyright-block col-xs-12 col-md-pull-2 col-md-4 fix-padding">
+                 <div class="copyright-block col-xs-12 col-md-pull-3 col-md-4 col-lg-pull-2 fix-padding">
                      <p class="copyright-target">ИП Сердюков Дмитрий Андреевич <br>
                          ИНН: 12312123123 <br>
                          ОГРНИП: 2131231231215</p>
@@ -763,11 +779,11 @@
                      <p class="prepay-info">При возникновении любых вопросов, звоните: <br><span class="us-number">+7 (495) 745-43-53</span></p>
                      <p class="prepay-info">Адрес пункта самовывоза: Фрунзенская наб. д. 30 пав. 3А место 12</p>
                      <img class="found-us" src="/img/popups/location.png" alt="">
-                     </div>
                  </div>
              </div>
          </div>
      </div>
+
 
 
      <!-- payment popup -->
@@ -790,10 +806,13 @@
              </div>
          </div>
      </div>
-
      <script src="js/jquery-2.0.0.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/pickmeup.js"></script>
+     <script src="js/main.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/pickmeup.js"></script>
+     <script src="js/slick.js"></script>
+     <script src="js/lightbox.js"></script>
+
+
  </body>
 </html>

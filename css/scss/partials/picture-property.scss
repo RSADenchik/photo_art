@@ -1,22 +1,55 @@
 .pic-property {
-  padding: 98px 0 106px;
+  padding: 88px 0 100px;
   background: url(/img/pic-property-bg.png) top center no-repeat;
   background-color: rgba(244,244,244,.49);
 
+  @media #{$bootstrap-xs} {
+    padding: 70px 0 63px;
+    background-size: cover;
+
+    .title {
+      max-width: 305px;
+      padding-bottom: 22px;
+    }
+  }
+
   .prop-img {
-    position: absolute;
-    left: -41px;
-    right: 0;
-    top: 147px;
     margin: 0 auto;
+    position: absolute;
+    left: -15px;
+    right: 0;
+    top: -135px;
+
+    @media #{$bootstrap-md} { width: 44%; left: -60px; }
+    @media #{$bootstrap-xs} {
+      width: 100%;
+      max-width: 388px;
+      left: 48px;
+      top: 3px;
+      right: 50px;
+    }
+    @media #{$bootstrap-nano} { max-width: 300px; left: -3px; right: 0; }
   }
   .prop-option-1, .prop-option-2,
   .prop-option-3, .prop-option-4 {
     font-family: $gotham-pro-regular;
+
+    @media #{$bootstrap-xs} {
+      .option-info br {
+        content: "";
+      }
+    }
+
     .option-title {
       color: #1e2020;
       font-size: 1.3em;
       line-height: 24px;
+
+      @media #{$bootstrap-xs} {
+        font-family: $gotham-pro-bold;
+        font-size: 1em;
+      }
+      @media #{$bootstrap-nano} { font-size: 0.9em; }
     }
     .line-big {
       width: 95px;
@@ -28,126 +61,55 @@
       color: #3d3d3d;
       font-size: 1em;
       line-height: 21px;
+      @media #{$bootstrap-nano} { font-size: 0.85em; }
     }
   }
   .prop-option-1 {
-    max-width: 300px;
-    margin-top: 52px;
-    padding-left: 70px;
+    margin-top: 48px;
+    padding-left: 65px;
     padding-right: 0;
+
+    @media #{$bootstrap-md} { padding-left: 15px; }
+    @media #{$bootstrap-xs} { padding: 0 0 0 20px; margin: 0; }
+    @media #{$bootstrap-nano} { margin-top: 27px; }
   }
   .prop-option-2 {
-    margin-top: 51px;
-    padding-left: 30px;
+    margin-top: 43px;
+    padding-left: 48px;
+
+    @media #{$bootstrap-md} { margin-top: 47px; padding-left: 18px; }
+    @media #{$bootstrap-xs} { margin: 0; padding: 0 0 0 20px; }
     .option-title { line-height: 24px; }
   }
   .prop-option-3 {
-    padding-left: 5px;
+    padding-left: 100px;
     padding-right: 0;
-    margin-top: 106px;
+    margin-top: 108px;
+
+    @media #{$bootstrap-md} { margin-top: 65px; padding-left: 15px; }
+    @media #{$bootstrap-xs} { padding-left: 20px; margin-top: 327px; }
+    @media #{$bootstrap-nano} { margin-top: 240px; }
   }
   .prop-option-4 {
-    margin-top: 98px;
-    padding-left: 54px;
+    margin-top: 100px;
+    padding-left: 75px;
+
+    @media #{$bootstrap-md} { margin-top: 52px; padding: 0 0 0 30px; }
+    @media #{$bootstrap-xs} { margin: 335px 0 0; padding: 0 12px 0 11px; }
+    @media #{$bootstrap-nano} { margin-top: 243px; padding: 0;}
   }
-  .prop-button {
-    width: 100%;
+  .btn-global {
     max-width: 415px;
-    margin: 133px 31% 0;
-    display: block;
-    font-family: $gotham-pro-bold;
-    text-transform: uppercase;
-    font-size: 1.4em;
-    line-height: 70px;
-    border-radius: 5px;
-    border-bottom: 3px solid #d12f32;
-    color: white;
+    margin-top: 133px;
     background-image: linear-gradient(to top, #e84246 0%, #d12f32 100%);
 
-    &:active, &:hover {
-      opacity: 0.8;
-    }
-  }
-}
-@media #{$bootstrap-md} {
-  .pic-property {
-    .prop-option-1 {
-      margin-left: 0;
-      padding-right: 0;
-      padding-left: 15px;
-    }
-    .prop-option-3 {
-      margin-left: 0;
-    }
-  }
-}
-@media #{$bootstrap-xs} {
-  .pic-property {
-    background: none;
-    padding: 60px 0 63px 0;
-    .title {
-      width: 60%;
-      margin: 0 auto;
-      font-size: 1.5em;
-      padding-bottom: 35px;
-      text-align: center;
-      line-height: 34px;
-    }
-    .line {
-      margin: 0 auto;
-    }
-    .description {
-      width: 65%;
-      margin: 0 auto;
-      padding-top: 30px;
-      padding-bottom: 40px;
-      font-size: 1.125em;
-      line-height: 27px;
-      text-align: center;
-    }
-    .prop-option-1, .prop-option-2,
-    .prop-option-3, .prop-option-4 {
-      .option-title {
-        font-family: $gotham-pro-bold;
-        font-size: 0.875em;
-      }
-      .option-info br {
-        content: "";
-      }
-    }
-    .prop-option-1 {
-      margin: 0;
-      padding-left: 20px;
-      .option-info {
-        width: 90%;
-      }
-
-    }
-    .prop-option-2 {
-      margin: 0;
-      padding-left: 15px;
-      padding-right: 21px;
-    }
-    .pic-mobile {
-    width: 95%;
-  }
-    .prop-option-3 {
-      padding-left: 19px;
-      margin-top: 36px;
-      .option-info {
-        width: 90%;
-      }
-    }
-    .prop-option-4 {
-      margin-top: 42px;
-      padding-right: 20px;
-      padding-left: 15px;
-    }
-    .prop-button {
-      width: 70%;
+    @media #{$bootstrap-xs} {
       max-width: 380px;
       margin-top: 45px;
+      font-size: 1.25em;
     }
+    @media #{$bootstrap-nano} { line-height: 40px; max-width: 300px; }
   }
 }
+
 

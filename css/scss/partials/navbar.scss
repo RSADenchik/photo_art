@@ -3,7 +3,8 @@
   background-color: #2d7274;
    .fix-relative {
      position: relative;
-     @media #{$bootstrap-xl} { right: 37px; }
+     @media #{$bootstrap-xl} { right: 18px; }
+     @media #{$bootstrap-md} { padding: 0; }
    }
   .nav-list {
     text-align: center;
@@ -25,7 +26,7 @@
         font-size: 1.2em;
         line-height: 20px;
         &:hover {
-          background-color: #de393d;
+          background-color: $color-red;
         }
         @media #{$bootstrap-md} {
           padding: 17px 13px;

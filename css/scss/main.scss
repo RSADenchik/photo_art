@@ -148,33 +148,86 @@ $montserrat-regular: "Montserrat-Regular";
 
   /* Global colors    */
 
+$color-red: #de393d;
 
 
+// Title block
+.title {
+  color: #2a2a2a;
+  font-family: $museo-sans-black;
+  font-size: 2.6em;
+  line-height: 42px;
+
+  @media #{$bootstrap-md} { font-size: 2.2em; }
+  @media #{$bootstrap-xs} {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1.75em;
+    padding-bottom: 34px;
+    text-align: center;
+    line-height: 31px;
+  }
+  @media #{$bootstrap-nano} { font-size: 1.3em; width: 90%; }
+}
 
 // Orange line
 .line {
   width: 80px;
   height: 2px;
   background-color: #ffa947;
-}
-// Title block
-.title {
-  padding-bottom: 15px;
-  color: #2a2a2a;
-  font-family: $museo-sans-black;
-  font-size: 2.6em;
-  line-height: 46px;
+  position: relative;
+  top: 15px;
+
+  @media #{$bootstrap-xs} {
+    margin: 0 auto;
+    position: relative;
+    top: -4px;
+  }
 }
 
 // Description block
 .description {
-  padding-top: 10px;
+  padding-top: 30px;
   color: #343c3b;
   font-family: $gotham-pro-regular;
   font-size: 1.7em;
-  line-height: 44px;
+  line-height: 48px;
+
+  @media #{$bootstrap-md} { font-size: 1.5em; }
+  @media #{$bootstrap-xs} {
+    width: 70%;
+    padding: 25px 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 27px;
+  }
+  @media #{$bootstrap-nano} { font-size: 1.1em; width: 80%; }
 }
 
+// button global
+
+.btn-global {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  font-family: $gotham-pro-bold;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  line-height: 70px;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 3px solid #d12f32;
+  box-shadow: 0 0 28.5px 3.5px rgba(0, 0, 0, 0.18);
+  color: white;
+  background-color: #de393d;
+
+  &:hover {
+    background-color: #de393d;
+    opacity: 0.8;
+  }
+  @media #{$bootstrap-nano} { font-size: 1.1em; }
+}
 
   /* Partials project */
 @import "partials/popups";

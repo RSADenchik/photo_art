@@ -1,97 +1,77 @@
 .examples {
-  padding-top: 78px;
-  background: url('/img/example-right-img.png') 99% 57% no-repeat;
+  padding-top: 90px;
+  background: url('/img/example-right-img.png') 100% 101% no-repeat;
+
+  @media #{$bootstrap-xs} {
+    background-size: 36%;
+    padding-top: 53px;
+
+    .description {
+      padding: 10px 0;
+      width: 100%;
+    }
+    .title {
+      max-width: 310px;
+      padding-bottom: 35px;
+      line-height: 31px;
+    }
+  }
 
   .add-row-padding {
-    padding-top: 36px;
+    padding-top: 30px;
+
+    @media #{$bootstrap-xs} { padding-top: 25px; }
   }
   .example-block {
     padding-bottom: 52px;
+
+    @media #{$bootstrap-md} { text-align: center; }
+    @media #{$bootstrap-xs} { text-align: center; padding-bottom: 25px; }
+
     .example-title {
       color: #343c3b;
       font-family: $museo-sans-bold;
       font-size: 1.7em;
       line-height: 44px;
+      @media #{$bootstrap-nano} { font-size: 1.5em; }
     }
     .example-description {
       color: #343c3b;
       font-family: $gotham-pro-regular;
       font-size: 1.25em;
       line-height: 30px;
+
+      @media #{$bootstrap-md} { font-size: 1.2em; }
+      @media #{$bootstrap-nano} { font-size: 1.15em; }
+
       .example-link {
         color: #3097c5;
       }
     }
     .example-img {
-      margin-top: 30px;
-      margin-left: 10px;
-      width: 308px;
-      height: 331px;
+      width: 100%;
+      max-width: 330px;
+      height: 330px;
+      margin: 30px 0 0 15px;
       border: 10px solid white;
       outline: 10px solid #926752;
+
+      @media #{$bootstrap-md} { margin-left: 0;}
+      @media #{$bootstrap-xs} {
+        width: 310px;
+        height: 330px;
+        margin: 22px auto 0;
+      }
+      @media #{$bootstrap-nano} { width: 100%; }
     }
-    .example-button {
-      width: 100%;
+    .btn-global {
       max-width: 230px;
       margin: 45px auto 0;
       font-family: $gotham-pro-regular;
-      font-size: 1.4em;
-      text-transform: uppercase;
-      line-height: 63px;
-      border-radius: 5px;
-      border-bottom: 3px solid #d12f32;
       box-shadow: 0 0 27.5px 3.5px rgba(0, 0, 0, 0.43);
       background-image: linear-gradient(to top, #e84246 0%, #d12f32 100%);
-      color: white;
 
-      &:active, &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
-}
-@media #{$bootstrap-xs} {
-  .examples {
-    background-size: 30%;
-    background-position: bottom right;
-    padding-top: 60px;
-    .title {
-      width: 55%;
-      margin: 0 auto;
-      font-size: 1.5em;
-      padding-bottom: 35px;
-      text-align: center;
-      line-height: 34px;
-    }
-    .line {
-      margin: 0 auto;
-    }
-    .description {
-      width: 75%;
-      margin: 0 auto;
-      padding-top: 30px;
-      padding-bottom: 40px;
-      font-size: 1.125em;
-      line-height: 27px;
-      text-align: center;
-    }
-    .add-row-padding {
-      padding-top: 0;
-    }
-    .example-block {
-      text-align: center;
-      padding-bottom: 25px;
-      .example-title {
-        font-size: 1.125em;
-      }
-      .example-img {
-        width: 290px;
-        display: block;
-        margin: 30px auto 0;
-      }
-      .example-button {
-        margin: 45px auto;
-      }
+      @media #{$bootstrap-xs} {  margin: 29px auto;}
     }
   }
 }
