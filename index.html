@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="en">
  <head>
-    <meta charset="UTF-8">
-    <title>Photo Art</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <link href="css/pickmeup.css" rel="stylesheet" type="text/css">
-    <link href="css/lightbox.css" rel="stylesheet" type="text/css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width initial-scale=1">
+     <title>PhotoArt</title>
+     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+     <link href="css/main.css" rel="stylesheet" type="text/css">
+     <link href="css/pickmeup.css" rel="stylesheet" type="text/css">
+     <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+     <link href="css/pushy.css" rel="stylesheet" type="text/css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
  </head>
- <body>
+ <body class="landing">
+
+
      <header class="header">
          <div class="container">
              <div class="row">
@@ -23,12 +25,32 @@
 
                      <!-- Mobile navbar -->
 
-                     <button type="button" class="navbar-toggle collapsed m-toggle visible-xs visible-sm">
-                         <span class="sr-only">Toggle navigation</span>
-                         <span class="icon-bar"></span>
-                         <span class="icon-bar"></span>
-                         <span class="icon-bar"></span>
-                     </button>
+                     <!-- Pushy Menu -->
+                     <nav class="pushy pushy-left hidden-md hidden-lg">
+                         <ul>
+                             <li class="pushy-link"><a href="#" class="page-scroll">Наши работы</a></li>
+                             <li class="pushy-link"><a href="#" class="page-scroll">Из чего состоит картина</a></li>
+                             <li class="pushy-link"><a href="#" class="page-scroll">Идеи для печати</a></li>
+                             <li class="pushy-link"><a href="#" class="page-scroll">Видео о производстве</a></li>
+                             <li class="pushy-link"><a href="#catalog" class="page-scroll">Каталог коллажей</a></li>
+                         </ul>
+                     </nav>
+
+                     <!-- Site Overlay -->
+                     <div class="site-overlay"></div>
+
+                     <!-- Your Content -->
+                     <div id="container" class="mobile-nav hidden-lg hidden-md">
+                         <!-- Menu Button -->
+                         <div class="menu-btn">
+                             <button type="button" class="navbar-toggle collapsed m-toggle visible-xs visible-sm">
+                                 <span class="sr-only">Toggle navigation</span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                             </button>
+                         </div>
+                     </div>
 
                      <!-- End Mobile navbar -->
 
@@ -85,12 +107,14 @@
                      <p class="home-description">Красивая картина на холсте — идеальный подарок на любой праздник</p>
                      <img class="perfect-img" src="/img/perfect-img.png" alt="">
                  </div>
-                 <div class="upload-block col-xs-12 col-md-5 col-md-offset-1">
-                     <div class="round-block"><img class="round-img" src="img/round-photo.png" alt=""></div>
-                     <p class="upload-content">Загрузите фотографию (или несколько) <br>
-                         и получите бесплатный макет <br>будущей картины через 3 часа
-                     </p>
-                     <button class="btn btn-primary btn-lg btn-global" type="button" data-toggle="modal" data-target="#pop-email"><img class="button-cloud" src="img/button-cloud-img.png" alt="">загрузить фото</button>
+                 <div class="col-xs-12 col-md-5 col-md-offset-1">
+                     <div class="upload-block">
+                         <div class="round-block"><img class="round-img" src="img/round-photo.png" alt=""></div>
+                         <p class="upload-content">Загрузите фотографию (или несколько) <br>
+                             и получите бесплатный макет <br>будущей картины через 3 часа
+                         </p>
+                         <button class="btn-global" type="button" data-toggle="modal" data-target="#pop-email"><img class="button-cloud" src="img/button-cloud-img.png" alt="">загрузить фото</button>
+                     </div>
                  </div>
                  <img class="right-home-pic hidden-xs hidden-sm" src="img/home-right-pic.png" alt="">
              </div>
@@ -109,35 +133,37 @@
              </div>
              <div class="row">
                  <div class="col-xs-12 margin-top">
-                     <div class="benefits-card col-md-4">
-                         <img class="card-icon" src="img/benefits-icon/card.png" alt="">
-                         <h4 class="card-title">9 лет</h4>
-                         <p class="card-description">Занимаемся печатью <br> фото на холсте</p>
-                     </div>
-                     <div class="benefits-card col-md-4">
-                         <img class="card-icon" src="img/benefits-icon/medal.png" alt="">
-                         <h4 class="card-title">5 лет</h4>
-                         <p class="card-description">Гарантия на картины.<br>Бесплатно переделаем,<br>если что-то случиться</p>
-                     </div>
-                     <div class="benefits-card col-md-4">
-                         <img class="card-icon" src="img/benefits-icon/forest.png" alt="">
-                         <h4 class="card-title">Натуральные материалы</h4>
-                         <p class="card-description">Натуральный холст<br> из Германии, без запаха.<br> Подрамник из сосны.<br> Пигментные чернила</p>
-                     </div>
-                     <div class="benefits-card col-md-4">
-                         <img class="card-icon" src="img/benefits-icon/changing-money.png" alt="">
-                         <h4 class="card-title">Вернем деньги</h4>
-                         <p class="card-description">Если картина вам<br> не понравится</p>
-                     </div>
-                     <div class="benefits-card col-md-4">
-                         <img class="card-icon" src="img/benefits-icon/picture.png" alt="">
-                         <h4 class="card-title">3640</h4>
-                         <p class="card-description">Довольных клиентов.<br> Только три раз <br> переделывали заказ<br> (переформулировать)</p>
-                     </div>
-                     <div class="benefits-card col-md-4">
-                         <img class="card-icon" src="img/benefits-icon/painter.png" alt="">
-                         <h4 class="card-title">Профессиональные <br> художники</h4>
-                         <p class="card-description">Закончили Институт <br> искусств, Строгановку <br> и Суриковское училище</p>
+                     <div class="row">
+                         <div class="benefits-card col-md-4">
+                             <img class="card-icon" src="img/benefits-icon/card.png" alt="">
+                             <h4 class="card-title">9 лет</h4>
+                             <p class="card-description">Занимаемся печатью <br> фото на холсте</p>
+                         </div>
+                         <div class="benefits-card col-md-4">
+                             <img class="card-icon" src="img/benefits-icon/medal.png" alt="">
+                             <h4 class="card-title">5 лет</h4>
+                             <p class="card-description">Гарантия на картины.<br>Бесплатно переделаем,<br>если что-то случиться</p>
+                         </div>
+                         <div class="benefits-card col-md-4">
+                             <img class="card-icon" src="img/benefits-icon/forest.png" alt="">
+                             <h4 class="card-title">Натуральные материалы</h4>
+                             <p class="card-description">Натуральный холст<br> из Германии, без запаха.<br> Подрамник из сосны.<br> Пигментные чернила</p>
+                         </div>
+                         <div class="benefits-card col-md-4">
+                             <img class="card-icon" src="img/benefits-icon/changing-money.png" alt="">
+                             <h4 class="card-title">Вернем деньги</h4>
+                             <p class="card-description">Если картина вам<br> не понравится</p>
+                         </div>
+                         <div class="benefits-card col-md-4">
+                             <img class="card-icon" src="img/benefits-icon/picture.png" alt="">
+                             <h4 class="card-title">3640</h4>
+                             <p class="card-description">Довольных клиентов.<br> Только три раз <br> переделывали заказ<br> (переформулировать)</p>
+                         </div>
+                         <div class="benefits-card col-md-4">
+                             <img class="card-icon" src="img/benefits-icon/painter.png" alt="">
+                             <h4 class="card-title">Профессиональные <br> художники</h4>
+                             <p class="card-description">Закончили Институт <br> искусств, Строгановку <br> и Суриковское училище</p>
+                         </div>
                      </div>
                  </div>
              </div>
@@ -154,62 +180,76 @@
              </div>
              <div class="row">
                  <div class="col-xs-12">
-                     <div class="flex-container">
-                         <div class="flex-column">
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/first-image.png" alt="">
-                                 <div class="image-block-hover"></div>
+                     <div class="row">
+                         <div id="gallery" class="container-flex carousel slide multi-item-carousel" data-interval="false">
+                             <div class="carousel-inner">
+                                 <div class="item active">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 1" href="img/gallery/first-image.png"><img class="gallery-img img-responsive" src="img/gallery/first-image.png" alt=""></a>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 2" href="img/gallery/2-women.png"><img class="gallery-img img-responsive" src="img/gallery/2-women.png" alt=""></a>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 3" href="img/gallery/woman-flower.png"><img class="gallery-img img-responsive" src="img/gallery/woman-flower.png" alt=""></a>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                         <a class="fancybox img-block" rel="gallery" title="Image 4" href="img/gallery/field-familly.png"><img class="gallery-img img-responsive" src="img/gallery/field-familly.png" alt=""></a>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 5" href="img/gallery/black-white.png"><img class="gallery-img img-responsive" src="img/gallery/black-white.png" alt=""></a>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 6" href="img/gallery/officer.png"><img class="gallery-img img-responsive" src="img/gallery/officer.png" alt=""></a>
+                                    </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 7" href="img/gallery/big-hat.png"><img class="gallery-img img-responsive" src="img/gallery/big-hat.png" alt=""></a>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 8" href="img/gallery/small-photo.png"><img class="gallery-img img-responsive" src="img/gallery/small-photo.png" alt=""></a>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 9" href="img/gallery/portret.png"><img class="gallery-img img-responsive" src="img/gallery/portret.png" alt=""></a>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 10" href="img/gallery/sea-woman.png"><img class="gallery-img img-responsive" src="img/gallery/sea-woman.png" alt=""></a>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 11" href="img/gallery/man-hat.png"><img class="gallery-img img-responsive" src="img/gallery/man-hat.png" alt=""></a>
+                                     </div>
+                                 </div>
+                                 <div class="item">
+                                     <div class="col-xs-3 fix-padding">
+                                        <a class="fancybox img-block" rel="gallery" title="Image 12" href="img/gallery/lady.png"><img class="gallery-img img-responsive" src="img/gallery/lady.png" alt=""></a>
+                                     </div>
+                                 </div>
                              </div>
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/2-women.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/woman-flower.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
-                         </div>
-                         <div class="flex-column">
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/field-familly.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/black-white.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/officer.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
-                         </div>
-                         <div class="flex-column">
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/big-hat.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/small-photo.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/portret.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
-                         </div>
-                         <div class="flex-column">
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/sea-woman.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/man-hat.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
-                             <div class="gallery-item">
-                                 <img class="gallery-img" src="img/gallery/lady.png" alt="">
-                                 <div class="image-block-hover"></div>
-                             </div>
+                             <a class="left carousel-control" href="#gallery" role="button" data-slide="prev"></a>
+                             <button class="btn-prev" id="btn-prev"><img src="/img/mobile/slick-prev.png"></button>
+                             <a class="right carousel-control" href="#gallery" role="button" data-slide="next"></a>
+                             <button class="btn-next" id="btn-next"><img src="/img/mobile/slick-next.png"></button>
+
+
                          </div>
                      </div>
                  </div>
@@ -251,7 +291,7 @@
                                  Все картины покрываем <br> защитным лаком.
                              </p>
                          </div>
-                         <div class="prop-option-4 col-xs-5 col-md-4 col-md-offset-4">
+                         <div class="prop-option-4 col-xs-6 col-md-4 col-md-offset-4">
                              <h4 class="option-title">Рамка (багет)</h4>
                              <div class="line-big"></div>
                              <p class="option-info">Пластиковый багет из Литвы. Не меняет <br> форму из-за температуры и влажности. <br>
@@ -274,58 +314,52 @@
                  </div>
              </div>
              <div class="row add-row-padding">
-                 <div class="example-block col-xs-12 col-md-4">
+                 <div class="example-block col-xs-6 col-md-4">
                      <h4 class="example-title">Портрет по фото</h4>
                      <p class="example-description">Подберем подходящие <br> образы <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-1.png" alt="">
                      <button class="btn-global">Заказать</button>
                  </div>
-                 <div class="example-block col-xs-12 col-md-4">
+                 <div class="example-block col-xs-6 col-md-4">
                      <h4 class="example-title">Фотоколлаж</h4>
                      <p class="example-description">Много фотографий на одной <br> картине <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-2.png" alt="">
                      <button class="btn-global">Заказать</button>
                  </div>
-                 <div class="example-block col-xs-12 col-md-4">
+                 <div class="example-block col-xs-6 col-md-4">
                      <h4 class="example-title">Печать в стиле Поп-Арт</h4>
                      <p class="example-description">Модный подарок <br><a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-3.png" alt="">
                      <button class="btn-global">Заказать</button>
                  </div>
-                 <div class="example-block col-xs-12 col-md-4">
+                 <div class="example-block col-xs-6 col-md-4">
                      <h4 class="example-title">Репродукция картин</h4>
                      <p class="example-description">Напечатаем картину <br> любого автора <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-4.png" alt="">
                      <button class="btn-global">Заказать</button>
                  </div>
-                 <div class="example-block col-xs-12 col-md-4">
+                 <div class="example-block col-xs-6 col-md-4">
                      <h4 class="example-title">Модульные картины</h4>
                      <p class="example-description">Картина из нескольких <br> частей <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-5.png" alt="">
                      <button class="btn-global">Заказать</button>
                  </div>
-                 <div class="example-block col-xs-12 col-md-4">
+                 <div class="example-block col-xs-6 col-md-4">
                      <h4 class="example-title">Композиция из фото</h4>
                      <p class="example-description">Несколько фото на отдельных <br> холстах <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-6.png" alt="">
                      <button class="btn-global">Заказать</button>
                  </div>
-                 <div class="example-block col-xs-12 col-md-4">
+                 <div class="example-block col-xs-6 col-md-4">
                      <h4 class="example-title">Репродукция картин</h4>
                      <p class="example-description">Напечатаем картину <br> любого автора <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-4.png" alt="">
                      <button class="btn-global">Заказать</button>
                  </div>
-                 <div class="example-block col-xs-12 col-md-4">
+                 <div class="example-block col-xs-6 col-md-4">
                      <h4 class="example-title">Модульные картины</h4>
                      <p class="example-description">Картина из нескольких <br> частей <a class="example-link" href="#">каталог коллажей</a></p>
                      <img class="example-img" src="/img/examples/example-img-5.png" alt="">
-                     <button class="btn-global">Заказать</button>
-                 </div>
-                 <div class="example-block col-xs-12 col-md-4">
-                     <h4 class="example-title">Композиция из фото</h4>
-                     <p class="example-description">Несколько фото на отдельных <br> холстах <a class="example-link" href="#">каталог коллажей</a></p>
-                     <img class="example-img" src="/img/examples/example-img-6.png" alt="">
                      <button class="btn-global">Заказать</button>
                  </div>
              </div>
@@ -345,8 +379,8 @@
                      <!--<div class="youtube-block">-->
                          <!--<iframe width="68%" height="440" src="https://www.youtube.com/embed/4KJpXriYC9A" frameborder="5" allowfullscreen></iframe>-->
                      <!--</div>-->
-                     <div class="youtube-block visible xs visible-sm">
-                         <iframe width="90%" height="440" src="https://www.youtube.com/embed/4KJpXriYC9A" frameborder="5" allowfullscreen></iframe>
+                     <div class="youtube-block">
+                         <iframe src="https://www.youtube.com/embed/4KJpXriYC9A" frameborder="5" allowfullscreen></iframe>
                      </div>
                  </div>
              </div>
@@ -393,7 +427,7 @@
 
      <!-- email-popup  -->
 
-     <div class="modal fade" id="pop-email" tabindex="-1" role="dialog" aria-labelledby="pop-email-title">
+     <div id="pop-email" class="modal fade" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
@@ -407,9 +441,7 @@
                         <form class="form-email col-md-9">
                             <label class="label-email" for="email">Введите электропочту:</label>
                             <input class="input-email" type="email" id="email" placeholder="Введите вашу надежную почту">
-                            <button class="button-true" type="button" data-toggle="modal" data-target="#pop-phone" data-dismiss="modal">Почта указана верно!
-                                <img class="button-icon" src="/img/popups/work-done-botton.png" alt="">
-                            </button>
+                            <a id="btn-email" class="button-true">Почта указана верно!<img class="button-icon" src="/img/popups/work-done-botton.png" alt=""></a>
                         </form>
                      </div>
                  </div>
@@ -428,8 +460,8 @@
                  <div class="modal-body clearfix">
                      <form class="form-phone col-md-9">
                          <label class="label-phone" for="phone">Введите ваш телефон:</label>
-                         <input class="input-phone" type="number" id="phone" placeholder="Введите ваш номер телефона">
-                         <button class="button-true" type="button" data-toggle="modal" data-target="#pop-size" data-dismiss="modal">Да, это мой телефон</button>
+                         <input class="input-phone" type="text" id="phone" placeholder="Введите ваш номер телефона">
+                         <a id="btn-phone" class="button-true">Да, это мой телефон</a>
                      </form>
                  </div>
              </div>
@@ -458,7 +490,7 @@
                          <label class="label-size" for="radio-5">75 х 105 см</label><br>
                          <input class="radio-size" id="radio-6" type="radio" name="size">
                          <label class="label-size" for="radio-6">90 х 110 см</label><br>
-                         <button class="button-true" type="button" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">Хочу этот размер</button>
+                         <a id="btn-size" class="button-true">Хочу этот размер</a>
                      </form>
                      <div class="pic-size col-xs-6 col-sm-7 col-md-7">
                          <p class="size-title">50 х 70 см — Хит!</p>
@@ -514,7 +546,7 @@
                              <p class="price-type">+2800 руб.</p>
                          </div>
                      </div>
-                     <button class="button-true" type="button" data-toggle="modal" data-target="#pop-type-option" data-dismiss="modal">Хочу этот тип картины</button>
+                     <a id="btn-type" class="button-true">Хочу этот тип картины</a>
                  </div>
              </div>
          </div>
@@ -552,7 +584,7 @@
                              <p class="price-type">+1390 руб.</p>
                          </div>
                          <div class="text-center col-xs-12">
-                             <button class="button-true" type="button" data-toggle="modal" data-target="#pop-baget" data-dismiss="modal">Добавить</button>
+                             <a id="btn-type-option" class="button-true">Добавить</a>
                              <span class="option-no" data-toggle="modal" data-target="#pop-baget" data-dismiss="modal">Спасибо, не нужно</span>
                          </div>
                      </div>
@@ -655,7 +687,7 @@
                          <p class="price-type">+2300 руб.</p>
                      </div>
                      <div class="for-nano text-center col-xs-6 col-sm-6 col-md-12 fix-padding">
-                         <button class="button-true" type="button" data-toggle="modal" data-target="#pop-package" data-dismiss="modal">Выбрать рамку (багет)</button>
+                         <a id="btn-baget" class="button-true">Выбрать рамку (багет)</a>
                          <span class="option-no" data-toggle="modal" data-target="#pop-package" data-dismiss="modal">Рамка не нужна (галерейная натяжка)</span>
                          <div class="hover-block-small">
                              <img class="type-img" src="/img/popups/bg-small.png" alt="">
@@ -699,7 +731,7 @@
                              <p class="price-type">+500 руб.</p>
                          </div>
                          <div class="text-center col-xs-12">
-                             <button class="button-true" type="button" data-toggle="modal" data-target="#pop-date" data-dismiss="modal">Выбрать упаковку</button>
+                             <a id="btn-package" class="button-true">Выбрать упаковку</a>
                              <span class="option-no" data-toggle="modal" data-target="#pop-date" data-dismiss="modal">Спасибо, подойдет обычный пакет</span>
                          </div>
                      </div>
@@ -723,7 +755,7 @@
                              <div class="single"></div>
                          </article>
                      </section>
-                     <button class="button-true" type="button" data-toggle="modal" data-target="#pop-stock" data-dismiss="modal">Дата указана верно</button>
+                     <a id="btn-date" class="button-true">Дата указана верно</a>
                  </div>
              </div>
          </div>
@@ -751,8 +783,8 @@
                              <div class="pic-size fix-padding col-sm-6 col-md-5 col-md-offset-1 visible-xs">
                                  <img src="/img/popups/stock-right-img.png" alt="">
                              </div>
-                             <button class="button-true" type="button" data-toggle="modal" data-target="#pop-prepay" data-dismiss="modal">Внести предоплату</button>
-                             <p class="option-no" data-toggle="modal" data-target="#pop-pay" data-dismiss="modal">Мне это не интересно</p>
+                             <a id="btn-stock-prepay" class="button-true">Внести предоплату</a>
+                             <p id="btn-stock-pay" class="option-no">Мне это не интересно</p>
                          </div>
                          <div class="pic-size fix-padding col-sm-6 col-md-5 col-md-offset-1 hidden-xs">
                              <img src="/img/popups/stock-right-img.png" alt="">
@@ -810,8 +842,13 @@
      <script src="js/main.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script src="js/pickmeup.js"></script>
-     <script src="js/slick.js"></script>
-     <script src="js/lightbox.js"></script>
+     <script src="js/pushy.min.js"></script>
+     <script src="js/jquery.fancybox.js"></script>
+     <script src="js/jquery.easing.min.js"></script>
+     <script src="js/mobile-detect.min.js"></script>
+     <script src="js/jquery.fancybox.js"></script>
+     <script src="js/jquery.elevatezoom.js"></script>
+
 
 
  </body>

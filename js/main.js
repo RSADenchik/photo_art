@@ -1,4 +1,20 @@
+
+     /*
+     *  Bootstrap showing popup after popup fix
+     */
+    function show_popup (button, modal_close, modal_show) {
+
+        button.on('click', function(){
+            modal_close.modal('hide');
+            modal_show.modal('show');
+            setTimeout(function(){
+                $('body').addClass('modal-open');
+            }, 400);
+        });
+    }
+
 $(document).ready(function() {
+
 
     // YANDEX MAP
     ymaps.ready(init);
@@ -16,8 +32,8 @@ $(document).ready(function() {
         var myPlacemark = new ymaps.Placemark([55.724643, 37.584604], {
 
             hintContent: 'Производство картин',
-            balloonContent: '<div style = "margin-top: 30px; margin-left: 20px;" ><b>Оперный театр</b><br/>ул. Белинского, 59</div>'
-
+            address: 'ул.Фрунзенская наб. д. 30 пав. 3А место 12',
+            websayt: ''
         },
             {
                 // пареметры метки
@@ -29,84 +45,134 @@ $(document).ready(function() {
 
                 //параметры описания
 
-                balloonContentSize: [130, 130],
+                balloonContentSize: [356, 294],
                 balloonLayout: "default#imageWithContent",
-                balloonImageHref: 'newbaloon.png',
-                balloonImageOffset: [-5, -60],
-                balloonImageSize: [150, 150],
+                balloonImageHref: 'img/ballon.png',
+                balloonImageOffset: [-838, -250],
+                balloonImageSize: [356, 294],
                 balloonShadow: false
         });
 
         // Добавление метки на карту
         myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
 
     }
+
+
+    // Calendar initialize
 
     addEventListener('DOMContentLoaded', function () {
         pickmeup('.single', {
             flat : true
         });
+    });
+
+
+        // Zoom image
+
+    $(".perfect-img").elevateZoom({
+        responsive: false,
+        zoomWindowWidth: '100%',
+        zoomType: "lens",
+        lensShape: "round",
+        lensSize: 120,
+        scrollZoom: true
+    });
+
+    $(".prop-img").elevateZoom({
+        responsive: false,
+        zoomWindowWidth: '100%',
+        zoomType: "lens",
+        lensShape: "round",
+        lensSize: 120,
+        scrollZoom: true
+    });
+
+
+    //  Fancybox gallery image
+    $(document).ready(function() {
+
+
+            $('.fancybox').fancybox({
+                padding: 15,
+                openEasing: 'easeInQuad',
+                closeEasing: 'easeOutQuad',
+                minWidth: '33%',
+                maxHeight: '500px',
+                openSpeed: 'slow',
+                closeSpeed: 'slow',
+                nextSpeed: 'normal',
+                prevSpeed: 'normal'
+            });
+
+
+
+                // Buuton Bootstrap
+
+            $("#btn-prev").click(function(){
+                $("#gallery").carousel("prev");
+            });
+
+            // Go to the next item carousel
+            $("#btn-next").click(function(){
+                $("#gallery").carousel("next");
+            });
+
+                // Multislider bootstrap
+
+            $('.multi-item-carousel').carousel({
+                interval: false
+            });
+
+
+        $('.container-flex .item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i=0;i<2;i++) {
+                next=next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+
+
 
 
     });
 
-   // $('.zoom').magnify();
-   //
-   //  /* Slider-slick */
-   //  $('.slider-slick').slick({
-   //      dots: false,
-   //      variableWidth: false,
-   //      infinite: true,
-   //      arrows: false,
-   //      speed: 1500,
-   //      draggable: false,
-   //      rows: 3,
-   //       prevArrow: "<img class='arrow arrow-fix slick-prev arrow-left' src='img/arrow-left.png'>",
-   //       nextArrow: "<img class='arrow arrow-fix slick-next arrow-right' src='img/arrow-right.png'>",
-   //      slidesToShow: 3,
-   //      slidesToScroll: 1,
-   //      responsive: [
-   //          {
-   //              breakpoint: 1200,
-   //              settings: {
-   //                  slidesToShow: 3,
-   //                  slidesToScroll: 1
-   //              }
-   //          },
-   //          {
-   //              breakpoint: 992,
-   //              settings: {
-   //                  slidesToShow: 2,
-   //                  slidesToScroll: 1
-   //              }
-   //          },
-   //          {
-   //              breakpoint: 768,
-   //              settings: {
-   //                  slidesToShow: 1,
-   //                  slidesToScroll: 1
-   //              }
-   //          }
-   //      ]
-   //  });
 
-    // moda dialog center
-    // $(function() {
-    //     function reposition() {
-    //         var modal = $(this),
-    //             dialog = modal.find('.modal-dialog');
-    //         modal.css('display', 'block');
-    //
-    //         // Dividing by two centers the modal exactly, but dividing by three
-    //         // or four works better for larger screens.
-    //         dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
-    //     }
-    //     // Reposition when a modal is shown
-    //     $('.modal').on('show.bs.modal', reposition);
-    //     // Reposition when the window is resized
-    //     $(window).on('resize', function() {
-    //         $('.modal:visible').each(reposition);
-    //     });
-    // });
+    // Function hide and show popups
+
+    show_popup($('#btn-email'), $('#pop-email'), $('#pop-phone'));
+    show_popup($('#btn-phone'), $('#pop-phone'), $('#pop-size'));
+    show_popup($('#btn-size'), $('#pop-size'), $('#pop-type-option'));
+    show_popup($('#btn-type-option'), $('#pop-type-option'), $('#pop-baget'));
+    show_popup($('#btn-baget'), $('#pop-baget'), $('#pop-package'));
+    show_popup($('#btn-package'), $('#pop-package'), $('#pop-date'));
+    show_popup($('#btn-date'), $('#pop-date'), $('#pop-stock'));
+    show_popup($('#btn-stock-prepay'), $('#pop-stock'), $('#pop-prepay'));
+    show_popup($('#btn-stock-pay'), $('#pop-stock'), $('#pop-pay'));
+
+
+    $('.modal').on('show.bs.modal', function () {
+        if ($(document).height() > $(window).height()) {
+            // no-scroll
+            $('body').addClass("modal-open-noscroll");
+        }
+        else {
+            $('body').removeClass("modal-open-noscroll");
+        }
+    });
+    $('.modal').on('hide.bs.modal', function () {
+        $('body').removeClass("modal-open-noscroll");
+    });
 
 });

@@ -1,24 +1,30 @@
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "settings/mixins";
-@import "settings/font-awesome/font-awesome";
 
-  // Global properties tags and class
+
 
 // fix js modal right padding
-html, body {
-  padding-right:0 !important;
-}
 
-body.modal-open {
-  overflow: auto;
-}
+  body.modal-open-noscroll
+  {
+    margin-right: 0!important;
+    overflow: hidden;
+  }
+  .modal-open-noscroll .navbar-default, .modal-open .navbar-default
+  {
+    margin-right: 0!important;
+  }
 
+  // Global properties tags and class
   ul, p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
-button {
-  border: none;
-}
+  button {
+    border: none;
+    outline: 0;
+    &:active { outline: 0;}
+    &:hover { outline: 0; }
+    &:focus { outline: 0;}
+  }
   ul {
     list-style: none;
   }
@@ -165,7 +171,7 @@ $color-red: #de393d;
     font-size: 1.75em;
     padding-bottom: 34px;
     text-align: center;
-    line-height: 31px;
+    line-height: 34px;
   }
   @media #{$bootstrap-nano} { font-size: 1.3em; width: 90%; }
 }
@@ -181,10 +187,9 @@ $color-red: #de393d;
   @media #{$bootstrap-xs} {
     margin: 0 auto;
     position: relative;
-    top: -4px;
+    top: 0;
   }
 }
-
 // Description block
 .description {
   padding-top: 30px;
@@ -196,7 +201,7 @@ $color-red: #de393d;
   @media #{$bootstrap-md} { font-size: 1.5em; }
   @media #{$bootstrap-xs} {
     width: 70%;
-    padding: 25px 0;
+    padding: 22px 0;
     margin: 0 auto;
     text-align: center;
     font-size: 1.3em;
@@ -225,6 +230,14 @@ $color-red: #de393d;
   &:hover {
     background-color: #de393d;
     opacity: 0.8;
+  }
+  &:active {
+    background-color: #de393d;
+    opacity: 0.6;
+    outline: 0;
+  }
+  &:focus {
+    background-color: #de393d;
   }
   @media #{$bootstrap-nano} { font-size: 1.1em; }
 }

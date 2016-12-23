@@ -1,15 +1,17 @@
+
 .examples {
   padding-top: 90px;
   background: url('/img/example-right-img.png') 100% 101% no-repeat;
 
   @media #{$bootstrap-xs} {
     background-size: 36%;
-    padding-top: 53px;
+    padding-top: 56px;
 
     .description {
       padding: 10px 0;
       width: 100%;
     }
+    .line { top: -9px;}
     .title {
       max-width: 310px;
       padding-bottom: 35px;
@@ -20,20 +22,48 @@
   .add-row-padding {
     padding-top: 30px;
 
-    @media #{$bootstrap-xs} { padding-top: 25px; }
+    @media #{$bootstrap-xs} {
+      padding-top: 25px;
+    }
   }
-  .example-block {
-    padding-bottom: 52px;
 
-    @media #{$bootstrap-md} { text-align: center; }
-    @media #{$bootstrap-xs} { text-align: center; padding-bottom: 25px; }
+
+  .example-block {
+      padding-bottom: 43px;
+
+    @media #{$bootstrap-md} {
+      text-align: center;
+    }
+    @media #{$bootstrap-xs} {
+      text-align: center;
+      padding-bottom: 23px;
+    }
+    @media #{$bootstrap-nano} {
+
+      margin: auto 5%;
+      padding: 0 15px 27px !important;
+      width: 90%;
+    }
+  }
+  @media #{$bootstrap-lg} {
+  .example-block:nth-child(3n-1) {
+    padding-left: 20px;
+  }
+  .example-block:nth-child(3n) {
+    padding-left: 40px;
+
+  }
+}
 
     .example-title {
       color: #343c3b;
       font-family: $museo-sans-bold;
       font-size: 1.7em;
       line-height: 44px;
-      @media #{$bootstrap-nano} { font-size: 1.5em; }
+
+      @media #{$bootstrap-xs} {
+        font-size: 1.3em;
+      }
     }
     .example-description {
       color: #343c3b;
@@ -42,15 +72,27 @@
       line-height: 30px;
 
       @media #{$bootstrap-md} { font-size: 1.2em; }
-      @media #{$bootstrap-nano} { font-size: 1.15em; }
+      @media #{$bootstrap-xs} {
+        font-size: 1.15em;
+        max-width: 200px;
+        margin: 0 auto;
+        line-height: 25px;
+        br {
+          content: "";
+        }
+      }
 
       .example-link {
         color: #3097c5;
+
+        @media #{$bootstrap-xs} {
+          display: block;
+        }
       }
     }
     .example-img {
       width: 100%;
-      max-width: 330px;
+      max-width: 306px;
       height: 330px;
       margin: 30px 0 0 15px;
       border: 10px solid white;
@@ -58,9 +100,12 @@
 
       @media #{$bootstrap-md} { margin-left: 0;}
       @media #{$bootstrap-xs} {
-        width: 310px;
-        height: 330px;
-        margin: 22px auto 0;
+        height: auto;
+        margin: 22px auto 27px;
+        border: none;
+        outline: none;
+        border-top: 10px solid #926752;
+        border-bottom: 10px solid #926752;
       }
       @media #{$bootstrap-nano} { width: 100%; }
     }
@@ -71,7 +116,32 @@
       box-shadow: 0 0 27.5px 3.5px rgba(0, 0, 0, 0.43);
       background-image: linear-gradient(to top, #e84246 0%, #d12f32 100%);
 
-      @media #{$bootstrap-xs} {  margin: 29px auto;}
+      @media #{$bootstrap-xs} {
+        max-width: 174px;
+        line-height: 48px;
+        font-size: 1.15em;
+        margin-top: 0;
+      }
     }
   }
-}
+  .example-block:nth-child(odd) {
+    @media #{$bootstrap-xs}   {
+      padding-left: 0;
+    }
+  }
+  .example-block:nth-child(even) {
+    @media #{$bootstrap-xs}   {
+      padding-right: 0;
+    }
+  }
+
+  .add-row-padding .example-block:nth-child(3) {
+    @media #{$bootstrap-xs} {
+      .example-title {
+        max-width: 179px;
+        margin: 0 auto;
+        line-height: 27px;
+        padding-top: 12px;
+      }
+    }
+  }

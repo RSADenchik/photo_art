@@ -12,6 +12,7 @@
 #pop-prepay,
 #pop-pay {
 
+
   .modal-dialog {
     width: 100%;
     position: absolute;
@@ -68,8 +69,7 @@
       }
       @media #{$bootstrap-nano} {
         left: 0;
-        right: 0;
-        top: -210px;
+        top: -125px;
         text-align: center;
         margin: 0 auto;
       }
@@ -89,7 +89,6 @@
       color: white;
 
       @media #{$bootstrap-sm} {
-        left: 0;
         right: 0;
         margin: 0 auto;
       }
@@ -100,7 +99,10 @@
       }
       @media #{$bootstrap-nano} {
         right: 0;
-        left: 0;
+        top: -138px;
+        line-height: 48px;
+        font-size: 1.2em;
+        width: 130px;
         margin: 0 auto;
       }
     }
@@ -129,6 +131,12 @@
         text-align: center;
         color: #212121;
         background-color: white;
+      }
+      @media #{$bootstrap-nano} {
+        width: 180px;
+        line-height: 48px;
+        font-size: 1.3em;
+        top: -75px;
       }
 
       .price {
@@ -207,8 +215,8 @@
         }
       }
 
-      .img-hover-block:hover .hover-bg,
-      .img-hover-block:hover .hover-lypa {
+      .img-hover-block:hover a .hover-bg,
+      .img-hover-block:hover a .hover-lypa {
         display: block;
       }
 
@@ -240,17 +248,34 @@
         }
       }
     }
+
       // Red Button
 
     .button-true {
       width: 100%;
       font-family: $gotham-pro-bold;
+      display: inline-block;
+      text-align: center;
       line-height: 68px;
       font-size: 1.25em;
       border-bottom: 3px solid #d12f32;
       border-radius: 5px;
       color: white;
       background-color: #df3b3e;
+
+      &:hover {
+        background-color: #de393d;
+        opacity: 0.8;
+      }
+      &:active {
+        background-color: #de393d;
+        opacity: 0.6;
+        outline: 0;
+      }
+      &:focus {
+        background-color: #de393d;
+        outline: 0;
+      }
 
       @media #{$bootstrap-nano} { font-size: 1em; }
     }
@@ -272,7 +297,7 @@
 
   .modal-dialog {
     max-width: 559px;
-    top: 19vh;
+    top: 20vh;
     left: calc(50% - 277px);
   }
 
@@ -429,6 +454,7 @@
     max-width: 800px;
     left: calc(50% - 400px);
     top: 3vh;
+    @media #{$bootstrap-nano} { top: 7vh; }
   }
 
   .modal-title {
@@ -446,9 +472,11 @@
   }
   .modal-body {
     padding: 36px 70px 58px 58px;
+    max-height: calc(90vh - 170px);
+    overflow-y: auto;
 
     @media #{$bootstrap-xs} { padding: 35px 30px 54px 30px; }
-
+    @media #{$bootstrap-nano} { max-height: calc(80vh - 170px);}
     .form-size {
 
       .radio-size {
@@ -595,7 +623,8 @@
   .modal-dialog {
     max-width: 898px;
     left: calc(50% - 450px);
-    top: 7vh;
+    top: 13vh;
+    @media #{$bootstrap-nano} { top: 20vh;}
   }
 
   .modal-title {
@@ -622,6 +651,9 @@
 
   .modal-body {
     padding: 23px 52px 40px;
+    max-height: calc(90vh - 170px);
+    overflow-y: auto;
+
 
     @media #{$bootstrap-xs} { padding: 40px 30px 52px; }
     @media #{$bootstrap-nano} { padding: 40px 25px 52px; }
@@ -653,7 +685,8 @@
   .modal-dialog {
     max-width: 898px;
     left: calc(50% - 450px);
-    top: 7vh;
+    top: 13vh;
+    @media #{$bootstrap-nano} { top: 25vh;}
   }
 
   .modal-title {
@@ -671,7 +704,7 @@
       width: 90%;
       margin: 0 auto;
       padding-left: 0;
-      font-size: 1.2em;
+      font-size: 1em;
       text-align: center;
     }
   }
@@ -685,8 +718,11 @@
 
   .modal-body {
     padding: 41px 174px 50px 165px;
+    max-height: calc(90vh - 170px);
+    overflow-y: auto;
     @media #{$bootstrap-sm} { padding: 41px 100px 50px; }
     @media #{$bootstrap-xs} { padding: 41px 30px 35px; }
+    @media #{$bootstrap-nano} { max-height: calc(71vh - 170px); }
 
     .pic-type {
       text-align: center;
@@ -729,7 +765,8 @@
   .modal-dialog {
     max-width: 899px;
     left: calc(50% - 450px);
-    top: 7vh;
+    top: 13vh;
+    @media #{$bootstrap-nano} { top: 25vh;}
   }
 
   .modal-title { padding: 27px 0 0 60px; }
@@ -740,8 +777,7 @@
 
       @media #{$bootstrap-nano} {
         left: 0;
-        right: 0;
-        top: -200px;
+        top: -130px;
         margin: 0 auto;
       }
     }
@@ -756,7 +792,6 @@
       @media #{$bootstrap-xs} { right: 0; }
       @media #{$bootstrap-nano} {
         right: 0;
-        left: 0;
         margin: 0 auto;
       }
     }
@@ -778,15 +813,18 @@
     @media #{$bootstrap-nano} {
       margin: 0 auto;
       padding-left: 0;
+      font-size: 0.9em;
       text-align: center;
     }
   }
 
   .modal-body {
     padding: 40px 8px 31px 15px;
+    max-height: calc(90vh - 170px);
+    overflow-y: auto;
     @media #{$bootstrap-sm} { padding: 40px 35px 31px; }
     @media #{$bootstrap-xs} { padding: 40px 13px 31px; }
-    @media #{$bootstrap-nano} { padding: 40px 50px 31px; }
+    @media #{$bootstrap-nano} { padding: 15px 50px 31px; top: calc(72vh - 170px); }
 
     .pic-type {
       @media #{$bootstrap-nano} { width: 100%; }
@@ -936,7 +974,7 @@
   .modal-dialog {
     max-width: 898px;
     left: calc(50% - 450px);
-    top: 7vh;
+    top: 13vh;
   }
 
   .modal-title {
@@ -987,6 +1025,8 @@
 
   .modal-body {
     padding: 73px 111px 50px 174px;
+    max-height: calc(90vh - 170px);
+    overflow-y: auto;
 
     @media #{$bootstrap-sm} { padding: 41px 75px 50px; }
     @media #{$bootstrap-xs} { padding: 41px 30px 35px; }
@@ -1059,7 +1099,7 @@
   .modal-dialog {
     max-width: 561px;
     left: calc(50% - 280px);
-    top: 12vh;
+    top: 10vh;
   }
 
   .modal-title {
@@ -1078,6 +1118,8 @@
 
   .modal-body {
     padding: 42px 80px 60px;
+    max-height: calc(90vh - 170px);
+    overflow-y: auto;
 
     @media #{$bootstrap-nano} { padding: 15px; }
 
@@ -1198,7 +1240,10 @@
   .modal-dialog {
     max-width: 900px;
     left: calc(50% - 400px);
-    top: 8vh;
+    top: 13vh;
+    @media #{$bootstrap-nano} {
+      top: 35vh;
+    }
   }
 
   .under-header {
@@ -1207,6 +1252,7 @@
       position: absolute;
       top: 0;
       left: 62px;
+      z-index: 1;
 
       @media #{$bootstrap-nano} { left: 15px; height: 110px; }
     }
@@ -1228,6 +1274,8 @@
   .modal-body {
     padding: 46px 85px 46px 60px;
     background: url("/img/popups/limit-edition.png") right bottom no-repeat;
+    max-height: calc(90vh - 170px);
+    overflow-y: auto;
 
     @media #{$bootstrap-xs} {
       padding: 65px 85px 46px 75px;
@@ -1249,6 +1297,8 @@
           width: 90%;
           margin: 0 auto;
           font-size: 1.2em;
+          max-height: calc(75vh - 170px);
+          overflow-y: auto;
         }
       }
 
@@ -1296,7 +1346,9 @@
   .modal-dialog {
     max-width: 900px;
     left: calc(50% - 450px);
-    top: 8vh;
+    top: 13vh;
+
+    @media #{$bootstrap-nano} { top: 15vh; }
 
   }
 
@@ -1328,6 +1380,8 @@
 
   .modal-body {
     padding: 50px;
+    max-height: calc(90vh - 170px);
+    overflow-y: auto;
 
     @media #{$bootstrap-xs} { padding: 45px 46px 43px 47px; }
     @media #{$bootstrap-nano} { padding: 15px; }

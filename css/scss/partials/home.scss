@@ -3,11 +3,11 @@
    background: url('/img/home-bg-main.png') center center no-repeat;
    background-position-y: -125px;
    @media #{$bootstrap-xs} {
-     padding: 64px 0 86px;
+     padding: 60px 0 86px;
      background: url(/img/mobile/home-pic-mobile.png) top right no-repeat,
      url(/img/mobile/home-left-img.png) bottom left no-repeat,
      url(/img/mobile/home-bg-mobile.png) center top no-repeat;
-     background-position-y: -36px, 29%, -22%;
+     background-position-y: -36px, 29%, -24%;
      background-size: 75px 133px, 23% 22%, 100% 56%;
    }
 
@@ -18,7 +18,7 @@
    }
 
    .home-content {
-     margin-top: 30px;
+     margin-top: 27px;
      @media #{$bootstrap-md} { padding: 0 15px; }
      @media #{$bootstrap-xs} { margin: 0;  padding: 0; }
 
@@ -30,6 +30,7 @@
        line-height: 41px;
 
        @media #{$bootstrap-xs} {
+         padding-top: 28px;
          font-size: 1.85em;
          line-height: 34px;
          text-align: center;
@@ -91,28 +92,31 @@
      right: 96px;
 
      @media #{$bootstrap-lg} { right: 0; }
-     @media #{$bootstrap-md} { right: -10px;  }
+     @media #{$bootstrap-md} { right: 0;  }
    }
 
    .upload-block {
-     max-width: 462px;
-     padding-bottom: 45px;
-     margin-top: 120px;
+     padding-bottom: 47px;
+     margin-top: 115px;
      position: relative;
-     left: 6px;
+     left: -6px;
      background-color: #126b6e;
      border: 2px dashed #ffa947;
      border-radius: 5px;
      box-shadow: 1.8px 14.9px 43.7px 10.3px rgba(0, 0, 0, 0.1);
      z-index: 2;
 
-      @media #{$bootstrap-md} { left: -13px; top: -40px; }
-      @media #{$bootstrap-sm} { margin-top: 70px; }
+      @media #{$bootstrap-md} {
+        left: -13px; top: -40px;
+      }
+
       @media #{$bootstrap-xs} {
         width: 100%;
         max-width: 440px;
-        left: calc(50% - 218px);
-        margin-top: 75px;
+        left: 0;
+        margin: 75px auto 0;
+        padding-bottom: 49px;
+
       }
       @media #{$bootstrap-nano} { left: 0; }
 
@@ -135,25 +139,31 @@
         padding-top: 25px;
       }
       .upload-content {
-        margin: 75px 0 10px;
+        padding: 80px 0 19px;
         text-align: center;
         font-family: $gotham-pro-regular;
         font-size: 1.25em;
-        line-height: 27px;
+        line-height: 25px;
         color: white;
 
         @media #{$bootstrap-xs} {
-          margin-bottom: 0;
           font-size: 1.15em;
-          line-height: 26px;
         }
-        @media #{$bootstrap-nano} { font-size: 0.95em; }
+        @media #{$bootstrap-nano} {
+          font-size: 0.95em;
+        }
       }
+
       .btn-global {
         max-width: 300px;
-        line-height: 60px;
+        line-height: 74px;
 
-        @media #{$bootstrap-xs} { margin-top: 20px; }
+        @media #{$bootstrap-xs} {
+          line-height: 74px;
+        }
+        @media #{$bootstrap-nano} {
+          max-width: 230px;
+        }
 
         .button-cloud {
           margin-right: 11px;

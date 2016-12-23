@@ -4,7 +4,7 @@
   background-color: rgba(244,244,244,.49);
 
   @media #{$bootstrap-xs} {
-    padding: 70px 0 63px;
+    padding: 58px 0 63px;
     background-size: cover;
 
     .title {
@@ -71,7 +71,7 @@
 
     @media #{$bootstrap-md} { padding-left: 15px; }
     @media #{$bootstrap-xs} { padding: 0 0 0 20px; margin: 0; }
-    @media #{$bootstrap-nano} { margin-top: 27px; }
+    @media #{$bootstrap-nano} { margin-top: 0; }
   }
   .prop-option-2 {
     margin-top: 43px;
@@ -88,15 +88,22 @@
 
     @media #{$bootstrap-md} { margin-top: 65px; padding-left: 15px; }
     @media #{$bootstrap-xs} { padding-left: 20px; margin-top: 327px; }
-    @media #{$bootstrap-nano} { margin-top: 240px; }
+    @media #{$bootstrap-nano} { margin-top: 240px; padding: 0 10px; }
   }
   .prop-option-4 {
     margin-top: 100px;
     padding-left: 75px;
 
     @media #{$bootstrap-md} { margin-top: 52px; padding: 0 0 0 30px; }
-    @media #{$bootstrap-xs} { margin: 335px 0 0; padding: 0 12px 0 11px; }
+    @media #{$bootstrap-xs} {
+      margin: 334px 0 0;
+      padding: 0 12px 0 11px;
+      .option-info {
+        line-height: 22px;
+      }
+    }
     @media #{$bootstrap-nano} { margin-top: 243px; padding: 0;}
+
   }
   .btn-global {
     max-width: 415px;
@@ -105,7 +112,7 @@
 
     @media #{$bootstrap-xs} {
       max-width: 380px;
-      margin-top: 45px;
+      margin-top: 40px;
       font-size: 1.25em;
     }
     @media #{$bootstrap-nano} { line-height: 40px; max-width: 300px; }

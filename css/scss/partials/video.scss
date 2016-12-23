@@ -1,5 +1,5 @@
 .video {
-  padding: 8px 0 40px;
+  padding: 52px 0 50px;
   background: url('/img/video-left-hand.png') left 75% no-repeat;
 
   @media #{$bootstrap-xs} {
@@ -12,15 +12,15 @@
   }
   .youtube-block {
     margin-top: 20px;
-    position: relative;
-    left: 172px;
-  }
-  .youtube-block-mobile {
-    position: relative;
-    margin: 0;
-    text-align: center;
-    left: 0;
-    top: 0;
+
+    iframe {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 770px;
+      height: 429px;
+
+    }
   }
 }
 
