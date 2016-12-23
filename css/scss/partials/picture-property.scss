@@ -115,7 +115,11 @@
       margin-top: 40px;
       font-size: 1.25em;
     }
-    @media #{$bootstrap-nano} { line-height: 40px; max-width: 300px; }
+    @media #{$bootstrap-nano} {
+      line-height: 25px;
+      padding: 15px 0 5px;
+      max-width: 300px;
+    }
   }
 }
 

@@ -28,10 +28,10 @@
                      <!-- Pushy Menu -->
                      <nav class="pushy pushy-left hidden-md hidden-lg">
                          <ul>
-                             <li class="pushy-link"><a href="#" class="page-scroll">Наши работы</a></li>
-                             <li class="pushy-link"><a href="#" class="page-scroll">Из чего состоит картина</a></li>
-                             <li class="pushy-link"><a href="#" class="page-scroll">Идеи для печати</a></li>
-                             <li class="pushy-link"><a href="#" class="page-scroll">Видео о производстве</a></li>
+                             <li class="pushy-link"><a href="#our-works" class="page-scroll">Наши работы</a></li>
+                             <li class="pushy-link"><a href="#property" class="page-scroll">Из чего состоит картина</a></li>
+                             <li class="pushy-link"><a href="#examples" class="page-scroll">Идеи для печати</a></li>
+                             <li class="pushy-link"><a href="#video" class="page-scroll">Видео о производстве</a></li>
                              <li class="pushy-link"><a href="#catalog" class="page-scroll">Каталог коллажей</a></li>
                          </ul>
                      </nav>
@@ -54,7 +54,7 @@
 
                      <!-- End Mobile navbar -->
 
-                     <img class="logo-img" src="img/logo.png" alt="">
+                    <a href="index.html"> <img class="logo-img" src="img/logo.png" alt=""> </a>
                      <img class="whatsapp-mobile visible-xs visible-sm" src="/img/mobile/whatsapp-mobile.png" alt="">
                      <p class="logo-title">Печать фото на холсте с <br> доставкой по Москве и МО.</p>
 
@@ -83,11 +83,11 @@
              <div class="row">
                  <div class="col-xs-12 fix-relative fix-padding">
                      <ul class="nav-list">
-                         <li class="list-item"><a class="list-item-link" href="#">Наши работы</a></li>
-                         <li class="list-item"><a class="list-item-link" href="#">Из чего состоит картина на холсте</a></li>
-                         <li class="list-item"><a class="list-item-link" href="#">Идеи для печати</a></li>
-                         <li class="list-item"><a class="list-item-link" href="#">Видео о производстве</a></li>
-                         <li class="list-item"><a class="list-item-link" href="#">Каталог коллажей</a></li>
+                         <li class="list-item"><a class="list-item-link" href="#our-works">Наши работы</a></li>
+                         <li class="list-item"><a class="list-item-link" href="#property">Из чего состоит картина на холсте</a></li>
+                         <li class="list-item"><a class="list-item-link" href="#examples">Идеи для печати</a></li>
+                         <li class="list-item"><a class="list-item-link" href="#video">Видео о производстве</a></li>
+                         <li class="list-item"><a class="list-item-link" href="catalog.html">Каталог коллажей</a></li>
                      </ul>
                  </div>
              </div>
@@ -169,7 +169,7 @@
              </div>
          </div>
      </div>
-     <div class="gallery">
+     <div id="our-works" class="gallery">
          <div class="container">
              <div class="row">
                  <div class="col-xs-12">
@@ -257,7 +257,7 @@
              <button class="btn-global">ХОЧУ ТАКЖЕ</button>
          </div>
      </div>
-     <div class="pic-property">
+     <div id="property" class="pic-property">
          <div class="container">
              <div class="row">
                  <div class="col-xs-12">
@@ -304,7 +304,7 @@
              </div>
          </div>
      </div>
-     <div class="examples">
+     <div id="examples" class="examples">
          <div class="container">
              <div class="row">
                  <div class="col-xs-12">
@@ -365,7 +365,7 @@
              </div>
          </div>
      </div>
-     <div class="video">
+     <div id="video" class="video">
          <div class="container">
              <div class="row">
                  <div class="col-xs-12">
@@ -376,9 +376,6 @@
              </div>
              <div class="row">
                  <div class="col-xs-12">
-                     <!--<div class="youtube-block">-->
-                         <!--<iframe width="68%" height="440" src="https://www.youtube.com/embed/4KJpXriYC9A" frameborder="5" allowfullscreen></iframe>-->
-                     <!--</div>-->
                      <div class="youtube-block">
                          <iframe src="https://www.youtube.com/embed/4KJpXriYC9A" frameborder="5" allowfullscreen></iframe>
                      </div>
@@ -434,7 +431,7 @@
                      <div class="under-header">
                          <div class="up-header"><img class="work-done" src="/img/popups/work-done.png" alt="">Фото загружено!</div>
                      </div>
-                     <h4 class="modal-title" id="pop-email-title">Куда выслать готовый макет?</h4>
+                     <h4 class="modal-title">Куда выслать готовый макет?</h4>
                  </div>
                  <div class="modal-body">
                      <div class="row">
@@ -451,11 +448,11 @@
 
      <!-- phone-popup -->
 
-     <div class="modal fade" id="pop-phone" tabindex="-1" role="dialog" aria-labelledby="pop-phone-title">
+     <div id="pop-phone" class= "modal fade" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
-                     <h4 class="modal-title" id="pop-phone-title">Как с вами связаться для уточнения деталей?</h4>
+                     <h4 class="modal-title">Как с вами связаться для уточнения деталей?</h4>
                  </div>
                  <div class="modal-body clearfix">
                      <form class="form-phone col-md-9">
@@ -470,11 +467,11 @@
 
      <!-- size-popup -->
 
-     <div class="modal fade" id="pop-size" tabindex="-1" role="dialog" aria-labelledby="pop-size-title">
+     <div id="pop-size" class="modal fade" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
-                     <h4 class="modal-title" id="pop-size-title">Какой размер картины был бы идеален?</h4>
+                     <h4 class="modal-title">Какой размер картины был бы идеален?</h4>
                  </div>
                  <div class="modal-body clearfix">
                      <form class="form-size col-xs-6 col-sm-5 col-md-5 fix-padding">
@@ -504,14 +501,14 @@
 
      <!-- picture-type-popup -->
 
-     <div class="modal fade" id="pop-type" tabindex="-1" role="dialog" aria-labelledby="pop-type-title">
+     <div id="pop-type" class="modal fade" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
                      <div class="under-header">
                          <p class="price-sum">Итого: <span class="price">8580<span class="rub">i</span></span></p>
                      </div>
-                     <h4 class="modal-title" id="pop-type-title">Какой тип картины вы хотите?</h4>
+                     <h4 class="modal-title">Какой тип картины вы хотите?</h4>
                  </div>
                  <div class="modal-body">
                      <div class="row">
@@ -554,16 +551,17 @@
 
      <!-- picture-type-option popup -->
 
-     <div class="modal fade" id="pop-type-option" tabindex="-1" role="dialog" aria-labelledby="pop-option-title">
+     <div id="pop-type-option" class="modal fade" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
                      <div class="under-header">
                          <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                         <span class="current-type">Простая картина</span>
                          <p class="pic-size">70 х 50 см</p>
                          <p class="price-sum">Итого: <span class="price">9970<span class="rub">i</span></span></p>
                      </div>
-                     <h4 class="modal-title" id="pop-option-title">Добавить стилизацию под живопись или прорисовку фактурным гелем?</h4>
+                     <h4 class="modal-title">Добавить стилизацию под живопись или прорисовку фактурным гелем?</h4>
                  </div>
                  <div class="modal-body">
                      <div class="row">
@@ -586,12 +584,48 @@
                          <div class="text-center col-xs-12">
                              <a id="btn-type-option" class="button-true">Добавить</a>
                              <span class="option-no" data-toggle="modal" data-target="#pop-baget" data-dismiss="modal">Спасибо, не нужно</span>
+                             <!--<button id="btn-to-krek" class="button-true"></button>        btn- TO KREKELUR -->
                          </div>
                      </div>
                  </div>
              </div>
          </div>
      </div>
+
+     <!-- krekelur-popup  -->
+
+     <div id="pop-krekelur" class="modal fade" role="dialog">
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <div class="under-header">
+                         <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                         <span class="current-type">Простая картина</span>
+                         <p class="pic-size">70 х 50 см</p>
+                         <p class="price-sum">Итого: <span class="price">9970<span class="rub">i</span></span></p>
+                     </div>
+                     <h4 class="modal-title">Добавить эффект растрескивания красок (кракелюр), чтобы состарить картину? </h4>
+                 </div>
+                 <div class="modal-body">
+                     <div class="row">
+                         <div class=" col-xs-offset-3 col-xs-6 col-md-6 col-md-offset-3 pic-type">
+                             <p class="type-title">Кракелюр</p>
+                             <div class="img-hover-block">
+                                 <img class="type-img" src="/img/popups/type-1.png" alt="">
+                                 <div class="hover-bg"></div>
+                             </div>
+                             <p class="price-type">+990 руб.</p>
+                         </div>
+                         <div class="text-center col-xs-12">
+                             <a id="btn-krek" class="button-true">Добавить</a>
+                             <span class="option-no" data-toggle="modal" data-target="#pop-baget" data-dismiss="modal">Спасибо, не нужно</span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
 
      <!-- baget-popup -->
 
@@ -601,6 +635,7 @@
                  <div class="modal-header">
                      <div class="under-header">
                          <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                         <span class="current-type">«Тип картины» + допы</span>
                          <p class="pic-size">70 х 50 см</p>
                          <p class="price-sum">Итого: <span class="price">9970<span class="rub">i</span></span></p>
                      </div>
@@ -707,6 +742,7 @@
                  <div class="modal-header">
                      <div class="under-header">
                          <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                         <span class="current-type">«Тип картины» + допы</span>
                          <p class="pic-size">70 х 50 см</p>
                          <p class="price-sum">Итого: <span class="price">11470<span class="rub">i</span></span></p>
                      </div>
@@ -769,6 +805,7 @@
                  <div class="modal-header">
                      <div class="under-header">
                          <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                         <span class="current-type">«Тип картины» + допы</span>
                          <p class="pic-size">70 х 50 см</p>
                          <p class="price-sum">Итого: <span class="price">11470<span class="rub">i</span></span></p>
                          <img class="stock-img" src="/img/popups/stock-flag.png" alt="">
@@ -848,6 +885,7 @@
      <script src="js/mobile-detect.min.js"></script>
      <script src="js/jquery.fancybox.js"></script>
      <script src="js/jquery.elevatezoom.js"></script>
+     <script src="js/jquery.maskedinput.min.js"></script>
 
 
 

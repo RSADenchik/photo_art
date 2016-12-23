@@ -1,0 +1,49 @@
+
+.sidebar {
+    padding-top: 60px;
+    font-family: $gotham-pro-regular;
+  .sidebar-wrap {
+    padding: 30px 28px 30px;
+    background-color: whitesmoke;
+
+    .sidebar-form {
+
+      .search-ipt {
+        width: 100%;
+        border: 1px solid #ffa947;
+        border-radius: 3px;
+        line-height: 35px;
+      }
+      .search-ipt[placeholder] {
+        padding-left: 20px;
+        font-size: 1.05em;
+      }
+      .search-icon {
+        position: relative;
+        float: right;
+        right: 16px;
+        top: -29px;
+        font-size: 1.2em;
+        color: #fa9c20;
+      }
+      .btn-sidebar {
+        font-size: 0.9em;
+        line-height: 34px;
+      }
+    }
+    .menu-sidebar {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid #ddd;
+
+      .ul-items:first-child {
+        padding-top: 0;
+      }
+      .ul-items {
+        padding: 20px 0;
+      }
+    }
+
+  }
+
+}
