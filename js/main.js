@@ -21,8 +21,8 @@ $(document).ready(function() {
 
 
         // YANDEX MAP
-        ymaps.ready(init);
-        function init() {
+        ymaps.ready(inity);
+        function inity() {
             // Создание экземпляра карты и его привязка к контейнеру с
             // заданным id ("map")
             var myMap = new ymaps.Map('map', {
@@ -60,13 +60,12 @@ $(document).ready(function() {
             // Добавление метки на карту
             myMap.geoObjects.add(myPlacemark);
             myMap.behaviors.disable('scrollZoom');
-
-
         }
 
     }
-    else {
+    else
 
+        {
         // YANDEX MAP mobile
         ymaps.ready(init);
         function init() {
@@ -113,9 +112,8 @@ $(document).ready(function() {
         }
     }
 
-
-
     // ease scroll on header link
+
     $('.list-item-link').click( function(){
         var scroll_el = $(this).attr('href');
         if ($(scroll_el).length != 0) {
@@ -128,6 +126,7 @@ $(document).ready(function() {
     // Phone mask
     $("#phone").mask("+7(999) 999-9999");
 
+
     // Calendar initialize
 
     addEventListener('DOMContentLoaded', function () {
@@ -136,32 +135,67 @@ $(document).ready(function() {
         });
     });
 
+    //Zoomer
+
+    var img = $('.perfect-img');
+
+    img.elevateZoom({
+            responsive: false,
+            zoomWindowWidth: '100%',
+            zoomType: "lens",
+            lensShape: "round",
+            lensSize: 120,
+            zoom: 4
+
+    });
+
+    //Remove
+    $('.zoomContainer').remove();
+    img.removeData('elevateZoom');
+    img.removeData('zoomImage');
+
+    //Re-create
+    img.elevateZoom({
+        responsive: true,
+        zoomWindowWidth: '100%',
+        zoomType: "lens",
+        lensShape: "round",
+        lensSize: 120,
+    });
+
+    var img1 = $('.prop-img');
+
+    //Create
+    img1.elevateZoom({
+        responsive: false,
+        zoomWindowWidth: 100,
+        zoomType: "lens",
+        lensShape: "round",
+        lensSize: 120,
+        scrollZoom: true
+    });
+
+    //Remove
+        $('.zoomContainer').remove();
+        img1.removeData('elevateZoom');
+        img1.removeData('zoomImage');
+
+    //Re-create
+        img1.elevateZoom({
+            responsive: false,
+            zoomWindowWidth: 100,
+            zoomType: "lens",
+            lensShape: "round",
+            lensSize: 120,
+            scrollZoom: true,
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 500,
+            lensFadeIn: 500,
+            lensFadeOut: 500
+        });
 
 
-
-        // Zoom image
-    //
-    // $(".perfect-img").elevateZoom({
-    //     responsive: false,
-    //     zoomWindowWidth: '100%',
-    //     zoomType: "lens",
-    //     lensShape: "round",
-    //     lensSize: 120,
-    //     scrollZoom: true
-    // });
-    //
-    // $(".prop-img").elevateZoom({
-    //     responsive: false,
-    //     zoomWindowWidth: '100%',
-    //     zoomType: "lens",
-    //     lensShape: "round",
-    //     lensSize: 120,
-    //     scrollZoom: true
-    // });
-
-
-//  Fancybox gallery image
-
+    //  Fancybox gallery image
 
 
         $('.fancybox').fancybox({
@@ -178,7 +212,7 @@ $(document).ready(function() {
 
 
 
-        // Buuton Bootstrap
+    // Button Bootstrap
 
         $("#btn-prev").click(function () {
             $("#gallery").carousel("prev");
@@ -203,18 +237,48 @@ $(document).ready(function() {
             }
             next.children(':first-child').clone().appendTo($(this));
 
-            for (var i = 0; i < 2; i++) {
-                next = next.next();
-                if (!next.length) {
-                    next = $(this).siblings(':first');
-                }
+            if (!md.mobile() && (!md.tablet()) ) {
 
-                next.children(':first-child').clone().appendTo($(this));
+                for (var g = 0; g < 10; g++) {
+                    next = next.next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+
+                    next.children(':first-child').clone().appendTo($(this));
+                }
             }
+            else {
+                for (var i = 0; i < 2; i++) {
+                    next = next.next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+
+                    next.children(':first-child').clone().appendTo($(this));
+                }
+            }
+
         });
 
 
+    // Show for mobile
 
+
+
+
+                // for (var i = 0; i < 10; i++) {
+                //     next = next.next();
+                //     if (!next.length) {
+                //         next = $(this).siblings(':first');
+                //     }
+                //
+                //     next.children(':first-child').clone().appendTo($(this));
+                // }
+
+
+
+            // Show for desktop
 
 
 

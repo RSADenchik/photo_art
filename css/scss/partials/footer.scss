@@ -85,9 +85,6 @@
       line-height: 27px;
 
       @media #{$bootstrap-xs} { padding-right: 58px; }
-      img:last-child {
-        padding: 0 9px 0 3px;
-      }
     }
   }
 }

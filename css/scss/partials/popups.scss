@@ -234,8 +234,8 @@
         }
       }
 
-      .img-hover-block:hover a .hover-bg,
-      .img-hover-block:hover a .hover-lypa {
+      .img-hover-block:hover .hover-bg,
+      .img-hover-block:hover .hover-lypa {
         display: block;
       }
 
@@ -796,6 +796,7 @@
   .modal-title {
     padding: 30px 0 25px 60px;
     line-height: 32px;
+    max-width: 80%;
 
     @media #{$bootstrap-xs} {
       width: 100%;
@@ -1235,7 +1236,7 @@
       @media #{$bootstrap-nano} { font-size: 1em; }
     }
 
-    section article .single {
+    section .single {
       width: 255px;
       margin: 0 auto;
       border-radius: 6px;

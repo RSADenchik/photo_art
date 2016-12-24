@@ -1,13 +1,13 @@
 .benefits {
-  margin-top: -114px;
-  padding: 142px 0 148px;
+  padding: 25px 0 148px;
+  position: relative;
   background-color: whitesmoke;
-  background: url('/img/paints.png') left bottom no-repeat, url('/img/baget.png') right 7% no-repeat;
+  background: url('/img/paints.png') left bottom no-repeat;
 
   @media #{$bootstrap-md} {
     margin: 0;
     padding: 50px 0 146px;
-    background-position: -1% bottom, 108% -2%;
+    background-position: -1% bottom;
   }
   @media #{$bootstrap-xs} {
     margin-top: 0;
@@ -15,6 +15,17 @@
     background-color: #f1f1f1;
     background: url('/img/mobile/baget-mobile.png') top right no-repeat, url('/img/mobile/paint-mobile.png') bottom left no-repeat;
   }
+
+
+    .baget-img {
+      position: absolute;
+      right: 0;
+      top: -6%;
+      @media #{$bootstrap-md} {
+        width: 30%;
+        top: 0;
+      }
+    }
 
   .description {
     margin-bottom: 30px;

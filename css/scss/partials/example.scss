@@ -74,7 +74,8 @@
       @media #{$bootstrap-md} { font-size: 1.2em; }
       @media #{$bootstrap-xs} {
         font-size: 1.15em;
-        max-width: 200px;
+        max-width: 240px;
+        -moz-max-width: 190px;
         margin: 0 auto;
         line-height: 25px;
         br {
@@ -92,7 +93,7 @@
     }
     .example-img {
       width: 100%;
-      max-width: 306px;
+      max-width: 300px;
       height: 330px;
       margin: 30px 0 0 15px;
       border: 10px solid white;

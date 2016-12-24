@@ -3,16 +3,66 @@
 
   @media #{$bootstrap-xs} { padding-top: 53px; padding-bottom: 59px; }
 
+
+  @media (min-width: 992px) {
+    .container-flex {
+      display: flex;
+      align-items: flex-start;
+      flex-flow: column wrap;
+
+      a { flex: 1; }
+    }
+  }
   .img-block {
     width: 100%;
-    height: 240px;
+    height: 330px;
+    padding: 10px;
     display: block;
+    position: relative;
     object-fit: cover;
+
+    @media #{$bootstrap-xs} {
+      height: 240px;
+      padding: 0;
+    }
 
     .gallery-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+  .img-block:hover .hover-bg,
+  .img-block:hover .hover-lypa {
+    display: block;
+  }
+
+  .hover-bg, .hover-lypa {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .hover-bg {
+    margin: 10px;
+    -moz-opacity: .7;
+    opacity: .7;
+    background-color: rgba(146, 103, 82, 0.6);
+    background-image: url("/img/popups/lypa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 3.16%;
+      top: 3.16%;
+      right: 3.16%;
+      bottom: 3.16%;
+      border: 1px solid rgba(255, 255, 255, 0.4);
     }
   }
   .carousel-inner>.item {
@@ -48,28 +98,7 @@
   }
 
 
-  @media (min-width: 992px) {
-    .container-flex {
-      display: flex;
-      max-height: 1110px;
-      align-items: flex-start;
-      flex-flow: column wrap;
 
-      a { flex: 1; }
-
-      .gallery-img {
-        width: 100%;
-        height: 240px;
-        padding: 15px;
-        &:hover {
-          opacity: 0.6;
-          background-color: rgba(146, 103, 82, 0.6);
-        }
-
-      }
-
-    }
-  }
   .btn-global {
     margin-top: 50px;
     max-width: 300px;
