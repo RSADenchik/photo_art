@@ -29,11 +29,14 @@
         height: 100% !important;
       }
     }
+    .img-balloon  {
+      display: block;
+    }
 
     @media #{$bootstrap-nano} {
-      .ymaps-2-1-47-image-with-content {
-        background-size: 100% 100%!important;
-      }
+      //.ymaps-2-1-47-image-with-content {
+      //  background-size: 100% 100%!important;
+      //}
     }
   }
 

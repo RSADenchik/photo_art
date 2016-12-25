@@ -6,10 +6,11 @@ var gulp          = require('gulp'),
     minifyCSS     = require('gulp-minify-css'),
     autowatch     = require('gulp-autowatch'),
     plumber       = require('gulp-plumber'),
-    uglify        = require('gulp-uglify');
-    concat        = require('gulp-concat');
-    csso          = require('gulp-csso');
+    uglify        = require('gulp-uglify'),
+    concat        = require('gulp-concat'),
+    csso          = require('gulp-csso'),
     imagemin      = require('gulp-imagemin');
+
 
 // HTML
 
@@ -17,7 +18,6 @@ gulp.task('htmls', function () {
     gulp.src(['*.html'])
         .pipe(connect.reload());
 });
-
 
 // SCSS
 
@@ -34,12 +34,15 @@ gulp.task('styles', function() {
 
 // Delete unused classes
 gulp.task('uncss', function() {
-   return gulp.src('css/main(copy after uncss).css')
+   return gulp.src('css/main.css')
        .pipe(uncss({
            html: ['index.html']
        }))
        .pipe(gulp.dest('./out'));
 });
+// Delete unused images
+
+
 
  // JS
 gulp.task('js', function() {

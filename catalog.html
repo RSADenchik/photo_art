@@ -6,6 +6,7 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery.scrollbar.css" rel="stylesheet" type="text/css">
     <link href="css/pushy.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -88,33 +89,115 @@
     </div>
 </nav>
 
+
 <!-- Sidebar -->
 <aside class="sidebar">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-lg-3 for-md">
                 <div class="sidebar-wrap">
                     <form action="" class="sidebar-form">
                         <input id="search" class="search-ipt" type="text" placeholder="Поиск по каталогу "><i class="fa fa-search search-icon" aria-hidden="true"></i>
                         <button class="btn-global btn-sidebar" type="submit">Найти</button>
                     </form>
                     <ul class="menu-sidebar">
-                        <li class="ul-items">Репродукции картин
-                            <ul class="submenu-sidebar">
-                                <li class="prod-item">Айвазовский И. К.</li>
-                                <li class="prod-item">Винсент Ван Гог</li>
-                                <li class="prod-item">Автор 3</li>
-                                <li class="prod-item">Автор 4</li>
-                                <li class="prod-item">Автор 5</li>
-                                <li class="prod-item">Автор 6</li>
+                        <li class="ul-item"><a id="dropdown" class="sidebar-links">Репродукции картин</a><i id="rotate" class="fa fa-angle-right arrow-right" aria-hidden="true"></i>
+                            <ul class="textarea-scrollbar scrollbar-outer submenu-sidebar">
+                                <li class="prod-item"><a class="sidebar-sublinks">Айвазовский И. К.</a></li>
+                                <li class="prod-item"><a class="sidebar-sublinks">Винсент Ван Гог</a></li>
+                                <li class="prod-item"><a class="sidebar-sublinks">Автор 3</a></li>
+                                <li class="prod-item"><a class="sidebar-sublinks">Автор 4</a></li>
+                                <li class="prod-item"><a class="sidebar-sublinks">Автор 5</a></li>
+                                <li class="prod-item"><a class="sidebar-sublinks">Автор 6</a></li>
+                                <li class="prod-item"><a class="sidebar-sublinks">Автор 7</a></li>
+                                <li class="prod-item"><a class="sidebar-sublinks">Автор 8</a></li>
+                                <li class="prod-item"><a class="sidebar-sublinks">Автор 9</a></li>
+                                <li class="prod-item"><a class="sidebar-sublinks">Автор 10</a></li>
                             </ul>
                         </li>
-                        <li class="ul-item">Мужской портрет</li>
-                        <li class="ul-item">Женский портрет</li>
-                        <li class="ul-item">Групповой портрет</li>
-                        <li class="ul-item">Детский портрет</li>
-                        <li class="ul-item">Современный портрет</li>
+                        <li class="ul-item"><a class="sidebar-links">Мужской портрет</a></li>
+                        <li class="ul-item"><a class="sidebar-links">Женский портрет</a></li>
+                        <li class="ul-item"><a class="sidebar-links">Групповой портрет</a></li>
+                        <li class="ul-item"><a class="sidebar-links">Детский портрет</a></li>
+                        <li class="ul-item"><a class="sidebar-links">Современный портрет</a></li>
                     </ul>
+                </div>
+            </div>
+            <div class="col-md-8 right-side">
+                <ol class="breadcrumb">
+                    <li class="breadcrumbs-item"><a href="index.html" class="breadcrumbs-link">Главная</a></li>
+                    <li class="breadcrumbs-item"><a href="catalog.html" class="breadcrumbs-link">Портреты</a></li>
+                    <li class="active"><a>Мужской портрет</a></li>
+                </ol>
+                <h2 class="catalog-title">Мужской портрет</h2>
+                <p class="catalog-description">Описание категории: мужские портреты с разных времен. мужские портреты
+                    с разных времен. мужские портреты с разных времен. Еще текста.</p>
+            </div>
+            <div class="col-md-3 right-side">
+                <div class="catalog-block">
+                    <img src="/img/gallery/small-photo.png">
+                    <span class="under-img">Мужской портрет</span>
+                    <button class="btn-global btn-catalog">Заказать</button>
+                </div>
+            </div>
+            <div class="col-md-3 right-side">
+                <div class="catalog-block">
+                    <img src="/img/gallery/small-photo.png">
+                    <span class="under-img">Мужской портрет</span>
+                    <button class="btn-global btn-catalog">Заказать</button>
+                </div>
+            </div>
+            <div class="col-md-3 right-side">
+                <div class="catalog-block">
+                    <img src="/img/gallery/small-photo.png">
+                    <span class="under-img">Мужской портрет</span>
+                    <button class="btn-global btn-catalog">Заказать</button>
+                </div>
+            </div>
+            <div class="col-md-3 col-md-offset-3 right-side">
+                <div class="catalog-block">
+                    <img src="/img/gallery/small-photo.png">
+                    <span class="under-img">Мужской портрет</span>
+                    <button class="btn-global btn-catalog">Заказать</button>
+                </div>
+            </div>
+            <div class="col-md-3 right-side">
+                <div class="catalog-block">
+                    <img src="/img/gallery/small-photo.png">
+                    <span class="under-img">Мужской портрет</span>
+                    <button class="btn-global btn-catalog">Заказать</button>
+                </div>
+            </div>
+            <div class="col-md-3 right-side">
+                <div class="catalog-block">
+                    <img src="/img/gallery/small-photo.png">
+                    <span class="under-img">Мужской портрет</span>
+                    <button class="btn-global btn-catalog">Заказать</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-md-3 col-md-offset-3 right-side">
+                        <div class="catalog-block">
+                            <img src="/img/gallery/small-photo.png">
+                            <span class="under-img">Мужской портрет</span>
+                            <button class="btn-global btn-catalog">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 right-side">
+                        <div class="catalog-block">
+                            <img src="/img/gallery/small-photo.png">
+                            <span class="under-img">Мужской портрет</span>
+                            <button class="btn-global btn-catalog">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 right-side">
+                        <div class="catalog-block">
+                            <img src="/img/gallery/small-photo.png">
+                            <span class="under-img">Мужской портрет</span>
+                            <button class="btn-global btn-catalog">Заказать</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -123,7 +206,8 @@
 
 
 <script src="js/jquery-2.0.0.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/pushy.min.js"></script>
 <script src="js/mobile-detect.min.js"></script>
