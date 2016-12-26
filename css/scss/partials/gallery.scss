@@ -1,16 +1,21 @@
 .gallery {
   padding: 85px 0 50px;
 
-  @media #{$bootstrap-xs} { padding-top: 53px; padding-bottom: 59px; }
+  @media #{$bootstrap-xs} {
+    padding: 53px 0;
+  }
 
-
-  @media (min-width: 992px) {
-    .container-flex {
-      display: flex;
-      align-items: flex-start;
-      flex-flow: column wrap;
-
-      a { flex: 1; }
+  .title {
+    @media #{$bootstrap-xs} {
+      padding-bottom: 25px;
+    }
+  }
+  .description {
+    margin-bottom: 15px;
+    padding-top: 31px;
+    @media #{$bootstrap-xs} {
+      margin-bottom: 2px;
+      padding-top: 25px;
     }
   }
   .img-block {
@@ -66,24 +71,27 @@
     }
   }
   .carousel-inner>.item {
-    -webkit-transition: 0.1s ease-in-out left;
-    transition: 0.1s ease-in-out left;
-    -webkit-transition: 0.5s, ease-in-out, left;
+    -webkit-transition: .1s ease-in-out left;
+    transition: .1s ease-in-out left;
+    -webkit-transition: .1s, ease-in-out, left;
     -moz-transition: .1s, ease-in-out, left;
     -o-transition: .1s, ease-in-out, left;
-    transition: .5s, ease-in-out, left;
+    transition: .1s, ease-in-out, left;
   }
   .multi-item-carousel{
 
-    .carousel-inner .active.left { left: -25%; }
-    .carousel-inner .next        { left:  25%; }
-    .carousel-inner .prev		 { left: -25%; }
+    .carousel-inner .active.left { left: 0; }
+    .carousel-inner .next        { left:  0; }
+    .carousel-inner .prev		 { left: 0; }
     .carousel-control 			 { width:  20%; height: 240px; }
     .btn-next {
       position: absolute;
       background: transparent;
       top: 42%;
       right: 3%;
+    }
+    .display {
+      display: block;
     }
     .btn-prev {
       position: absolute;
@@ -100,10 +108,12 @@
 
 
   .btn-global {
-    margin-top: 50px;
+    margin-top: 59px;
+    margin-bottom: 14px;
+    line-height: 67px;
     max-width: 300px;
     @media #{$bootstrap-xs} {
-      margin-top: 42px;
+      margin-top: 45px;
     }
   }
 }

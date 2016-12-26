@@ -1,10 +1,10 @@
 .contact {
-  padding: 0 0 61px;
+  padding: 0 0 56px;
   font-family: $museo-sans-regular;
   line-height: 27px;
 
   @media #{$bootstrap-xs} {
-    padding-bottom: 33px;
+    padding-bottom: 35px;
     padding-top: 47px;
 
     .line { top: -15px };
@@ -17,7 +17,8 @@
     margin-bottom: 60px;
 
     @media #{$bootstrap-xs} {
-      height: 80vh !important;
+      height: 100vh !important;
+      margin-bottom: 40px;
     }
     @media #{$bootstrap-xs} {
       .ymaps-2-1-47-map {
@@ -32,22 +33,19 @@
     .img-balloon  {
       display: block;
     }
-
-    @media #{$bootstrap-nano} {
-      //.ymaps-2-1-47-image-with-content {
-      //  background-size: 100% 100%!important;
-      //}
-    }
   }
 
   .questions {
     text-transform: uppercase;
     color: #181818;
+    margin-left: -22px;
     font-size: 2.8em;
 
     @media #{$bootstrap-xs} {
       font-size: 2.3em;
       text-align: center;
+      display: block;
+      margin: 0 auto;
     }
     @media #{$bootstrap-nano} { font-size: 1.7em; }
   }
@@ -60,6 +58,9 @@
       display: block;
       text-align: center;
       padding-top: 20px;
+    }
+    @media #{$bootstrap-nano} {
+      font-size: 1.4em;
     }
   }
 }

@@ -17,107 +17,6 @@ $(document).ready(function() {
 
     var md = new MobileDetect(window.navigator.userAgent);
 
-    if (!md.mobile() && (!md.tablet()) ) {
-
-
-        // YANDEX MAP
-
-        ymaps.ready(function () {
-
-            // Создание экземпляра карты и его привязка к контейнеру с
-            // заданным id ("map")
-            var myMap = new ymaps.Map('map', {
-                // При инициализации карты, обязательно нужно указать
-                // ее центр и коэффициент масштабирования
-                center: [55.724643, 37.584604], // Москва
-                zoom: 17
-            });
-
-            // Создание метки
-            var myPlacemark = new ymaps.Placemark([55.724643, 37.584604], {
-
-                    hintContent: 'Производство картин',
-                    address: 'ул.Фрунзенская наб. д. 30 пав. 3А место 12',
-                    websayt: ''
-                },
-                {
-                    // пареметры метки
-                    iconLayout: 'default#image',
-                    iconImageHref: 'img/mapMark.png',
-                    draggable: true,
-                    iconImageSize: [76, 102],
-                    iconImageOffset: [-38, -102],
-                    hideIconOnBalloonOpen: false,
-
-                    //параметры описания
-
-                    balloonContentSize: [356, 294],
-                    balloonLayout: "default#imageWithContent",
-                    balloonImageHref: 'img/ballon.png',
-                    balloonImageOffset: [-838, -250],
-                    balloonImageSize: [356, 294],
-                    balloonShadow: false
-
-                });
-
-
-            // Добавление метки на карту
-            myMap.geoObjects.add(myPlacemark);
-            myMap.behaviors.disable('scrollZoom');
-            myPlacemark.balloon.open();
-        });
-
-
-    }
-    else
-
-        {
-        // YANDEX MAP mobile
-            ymaps.ready(function () {
-
-                // Создание экземпляра карты и его привязка к контейнеру с
-                // заданным id ("map")
-                var myMap = new ymaps.Map('map', {
-                    // При инициализации карты, обязательно нужно указать
-                    // ее центр и коэффициент масштабирования
-                    center: [55.724775, 37.584604], // Москва
-                    zoom: 17
-                });
-
-
-                // Создание метки
-                var myPlacemark = new ymaps.Placemark([55.724643, 37.584604], {
-
-                        hintContent: 'Производство картин',
-                        address: 'ул.Фрунзенская наб. д. 30 пав. 3А место 12',
-                        websayt: ''
-                    },
-                    {
-                        // пареметры метки
-                        iconLayout: 'default#image',
-                        iconImageHref: 'img/mapMark.png',
-                        draggable: true,
-                        iconImageSize: [76, 102],
-                        iconImageOffset: [-38, -102],
-                        hideIconOnBalloonOpen: false,
-
-                        //параметры описания
-
-                        balloonContentSize: [356, 294],
-                        balloonLayout: "default#imageWithContent",
-                        balloonImageHref: 'img/ballon.png',
-                        balloonImageOffset: [-160, -450],
-                        balloonImageSize: [300, 294],
-                        balloonShadow: false
-                    });
-
-                // Добавление метки на карту
-                myMap.geoObjects.add(myPlacemark);
-                myMap.behaviors.disable('scrollZoom');
-                myMap.behaviors.disable('drag');
-                myPlacemark.balloon.open();
-        });
-    }
 
     // ease scroll on header link
 
@@ -142,42 +41,7 @@ $(document).ready(function() {
         });
     });
 
-     //Zoomer work on desktop
-
-    if (!md.mobile() && (!md.tablet()) ) {
-
-        var img = $('.perfect-img');
-
-        img.elevateZoom({
-            responsive: false,
-            zoomWindowWidth: '100%',
-            zoomType: "lens",
-            lensShape: "round",
-            lensSize: 120,
-            zoom: 4
-
-        });
-
-        //Remove
-        $('.zoomContainer').remove();
-        img.removeData('elevateZoom');
-        img.removeData('zoomImage');
-
-        //Re-create
-        img.elevateZoom({
-            responsive: true,
-            zoomWindowWidth: '100%',
-            zoomType: "lens",
-            lensShape: "round",
-            lensSize: 120,
-            scrollZoom: true
-        });
-    }
-
-
-
     //  Fancybox gallery image
-
 
         $('.fancybox').fancybox({
             padding: 15,
@@ -192,8 +56,10 @@ $(document).ready(function() {
         });
 
 
-
     // Button Bootstrap
+    if ( md.mobile() || ( md.tablet()) ) {
+
+        $('.item').removeClass('display');
 
         $("#btn-prev").click(function () {
             $("#gallery").carousel("prev");
@@ -210,40 +76,30 @@ $(document).ready(function() {
             interval: false
         });
 
-
-        $('.container-flex .item').each(function () {
+        $('.multi-item-carousel .item').each(function () {
             var next = $(this).next();
             if (!next.length) {
                 next = $(this).siblings(':first');
             }
             next.children(':first-child').clone().appendTo($(this));
 
-            if (!md.mobile() && (!md.tablet()) ) {
-
-                for (var g = 0; g < 10; g++) {
-                    next = next.next();
-                    if (!next.length) {
-                        next = $(this).siblings(':first');
-                    }
-
-                    next.children(':first-child').clone().appendTo($(this));
+            for (var i = 0; i < 2; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
                 }
-            }
-            else {
-                for (var i = 0; i < 2; i++) {
-                    next = next.next();
-                    if (!next.length) {
-                        next = $(this).siblings(':first');
-                    }
 
-                    next.children(':first-child').clone().appendTo($(this));
-                }
+                next.children(':first-child').clone().appendTo($(this));
             }
-
         });
+    }
+    else {
+
+        $('.item').addClass('display');
+    }
+
 
     // Catalog dropdown
-
 
 
     // Function hide and show popups

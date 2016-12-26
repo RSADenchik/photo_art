@@ -1,26 +1,47 @@
 .pic-property {
-  padding: 88px 0 100px;
+  padding: 85px 0 105px;
   background: url(/img/pic-property-bg.png) top center no-repeat;
   background-color: rgba(244,244,244,.49);
 
   @media #{$bootstrap-xs} {
-    padding: 58px 0 63px;
+   .padding-right {
+     padding-right: 0;
+   }
+    .padding-left {
+      padding-left: 0;
+    }
+  }
+  @media #{$bootstrap-xs} {
+    padding: 53px 0 62px;
     background-size: cover;
 
     .title {
       max-width: 305px;
-      padding-bottom: 22px;
+      padding-bottom: 20px;
+    }
+    .description {
+
     }
   }
+  .description {
+    padding-top: 25px;
+    @media #{$bootstrap-xs} {
+      padding-top: 20px;
+    }
+  }
+
 
   .prop-img {
     margin: 0 auto;
     position: absolute;
-    left: -15px;
+    left: -8px;
     right: 0;
-    top: -135px;
+    top: -139px;
 
-    @media #{$bootstrap-md} { width: 44%; left: -60px; }
+    @media #{$bootstrap-md} {
+      width: 44%;
+      left: -60px;
+    }
     @media #{$bootstrap-xs} {
       width: 100%;
       max-width: 388px;
@@ -57,7 +78,7 @@
       background-color: #ffa947;
     }
     .option-info {
-      padding-top: 10px;
+      padding-top: 12px;
       color: #3d3d3d;
       font-size: 1em;
       line-height: 21px;
@@ -65,40 +86,72 @@
     }
   }
   .prop-option-1 {
-    margin-top: 48px;
-    padding-left: 65px;
+    max-width: 285px;
+    margin-top: 47px;
+    padding-left: 55px;
     padding-right: 0;
 
-    @media #{$bootstrap-md} { padding-left: 15px; }
-    @media #{$bootstrap-xs} { padding: 0 0 0 20px; margin: 0; }
+    @media #{$bootstrap-md} {
+      padding-left: 0;
+      max-width: 270px
+    }
+    @media #{$bootstrap-xs} {
+      padding: 0 0 0 5px;
+      margin-top: 5px;
+      .option-title {
+        line-height: 22px;
+      }
+      .option-info {
+        padding-top: 9px;
+      }
+    }
     @media #{$bootstrap-nano} { margin-top: 0; }
+
+      .option-info br {
+        content: "";
+      }
   }
   .prop-option-2 {
-    margin-top: 43px;
-    padding-left: 48px;
+    margin-top: 49px;
+    padding-left: 34px;
 
-    @media #{$bootstrap-md} { margin-top: 47px; padding-left: 18px; }
-    @media #{$bootstrap-xs} { margin: 0; padding: 0 0 0 20px; }
+    @media #{$bootstrap-md} {
+      margin-top: 47px;
+      padding-left: 0;
+    }
+    @media #{$bootstrap-xs} {
+      padding: 0 0 0 4px;
+      margin-top: 3px
+    }
     .option-title { line-height: 24px; }
   }
   .prop-option-3 {
-    padding-left: 100px;
-    padding-right: 0;
-    margin-top: 108px;
+    margin-top: 102px;
+    padding: 0 0 0 88px;
 
-    @media #{$bootstrap-md} { margin-top: 65px; padding-left: 15px; }
-    @media #{$bootstrap-xs} { padding-left: 20px; margin-top: 327px; }
+    @media #{$bootstrap-md} {
+      margin-top: 60px;
+      padding-left: 0;
+    }
+    @media #{$bootstrap-xs} {
+      padding-left: 3px;
+      margin-top: 328px;
+    }
     @media #{$bootstrap-nano} { margin-top: 240px; padding: 0 10px; }
   }
   .prop-option-4 {
-    margin-top: 100px;
-    padding-left: 75px;
+    margin-top: 95px;
+    padding-left: 60px;
 
-    @media #{$bootstrap-md} { margin-top: 52px; padding: 0 0 0 30px; }
+    @media #{$bootstrap-md} {
+      margin-top: 50px;
+      padding: 0;
+    }
     @media #{$bootstrap-xs} {
-      margin: 334px 0 0;
-      padding: 0 12px 0 11px;
+      margin-top: 334px;
+      padding: 0 1px 0 10px;
       .option-info {
+        padding-top: 11px;
         line-height: 22px;
       }
     }
@@ -106,13 +159,15 @@
 
   }
   .btn-global {
-    max-width: 415px;
+    max-width: 421px;
+    line-height: 66px;
     margin-top: 133px;
     background-image: linear-gradient(to top, #e84246 0%, #d12f32 100%);
 
     @media #{$bootstrap-xs} {
       max-width: 380px;
-      margin-top: 40px;
+      margin-top: 39px;
+      line-height: 68px;
       font-size: 1.25em;
     }
     @media #{$bootstrap-nano} {

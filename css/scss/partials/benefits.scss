@@ -1,180 +1,240 @@
 .benefits {
-  padding: 25px 0 148px;
+  padding: 135px 0 146px;
   position: relative;
   background-color: whitesmoke;
   background: url('/img/paints.png') left bottom no-repeat;
 
   @media #{$bootstrap-md} {
-    margin: 0;
-    padding: 50px 0 146px;
-    background-position: -1% bottom;
+    padding: 50px 0 100px;
   }
   @media #{$bootstrap-xs} {
     margin-top: 0;
-    padding: 54px 0 101px;
+    padding: 54px 0 98px;
     background-color: #f1f1f1;
     background: url('/img/mobile/baget-mobile.png') top right no-repeat, url('/img/mobile/paint-mobile.png') bottom left no-repeat;
   }
 
-
-    .baget-img {
-      position: absolute;
-      right: 0;
-      top: -6%;
-      @media #{$bootstrap-md} {
-        width: 30%;
-        top: 0;
-      }
+  .baget-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    @media #{$bootstrap-md} {
+      width: 30%;
     }
-
-  .description {
-    margin-bottom: 30px;
   }
-  .margin-top {
-    padding-left: 30px;
+  .title {
+    padding-bottom: 17px;
+    @media #{$bootstrap-xs} {
+      padding-bottom: 28px;
+    }
+  }
+  .line {
+    top: 2px;
+  }
+  .description {
+    padding-top: 15px;
 
     @media #{$bootstrap-xs} {
-    padding-left: 15px;
+      padding-top: 27px;
+      padding-bottom: 18px;
+    }
   }
+  .margin-top {
+    padding-left: 31px;
+    padding-right: 29px;
+    padding-top: 33px;
   }
 
-    .benefits-card::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 0;
-      border-bottom: 75px solid #0e8084;
-      border-right: 121px solid transparent;
-    }
-    .benefits-card {
-      padding: 58px 10px 27px 51px;
-      height: 280px;
-      position: relative;
+  .benefits-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 75px solid #0e8084;
+    border-right: 121px solid transparent;
+  }
+  .benefits-card {
+    padding: 58px 10px 27px 49px;
+    height: 280px;
+    position: relative;
 
-
-      @media #{$bootstrap-xs} {
-
-        margin: 0 auto;
-        max-width: 380px;
-        padding: 50px 10px 133px 48px;
-        height: auto;
-        box-shadow: 0 26px 33.1px 4.9px rgba(0, 0, 0, 0.08);
-      }
-      @media #{$bootstrap-nano} { padding-left: 15px; margin: 0 10.41% 30px; }
-
-      .card-icon {
-        padding: 0 17px 120px 0;
-        float: left;
-
-        @media #{$bootstrap-nano} {
-
-          padding: 10px 9px 120px 0;
-          width: 24%;
-          max-width: 80px;
-        }
-      }
-      .card-title {
-        font-family: $museo-sans-bold;
-        font-size: 1.8em;
-        line-height: 32px;
-        color: #302e2e;
-
-        @media #{$bootstrap-md} { font-size: 1.6em; }
-        @media #{$bootstrap-nano} { font-size: 1.2em; }
-      }
-      .card-description {
-        padding-top: 8px;
-        text-align: left;
-        font-family: $gotham-pro-regular;
-        font-size: 1.15em;
-        line-height: 25px;
-        color: #4d4d4d;
-
-        @media #{$bootstrap-md} { font-size: 1em; }
-        @media #{$bootstrap-nano} { font-size: 1em; }
-      }
+    @media #{$bootstrap-md} {
+      padding-left: 25px;
     }
 
-    .benefits-card:nth-child(even) {
-    background-color: #fafafa;
+    @media #{$bootstrap-xs} {
+      margin: 0 auto;
+      max-width: 380px;
+      padding: 50px 10px 133px 50px;
+      height: auto;
+      box-shadow: 0 26px 33.1px 4.9px rgba(0, 0, 0, 0.08);
     }
-    .benefits-card:nth-child(odd) {
-    background-color: #f3f3f3;
+    @media #{$bootstrap-nano} {
+      padding-left: 15px;
+      padding-top: 25px;
+      margin: 0 10.41% 30px;
     }
 
-    .benefits-card:nth-child(2) {
-      padding-left: 50px;
-
-      @media #{$bootstrap-xs} {
-        padding: 88px 0 106px 55px;
-      }
-      @media #{$bootstrap-nano} {
-        padding-left: 15px;
-        padding-top: 50px;
-
-      }
-    }
-    .benefits-card:nth-child(3) {
-      padding: 64px 10px 50px 30px;
-
-      @media #{$bootstrap-xs} {
-        padding: 91px 10px 49px 39px;
-      }
-      @media #{$bootstrap-nano} {
-        padding-left: 8px;
-      }
-    }
-   .benefits-card:nth-child(4) {
-     @media #{$bootstrap-xs} {
-       padding-top: 86px;
-     }
-     }
-    .benefits-card:nth-child(5) {
-      padding: 57px 0 50px 48px;
-
-      @media #{$bootstrap-xs} {
-        padding: 84px 0  81px 50px;
-      }
-      @media #{$bootstrap-md} {
-        padding: 58px 10px 27px 51px;
-      }
-      @media #{$bootstrap-nano} {
-        padding-left: 15px;
-        padding-top: 50px;
-      }
-    }
-   }
-    .benefits-card:nth-child(6) {
-    padding: 55px 10px 0 15px;
-
-    @media #{$bootstrap-md} { padding: 53px 5px; }
-     @media #{$bootstrap-xs} {
-       padding: 85px 10px 78px 24px;
-     }
-    @media #{$bootstrap-nano} { padding-left: 15px; }
     .card-icon {
-      padding: 6px 15px 120px 0;
+      padding: 0 17px 120px 0;
+      float: left;
 
-      @media #{$bootstrap-md} { padding: 6px 10px 120px 0; }
+      @media #{$bootstrap-xs} {
+        padding: 0 15px 120px 0;
+      }
+      @media #{$bootstrap-nano} {
+
+        padding: 10px 9px 120px 0;
+        width: 24%;
+        max-width: 80px;
+      }
     }
-
-}
-@media #{$bootstrap-nano} {
-  .benefits .container-mobile .row-padding .benefits-card {
-    padding-left: 10px;
-    padding-right: 10px;
     .card-title {
-      font-size: 1.2em;
-      line-height: 24px;
-    }
-    .card-icon {
-      padding-right: 10px;
+      font-family: $museo-sans-bold;
+      font-size: 1.8em;
+      line-height: 32px;
+      color: #302e2e;
+
+      @media #{$bootstrap-md} {
+        font-size: 1.6em;
+      }
+      @media #{$bootstrap-nano} {
+        font-size: 1.2em;
+      }
     }
     .card-description {
-      font-size: 0.85em;
-      line-height: 22px;
+      padding-top: 8px;
+      text-align: left;
+      font-family: $gotham-pro-regular;
+      font-size: 1.15em;
+      line-height: 25px;
+      color: #4d4d4d;
+
+      @media #{$bootstrap-md} {
+        font-size: 1em;
+      }
+      @media #{$bootstrap-nano} {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  .benefits-card:nth-child(even) {
+    background-color: #fafafa;
+  }
+  .benefits-card:nth-child(odd) {
+    background-color: #f3f3f3;
+  }
+
+  .benefits-card:nth-child(2) {
+    padding-left: 53px;
+
+    @media #{$bootstrap-md} {
+      padding-left: 25px;
+    }
+    @media #{$bootstrap-xs} {
+      padding: 88px 0 106px 55px;
+    }
+    @media #{$bootstrap-nano} {
+      padding-left: 15px;
+      padding-top: 25px;
+
+    }
+  }
+  .benefits-card:nth-child(3) {
+    padding: 59px 10px 50px 38px;
+    .card-icon {
+      padding-top: 6px;
+    }
+
+    @media #{$bootstrap-md} {
+      padding-left: 25px;
+    }
+    @media #{$bootstrap-xs} {
+      padding: 91px 10px 49px 39px;
+    }
+    @media #{$bootstrap-nano} {
+      padding: 25px 0 49px 8px;
+    }
+  }
+  .benefits-card:nth-child(4) {
+    @media #{$bootstrap-xs} {
+      padding-top: 88px;
+      .card-icon {
+        padding-top: 5px;
+      }
+    }
+    @media #{$bootstrap-nano} {
+      padding-top: 25px;
+    }
+  }
+
+  .benefits-card:nth-child(5) {
+    padding: 56px 0 50px 51px;
+
+    @media #{$bootstrap-md} {
+      padding-left: 25px;
+    }
+    @media #{$bootstrap-xs} {
+      padding: 88px 0 84px 53px;
+      .card-description {
+        line-height: 24px;
+      }
+    }
+    @media #{$bootstrap-nano} {
+      padding-left: 10px;
+      padding-top: 25px;
+    }
+  }
+
+  .benefits-card:nth-child(6) {
+    padding: 55px 10px 0 21px;
+
+    @media #{$bootstrap-md} {
+      padding: 53px 5px;
+    }
+    @media #{$bootstrap-xs} {
+      padding: 85px 10px 78px 24px;
+      .card-icon {
+        padding: 5px 16px 120px 0;
+      }
+      .card-description {
+        padding-top: 11px;
+      }
+    }
+    @media #{$bootstrap-nano} {
+      padding-left: 6px;
+      padding-right: 0
+    }
+    .card-icon {
+      padding: 5px 20px 120px 0;
+
+      @media #{$bootstrap-md} {
+        padding: 6px 10px 120px 0;
+      }
+      @media #{$bootstrap-nano} {
+        padding: 5px 10px 120px 0;
+      }
+    }
+
+  }
+  @media #{$bootstrap-nano} {
+    .benefits .container-mobile .row-padding .benefits-card {
+      padding-left: 10px;
+      padding-right: 10px;
+      .card-title {
+        font-size: 1.2em;
+        line-height: 24px;
+      }
+      .card-icon {
+        padding-right: 10px;
+      }
+      .card-description {
+        font-size: 0.85em;
+        line-height: 22px;
+      }
     }
   }
 }

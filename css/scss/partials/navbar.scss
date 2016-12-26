@@ -3,8 +3,7 @@
   background-color: #2d7274;
    .fix-relative {
      position: relative;
-     @media #{$bootstrap-xl} { right: 18px; }
-     @media #{$bootstrap-md} { padding: 0; }
+     @media #{$bootstrap-xl} { right: 21px; }
    }
   .nav-list {
     text-align: center;

@@ -1,17 +1,22 @@
 
 .examples {
-  padding-top: 90px;
-  background: url('/img/example-right-img.png') 100% 101% no-repeat;
+  padding-top: 104px;
+  background: url('/img/example-right-img.png') right 60% no-repeat;
 
   @media #{$bootstrap-xs} {
+    background: none;
+  }
+  @media #{$bootstrap-xs} {
     background-size: 36%;
-    padding-top: 56px;
+    padding-top: 55px;
 
     .description {
       padding: 10px 0;
       width: 100%;
     }
-    .line { top: -9px;}
+    .line {
+      top: -9px;
+    }
     .title {
       max-width: 310px;
       padding-bottom: 35px;
@@ -20,20 +25,12 @@
   }
 
   .add-row-padding {
-    padding-top: 30px;
-
-    @media #{$bootstrap-xs} {
-      padding-top: 25px;
-    }
+    padding-top: 40px;
   }
 
-
   .example-block {
-      padding-bottom: 43px;
+    padding-bottom: 55px;
 
-    @media #{$bootstrap-md} {
-      text-align: center;
-    }
     @media #{$bootstrap-xs} {
       text-align: center;
       padding-bottom: 23px;
@@ -44,23 +41,80 @@
       padding: 0 15px 27px !important;
       width: 90%;
     }
+    .print-style {
+      padding-top: 40px;
+      padding-bottom: 10px;
+      line-height: 27px;
+    }
+    .last-child {
+      padding-bottom: 8px;
+    }
   }
-  @media #{$bootstrap-lg} {
+  /* 2,5,8 */
   .example-block:nth-child(3n-1) {
-    padding-left: 20px;
-  }
-  .example-block:nth-child(3n) {
-    padding-left: 40px;
+    padding-left: 30px;
+    .btn-global {
+      margin: 33px auto 0 50px;
+      @media #{$bootstrap-md} {
+        margin: 33px auto 0;
+      }
+      @media #{$bootstrap-xs} {
+        margin: 0 auto;
+      }
+    }
 
   }
-}
+  .example-block:nth-child(3) {
+    @media #{$bootstrap-xs} {
+      .example-title {
+        max-width: 179px;
+        margin: 0 auto;
+        line-height: 27px;
+        padding-top: 12px;
+      }
+    }
+  }
+  /* 3, 6 ,9 */
+  .example-block:nth-child(3n) {
+    padding-left: 45px;
+    .btn-global {
+      margin: 33px 45px 0 auto;
+      @media #{$bootstrap-md} {
+        margin: 33px auto 0;
+      }
+      @media #{$bootstrap-xs} {
+        margin: 0 auto;
+      }
+    }
+    @media #{$bootstrap-md} {
+      padding-left: 30px;
+    }
+  }
+  /* 2, 4 , 6 */
+  .example-block:nth-child(odd) {
+    @media #{$bootstrap-xs}   {
+      padding-left: 0;
+      padding-right: 6px;
+    }
+  }
+  /* 1, 3, 5 */
+  .example-block:nth-child(even) {
+    @media #{$bootstrap-xs}   {
+      padding-left: 5px;
+      padding-right: 0;
+    }
+  }
+
 
     .example-title {
       color: #343c3b;
       font-family: $museo-sans-bold;
       font-size: 1.7em;
-      line-height: 44px;
+      line-height: 43px;
 
+      @media #{$bootstrap-md} {
+        font-size: 1.6em;
+      }
       @media #{$bootstrap-xs} {
         font-size: 1.3em;
       }
@@ -68,10 +122,12 @@
     .example-description {
       color: #343c3b;
       font-family: $gotham-pro-regular;
-      font-size: 1.25em;
+      font-size: 1.3em;
       line-height: 30px;
 
-      @media #{$bootstrap-md} { font-size: 1.2em; }
+      @media #{$bootstrap-md} {
+        font-size: 1.15em;
+      }
       @media #{$bootstrap-xs} {
         font-size: 1.15em;
         max-width: 240px;
@@ -93,16 +149,14 @@
     }
     .example-img {
       width: 100%;
-      max-width: 300px;
-      height: 330px;
-      margin: 30px 0 0 15px;
-      border: 10px solid white;
-      outline: 10px solid #926752;
+      max-width: 330px;
+      height: 350px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 10px solid #926752;
 
-      @media #{$bootstrap-md} { margin-left: 0;}
       @media #{$bootstrap-xs} {
-        height: auto;
-        margin: 22px auto 27px;
+        margin: 35px auto 20px;
         border: none;
         outline: none;
         border-top: 10px solid #926752;
@@ -110,39 +164,48 @@
       }
       @media #{$bootstrap-nano} { width: 100%; }
     }
+    .border-inside {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 14.16%;
+        top: 21.05%;
+        right: 6.16%;
+        bottom: 26.4%;
+        border: 11px solid #fff;
+        @media #{$bootstrap-md} {
+          left: 12%;
+          right: 7.88%;
+        }
+      }
+      @media #{$bootstrap-xs} {
+        display: none;
+      }
+    }
+
+
     .btn-global {
       max-width: 230px;
-      margin: 45px auto 0;
+      margin: 33px 75px 0 auto;
+      line-height: 63px;
       font-family: $gotham-pro-regular;
       box-shadow: 0 0 27.5px 3.5px rgba(0, 0, 0, 0.43);
       background-image: linear-gradient(to top, #e84246 0%, #d12f32 100%);
 
+      @media #{$bootstrap-md} {
+        margin: 33px auto 0;
+      }
       @media #{$bootstrap-xs} {
         max-width: 174px;
         line-height: 48px;
         font-size: 1.15em;
-        margin-top: 0;
+        margin: 0 auto;
       }
-    }
-  }
-  .example-block:nth-child(odd) {
-    @media #{$bootstrap-xs}   {
-      padding-left: 0;
-    }
-  }
-  .example-block:nth-child(even) {
-    @media #{$bootstrap-xs}   {
-      padding-right: 0;
     }
   }
 
-  .add-row-padding .example-block:nth-child(3) {
-    @media #{$bootstrap-xs} {
-      .example-title {
-        max-width: 179px;
-        margin: 0 auto;
-        line-height: 27px;
-        padding-top: 12px;
-      }
-    }
-  }

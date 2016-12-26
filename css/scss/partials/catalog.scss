@@ -1,6 +1,6 @@
 
-.sidebar {
-    padding-top: 60px;
+.sidebar .container {
+    padding-top: 55px;
     font-family: $gotham-pro-regular;
 
   .for-md {
@@ -10,8 +10,8 @@
 
   }
   .sidebar-wrap {
-    padding: 32px 30px 0 25px;
-    max-width: 260px;
+    padding: 38px 30px 0 25px;
+    max-width: 255px;
     background-color: whitesmoke;
     @media #{$bootstrap-md} {
       padding: 32px 20px 0 20px;
@@ -40,7 +40,7 @@
       }
       .btn-sidebar {
         font-size: 1em;
-        line-height: 34px;
+        line-height: 32px;
       }
     }
     .menu-sidebar {
@@ -59,7 +59,7 @@
         .arrow-right {
           position: absolute;
           top: 15px;
-          right: -5px;
+          right: -10px;
           font-size: 1.4em;
           color: #b9c1ca;
           @media #{$bootstrap-md} {
@@ -233,13 +233,6 @@
         .scrollbar-outer > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -14px; }
         .scrollbar-outer > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -14px; }
 
-
-
-
-
-
-
-
         .sidebar-links {
           color: #0c0c0c;
           display: block;
@@ -281,10 +274,27 @@
 
     }
   }
+}
+.padding-left {
+  padding-left: 0;
+}
+.more-picture {
 
-
+  color: #61a3a4;
+  font-family: $proxima-nova-bold;
+  font-size: 1.2em;
+  padding-top: 30px;
+  line-height: 18px;
+  text-decoration: underline;
+}
+.more {
+  background-color: whitesmoke;
+  margin-top: 70px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  height: 72px;
 }
 .right-side {
+
 
   .breadcrumb>.active>a {
     text-decoration: underline;
@@ -292,16 +302,73 @@
   }
 
   .breadcrumb>li>a {
+    padding: 0 8px 0 4px;
+    font-size: 1.15em;
     text-decoration: underline;
     color: #187e80;
   }
+  .breadcrumb>li+li:before {
+    color: #187e80;
+    padding: 0 2px;
+  }
 
-  .breadcrumbs {
-    padding-left: 0;
+  .breadcrumb {
+    padding: 0;
+    margin-bottom: 20px;
+    background: transparent;
 
   }
+  .catalog-title {
+    font-size: 2.15em;
+    margin-left: 3px;
+    line-height: 42px;
+    color: black;
+    font-family: $proxima-nova-regular;
+    font-weight: 500;
+  }
+  .catalog-description {
+    font-family: $proxima-nova-regular;
+    font-size: 1.2em;
+    margin-left: 5px;
+    padding-top: 2px;
+    max-width: 615px;
+    line-height: 23px;
+  }
   .catalog-block {
-    width: 265px;
-    border: 1px solid black;
+    position: relative;
+    text-align: center;
+  }
+  .catalog-img {
+    padding-top: 35px;
+    margin-bottom: 22px;
+    width: 100%;
+    height: 335px;
+  }
+  .block-border {
+    position: absolute;
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    z-index: -1;
+    bottom: 32px;
+    height: 100px;
+    @media #{$bootstrap-md} {
+      width: 221px;
+    }
+  }
+  .under-img {
+    font-size: 1.25em;
+    font-family: $gotham-pro-bold;
+  }
+  .btn-catalog {
+    margin-top: 24px;
+    max-width: 200px;
+    font-family: $gotham-pro-bold;
+    font-size: 1em;
+    line-height: 55px;
+    background-color: #d12f32;
+    border-radius: 5px;
+    z-index: 1;
+    box-shadow: 0 0 40.7px 8.3px rgba(0, 0, 0, 0.1);
+
   }
 }

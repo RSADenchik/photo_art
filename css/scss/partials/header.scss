@@ -1,15 +1,17 @@
 .header {
-  height: 102px;
+  height: 99px;
   font-family: $museo-sans-regular;
   color: #343333;
   background-color: #f1f5f8;
 
-  @media #{$bootstrap-xs} { height: 230px; border-bottom: 1px solid rgba(45, 114, 116, 0.48); }
+  @media #{$bootstrap-xs} {
+    height: 230px;
+    border-bottom: 1px solid rgba(45, 114, 116, 0.48);
+  }
 
   .logo-block {
     margin-top: 20px;
 
-    @media #{$bootstrap-md} { padding-left: 15px; }
     @media #{$bootstrap-xs} {
       margin-top: 30px;
       text-align: center;
@@ -28,18 +30,15 @@
     .pushy {
       background: #126b6e;
 
-
       .mobile-nav {
         position: fixed;
         width: 100%;
         z-index: 777;
         background-color: transparent;
 
-
         .site-overlay {
           background: rgba(18, 107, 6, 0.4);
         }
-
 
         .menu-btn {
           width: 100px;
@@ -110,44 +109,50 @@
   }
 
   .adress-block {
-    padding-left: 50px;
-    margin-top: 22px;
+    padding-left: 49px;
+    margin-top: 18px;
 
-    @media #{$bootstrap-md} { padding: 0; }
+    @media #{$bootstrap-md} {
+      padding: 0;
+    }
 
     .adress-img {
       float: left;
+      margin-top: 3px;
     }
     .adress-target {
       padding-left: 15px;
       margin: 0;
       float: left;
       font-size: 1em;
-      line-height: 20px;
+      line-height: 22px;
     }
   }
 
   .contact-block {
     text-align: right;
-    padding-right: 10px;
+    padding-right: 14px;
     font-family: $museo-sans-bold;
 
-    @media #{$bootstrap-md} {  padding: 0 5px 0 0; }
+    @media #{$bootstrap-md} {
+      padding: 0 5px 0 0;
+    }
 
     .contact-title {
       font-family: $museo-sans-regular;
+      padding-top: 4px;
       font-size: 1.15em;
       line-height: 34px;
     }
     .contact-target {
-      font-size: 1.8em;
-      line-height: 30px;
+      font-size: 1.75em;
+      line-height: 24px;
     }
     .contact-footer {
-      font-size: 1.35em;
-      line-height: 27px;
+      font-size: 1.34em;
+      line-height: 25px;
       img:last-child {
-        padding: 0 5px;
+        padding: 0 4px;
       }
     }
   }
