@@ -99,25 +99,28 @@
      <div class="home">
          <div class="container home-image">
              <div class="row">
-                 <div class="home-content col-xs-12 col-md-6">
-                     <div class="line"></div>
-                     <h2 class="home-title">ПЕЧАТЬ НА ХОЛСТЕ по<br> фото клиента ЗА <span class="days"> 3 ДНЯ </span></h2>
-                     <p class="home-description">Красивая картина на холсте — идеальный подарок на любой праздник</p>
-                     <img class="perfect-img" src="/img/perfect-img.png" alt="">
+                 <div class="col-xs-12 col-md-6">
+                     <div class="home-content">
+                         <div class="line"></div>
+                         <h2 class="home-title">ПЕЧАТЬ НА ХОЛСТЕ по<br> фото клиента ЗА <span class="days"> 3 ДНЯ </span></h2>
+                         <p class="home-description">Красивая картина на холсте — идеальный подарок на любой праздник</p>
+                         <img class="perfect-img" src="/img/perfect-img.png" alt="">
+                     </div>
                  </div>
                  <div class="col-xs-12 col-md-5 col-md-offset-1">
-                     <div class="upload-block">
+                     <div id="upload-block" class="upload-block">
                          <div class="round-block"><img class="round-img" src="img/round-photo.png" alt=""></div>
                          <p class="upload-content">Загрузите фотографию (или несколько) <br>
                              и получите бесплатный макет <br>будущей картины через 3 часа
                          </p>
-                         <button class="btn-global" type="button" data-toggle="modal" data-target="#pop-email"><img class="button-cloud" src="img/button-cloud-img.png" alt="">загрузить фото</button>
+                         <button id="btn-upload" class="btn-global" type="button" data-toggle="modal" data-target="#pop-email"><img class="button-cloud" src="img/button-cloud-img.png" alt="">загрузить фото</button>
                      </div>
                  </div>
                  <img class="right-home-pic hidden-xs hidden-sm" src="img/home-right-pic.png" alt="">
              </div>
          </div>
      </div>
+
             <!-- end home block -->
 
      <div class="benefits">
@@ -397,13 +400,13 @@
                  <div class="example-block col-xs-6 col-md-4">
                      <h4 class="example-title print-style">Печать в стиле <br> Графика</h4>
                      <p class="example-description"></p>
-                     <img class="example-img" src="/img/examples/example-img-7.jpg" alt="">
+                     <img class="example-img" src="/img/examples/example-img-7.png" alt="">
                      <button class="btn-global">Заказать</button>
                  </div>
                  <div class="example-block col-xs-6 col-md-4">
                      <h4 class="example-title print-style">Печать в стиле <br> Пастель</h4>
                      <p class="example-description"></p>
-                     <img class="example-img" src="/img/examples/example-img-8.jpg" alt="">
+                     <img class="example-img" src="/img/examples/example-img-8.png" alt="">
                      <button class="btn-global">Заказать</button>
                  </div>
                  <div class="example-block col-xs-6 col-md-4">
@@ -474,7 +477,7 @@
 
      <!-- email-popup  -->
 
-     <div id="pop-email" class="modal fade" role="dialog">
+     <div id="pop-email" class="modal fade pop-email" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
@@ -485,11 +488,13 @@
                  </div>
                  <div class="modal-body">
                      <div class="row">
-                        <form class="form-email col-md-9">
-                            <label class="label-email" for="email">Введите электропочту:</label>
-                            <input class="input-email" type="email" id="email" placeholder="Введите вашу надежную почту">
-                            <a id="btn-email" class="button-true">Почта указана верно!<img class="button-icon" src="/img/popups/work-done-botton.png" alt=""></a>
-                        </form>
+                         <div class="col-md-9">
+                            <form class="form-email">
+                                <label class="label-email" for="email">Введите электропочту:</label>
+                                <input id="email" class="input-email" type="email" placeholder="Введите вашу надежную почту" required>
+                                <a id="btn-email" class="button-true">Почта указана верно!<img class="button-icon" src="/img/popups/work-done-botton.png" alt=""></a>
+                            </form>
+                         </div>
                      </div>
                  </div>
              </div>
@@ -498,18 +503,20 @@
 
      <!-- phone-popup -->
 
-     <div id="pop-phone" class= "modal fade" role="dialog">
+     <div id="pop-phone" class= "modal fade pop-phone" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
                      <h4 class="modal-title">Как с вами связаться для уточнения деталей?</h4>
                  </div>
                  <div class="modal-body clearfix">
-                     <form class="form-phone col-md-9">
-                         <label class="label-phone" for="phone">Введите ваш телефон:</label>
-                         <input class="input-phone" type="text" id="phone" placeholder="Введите ваш номер телефона">
-                         <a id="btn-phone" class="button-true">Да, это мой телефон</a>
-                     </form>
+                     <div class="col-md-9">
+                         <form class="form-phone">
+                             <label class="label-phone" for="phone">Введите ваш телефон:</label>
+                             <input id="phone" class="input-phone" type="text" placeholder="Введите ваш номер телефона">
+                             <a id="btn-phone" class="button-true">Да, это мой телефон</a>
+                         </form>
+                     </div>
                  </div>
              </div>
          </div>
@@ -517,7 +524,7 @@
 
      <!-- size-popup -->
 
-     <div id="pop-size" class="modal fade" role="dialog">
+     <div id="pop-size" class="modal fade pop-size" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
@@ -551,7 +558,7 @@
 
      <!-- picture-type-popup -->
 
-     <div id="pop-type" class="modal fade" role="dialog">
+     <div id="pop-type" class="modal fade pop-type" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
@@ -601,12 +608,12 @@
 
      <!-- picture-type-option popup -->
 
-     <div id="pop-type-option" class="modal fade" role="dialog">
+     <div id="pop-type-option" class="modal fade pop-type-option" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
                      <div class="under-header">
-                         <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                         <span class="option-back">← изменить тип картины</span>
                          <span class="current-type">Простая картина</span>
                          <p class="pic-size">70 х 50 см</p>
                          <p class="price-sum">Итого: <span class="price">9970<span class="rub">i</span></span></p>
@@ -633,7 +640,7 @@
                          </div>
                          <div class="text-center col-xs-12">
                              <a id="btn-type-option" class="button-true">Добавить</a>
-                             <span class="option-no" data-toggle="modal" data-target="#pop-baget" data-dismiss="modal">Спасибо, не нужно</span>
+                             <span id="type-option-no" class="option-no">Спасибо, не нужно</span>
                              <!--<button id="btn-to-krek" class="button-true"></button>        btn- TO KREKELUR -->
                          </div>
                      </div>
@@ -644,12 +651,12 @@
 
      <!-- krekelur-popup  -->
 
-     <div id="pop-krekelur" class="modal fade" role="dialog">
+     <div id="pop-krekelur" class="modal fade pop-krekelur" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
                      <div class="under-header">
-                         <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                         <span class="option-back">← изменить тип картины</span>
                          <span class="current-type">Простая картина</span>
                          <p class="pic-size">70 х 50 см</p>
                          <p class="price-sum">Итого: <span class="price">9970<span class="rub">i</span></span></p>
@@ -668,7 +675,7 @@
                          </div>
                          <div class="text-center col-xs-12">
                              <a id="btn-krek" class="button-true">Добавить</a>
-                             <span class="option-no" data-toggle="modal" data-target="#pop-baget" data-dismiss="modal">Спасибо, не нужно</span>
+                             <span id="krekelur-no" class="option-no">Спасибо, не нужно</span>
                          </div>
                      </div>
                  </div>
@@ -678,12 +685,12 @@
 
      <!-- baget-popup -->
 
-     <div id="pop-baget" class="modal fade" role="dialog">
+     <div id="pop-baget" class="modal fade pop-baget" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
                      <div class="under-header">
-                         <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                         <span class="option-back">← изменить тип картины</span>
                          <span class="current-type">«Тип картины» + допы</span>
                          <p class="pic-size">70 х 50 см</p>
                          <p class="price-sum">Итого: <span class="price">9970<span class="rub">i</span></span></p>
@@ -805,7 +812,7 @@
                      </div>
                      <div class="for-nano text-center col-xs-6 col-sm-6 col-md-12 fix-padding">
                          <a id="btn-baget" class="button-true">Выбрать рамку (багет)</a>
-                         <span class="option-no" data-toggle="modal" data-target="#pop-package" data-dismiss="modal">Рамка не нужна (галерейная натяжка)</span>
+                         <span id="baget-no" class="option-no">Рамка не нужна (галерейная натяжка)</span>
                          <div class="hover-block-small">
                              <img class="type-img" src="/img/popups/bg-small.png" alt="">
                              <div class="hover-bg"></div>
@@ -818,17 +825,17 @@
 
      <!-- package popup -->
 
-     <div id="pop-package" class="modal fade" role="dialog">
+     <div id="pop-package" class="modal fade pop-package" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
                      <div class="under-header">
-                         <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                         <span class="option-back">← изменить тип картины</span>
                          <span class="current-type">«Тип картины» + допы</span>
                          <p class="pic-size">70 х 50 см</p>
                          <p class="price-sum">Итого: <span class="price">11470<span class="rub">i</span></span></p>
                      </div>
-                     <h4 class="modal-title" id="pop-package-title">Выберите упаковку для вашей картины:</h4>
+                     <h4 class="modal-title">Выберите упаковку для вашей картины:</h4>
                  </div>
                  <div class="modal-body">
                      <div class="row">
@@ -850,7 +857,7 @@
                          </div>
                          <div class="text-center col-xs-12">
                              <a id="btn-package" class="button-true">Выбрать упаковку</a>
-                             <span class="option-no" data-toggle="modal" data-target="#pop-date" data-dismiss="modal">Спасибо, подойдет обычный пакет</span>
+                             <span id="package-no" class="option-no">Спасибо, подойдет обычный пакет</span>
                          </div>
                      </div>
                  </div>
@@ -860,11 +867,11 @@
 
      <!-- date popup -->
 
-     <div id="pop-date" class="modal fade" role="dialog">
+     <div id="pop-date" class="modal fade pop-date" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
-                     <h4 class="modal-title" id="pop-date-title">К какой дате нужно изготовить картину?</h4>
+                     <h4 class="modal-title">К какой дате нужно изготовить картину?</h4>
                  </div>
                  <div class="modal-body">
                      <section>
@@ -879,18 +886,18 @@
 
      <!-- stock popup -->
 
-     <div id="pop-stock" class="modal fade" role="dialog">
+     <div id="pop-stock" class="modal fade pop-stock" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
                      <div class="under-header">
-                         <span class="option-back" data-toggle="modal" data-target="#pop-type" data-dismiss="modal">← изменить тип картины</span>
+                         <span class="option-back">← изменить тип картины</span>
                          <span class="current-type">«Тип картины» + допы</span>
                          <p class="pic-size">70 х 50 см</p>
                          <p class="price-sum">Итого: <span class="price">11470<span class="rub">i</span></span></p>
                          <img class="stock-img" src="/img/popups/stock-flag.png" alt="">
                      </div>
-                     <h4 class="modal-title" id="pop-stock-title">Ограниченное предложение!</h4>
+                     <h4 class="modal-title">Ограниченное предложение!</h4>
                  </div>
                  <div class="modal-body">
                      <div class="row">
@@ -914,11 +921,11 @@
 
      <!-- prepayment popup -->
 
-     <div id="pop-prepay" class="modal fade" role="dialog">
+     <div id="pop-prepay" class="modal fade pop-prepay" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
-                     <h4 class="modal-title" id="pop-prepay-title">Благодарим за предоплату</h4>
+                     <h4 class="modal-title">Благодарим за предоплату</h4>
                      <p class="print-page">Напечатать страницу</p>
                  </div>
                  <div class="modal-body">
@@ -935,11 +942,11 @@
 
      <!-- payment popup -->
 
-     <div id="pop-pay" class="modal fade" role="dialog">
+     <div id="pop-pay" class="modal fade pop-pay" role="dialog">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
                  <div class="modal-header">
-                     <h4 class="modal-title" id="pop-pay-title">Благодарим за заказ</h4>
+                     <h4 class="modal-title">Благодарим за заказ</h4>
                      <p class="print-page">Напечатать страницу</p>
                  </div>
                  <div class="modal-body">

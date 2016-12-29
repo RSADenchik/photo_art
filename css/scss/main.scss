@@ -7,13 +7,19 @@
 
   body.modal-open-noscroll
   {
-    margin-right: 0!important;
+    margin-right: 0 !important;
+    padding-right: 15px !important;
+
     overflow: hidden;
+    //padding-right: 15px !important;
   }
   .modal-open-noscroll .navbar-default, .modal-open .navbar-default
   {
-    margin-right: 0!important;
+    margin-right: 0 !important;
+    padding-right: 15px !important;
+
   }
+
 
   // Global properties tags and class
   ul, p, h1, h2, h3, h4, h5, h6 {

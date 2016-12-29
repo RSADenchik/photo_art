@@ -1,17 +1,17 @@
 
 // General settings
-#pop-email,
-#pop-phone,
-#pop-size,
-#pop-type,
-#pop-krekelur,
-#pop-type-option,
-#pop-baget,
-#pop-package,
-#pop-date,
-#pop-stock,
-#pop-prepay,
-#pop-pay {
+.pop-email,
+.pop-phone,
+.pop-size,
+.pop-type,
+.pop-krekelur,
+.pop-type-option,
+.pop-baget,
+.pop-package,
+.pop-date,
+.pop-stock,
+.pop-prepay,
+.pop-pay {
 
 
   .modal-dialog {
@@ -188,6 +188,7 @@
   .modal-body {
     box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
 
+
     // Picture width title and price
     .pic-type {
       text-align: center;
@@ -313,7 +314,7 @@
 
  // First-popup
 
-#pop-email {
+.pop-email {
 
   .modal-dialog {
     max-width: 559px;
@@ -358,12 +359,19 @@
         line-height: 27px;
         color: #444749;
       }
+      // Error class validation
 
       .input-email {
         width: 100%;
         border: 2px solid #ddd;
         border-radius: 5px;
         line-height: 60px;
+      }
+      .input-error {
+        border: 2px solid red;
+      }
+      .input-ok {
+        border: 2px solid green;
       }
 
       .input-email[placeholder] {
@@ -390,7 +398,7 @@
 
   // Second popup
 
-#pop-phone {
+.pop-phone {
 
   .modal-dialog {
     max-width: 559px;
@@ -427,6 +435,13 @@
         line-height: 68px;
       }
 
+      .input-error {
+        border: 2px solid red;
+      }
+      .input-ok {
+        border: 2px solid green;
+      }
+
       .input-phone[placeholder] {
         padding-left: 30px;
         font-size: 1.25em;
@@ -446,7 +461,7 @@
 }
 
   //Third Popup
-#pop-size {
+.pop-size {
 
   .modal-dialog::before {
     content: "Дизайнер уже получил файлы и начал работу!";
@@ -638,8 +653,10 @@
 
  //Third Popup
 
-#pop-type {
-
+.pop-type {
+  .modal-open {
+    overflow: scroll;
+  }
   .modal-dialog {
     max-width: 898px;
     left: calc(50% - 450px);
@@ -700,7 +717,7 @@
 
     // fourth popup
 
-#pop-type-option {
+.pop-type-option {
 
   .modal-dialog {
     max-width: 898px;
@@ -783,7 +800,7 @@
  // Pop-krekelur
 
 
-#pop-krekelur {
+.pop-krekelur {
 
   .modal-dialog {
     max-width: 898px;
@@ -861,7 +878,7 @@
   }
 }
   // Fifth popup
-#pop-baget {
+.pop-baget {
 
   .modal-dialog {
     max-width: 899px;
@@ -1071,7 +1088,7 @@
   }
 }
  // Six popup package
-#pop-package {
+.pop-package {
 
   .modal-dialog {
     max-width: 898px;
@@ -1197,7 +1214,7 @@
   }
 }
   // Seven popup
-#pop-date {
+.pop-date {
 
   .modal-dialog {
     max-width: 561px;
@@ -1338,7 +1355,7 @@
 }
  // Eight popup block
 
- #pop-stock {
+ .pop-stock {
 
   .modal-dialog {
     max-width: 900px;
@@ -1446,8 +1463,8 @@
 
  // Nine popup block
 
-#pop-prepay,
-#pop-pay {
+.pop-prepay,
+.pop-pay {
 
   .modal-dialog {
     max-width: 900px;

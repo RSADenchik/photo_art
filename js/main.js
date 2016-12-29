@@ -1,3 +1,14 @@
+ // Validate email regex
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+
+ // Validate phone number regex
+     function isNumber(number) {
+         var regex = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+         return regex.test(number);
+     }
 
      /*
      *  Bootstrap showing popup after popup fix
@@ -5,11 +16,11 @@
     function show_popup (button, modal_close, modal_show) {
 
         button.on('click', function(){
-            modal_close.modal('hide');
-            modal_show.modal('show');
+            jQuery(modal_close).modal('hide'); // add jQuery to fix error with underfind
+            jQuery(modal_show).modal('show');
             setTimeout(function(){
                 $('body').addClass('modal-open');
-            }, 400);
+            }, 600);
         });
     }
 
@@ -29,8 +40,52 @@ $(document).ready(function() {
     });
 
 
+    // Validation email
+
+        $('#btn-email').on('click', function() {
+            var email = $('#email');
+            var send_text =  email.val();
+        if( isEmail(send_text)) {
+            email.removeClass('input-error');
+            email.addClass('input-ok');
+            $('#pop-email').modal('hide');
+            $('#pop-phone').modal('show');
+            setTimeout(function(){
+                $('body').addClass('modal-open');
+            }, 500);
+        }
+        else {
+            email.removeClass('input-ok');
+            email.addClass('input-error');
+        }
+    });
+
+    // Validation phone nubmer
+
     // Phone mask
-    $("#phone").mask("+7(999) 999-9999");
+
+    var number = $('#phone');
+    number.mask("+7(999) 999-9999");
+
+    $('#btn-phone').on('click', function() {
+
+        var send_number =  number.val();
+
+        if( isNumber(send_number) == true) {
+            number.removeClass('input-error');
+            number.addClass('input-ok');
+            $('#pop-phone').modal('hide');
+            $('#pop-size').modal('show');
+            setTimeout(function(){
+                $('body').addClass('modal-open');
+            }, 500);
+        }
+
+        else {
+            number.removeClass('input-ok');
+            number.addClass('input-error');
+        }
+    });
 
 
     // Calendar initialize
@@ -76,6 +131,8 @@ $(document).ready(function() {
             interval: false
         });
 
+
+
         $('.multi-item-carousel .item').each(function () {
             var next = $(this).next();
             if (!next.length) {
@@ -99,14 +156,16 @@ $(document).ready(function() {
     }
 
 
-    // Catalog dropdown
+
 
 
     // Function hide and show popups
 
-    show_popup($('#btn-email'), $('#pop-email'), $('#pop-phone'));
-    show_popup($('#btn-phone'), $('#pop-phone'), $('#pop-size'));
-    show_popup($('#btn-size'), $('#pop-size'), $('#pop-type-option'));
+    show_popup($('#btn-upload'), $('#upload-block')), $('#pop-email');
+    // show_popup($('#btn-email'), $('#pop-email'), $('#pop-phone'));
+    // show_popup($('#btn-phone'), $('#pop-phone'), $('#pop-size'));
+    show_popup($('#btn-size'), $('#pop-size'), $('#pop-type'));
+    show_popup($('#btn-type'), $('#pop-type'), $('#pop-type-option'));
     show_popup($('#btn-type-option'), $('#pop-type-option'), $('#pop-krekelur'));
     show_popup($('#btn-krek'), $('#pop-krekelur'), $('#pop-baget'));
     show_popup($('#btn-baget'), $('#pop-baget'), $('#pop-package'));
@@ -114,7 +173,14 @@ $(document).ready(function() {
     show_popup($('#btn-date'), $('#pop-date'), $('#pop-stock'));
     show_popup($('#btn-stock-prepay'), $('#pop-stock'), $('#pop-prepay'));
     show_popup($('#btn-stock-pay'), $('#pop-stock'), $('#pop-pay'));
+    show_popup($('.option-back'), $('#pop-type-option, #pop-krekelur, #pop-baget, #pop-package, #pop-stock'), $('#pop-type'));
+    show_popup($('#type-option-no'), $('#pop-type-option'), $('#pop-krekelur'));
+    show_popup($('#krekelur-no'), $('#pop-krekelur'), $('#pop-baget'));
+    show_popup($('#baget-no'), $('#pop-baget'), $('#pop-package'));
+    show_popup($('#package-no'), $('#pop-package'), $('#pop-date'));
 
+
+    // Fix margin-right open modal popup
 
     $('.modal').on('show.bs.modal', function () {
         if ($(document).height() > $(window).height()) {
