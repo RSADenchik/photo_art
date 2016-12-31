@@ -1,7 +1,6 @@
 var gulp          = require('gulp'),
     connect       = require('gulp-connect'),
     sass          = require('gulp-sass'),
-    uncss         = require('gulp-uncss'),
     prefix        = require('gulp-autoprefixer'),
     minifyCSS     = require('gulp-minify-css'),
     autowatch     = require('gulp-autowatch'),
@@ -32,19 +31,9 @@ gulp.task('styles', function() {
         .pipe(connect.reload());
 });
 
-// Delete unused classes
-gulp.task('uncss', function() {
-   return gulp.src('css/main.css')
-       .pipe(uncss({
-           html: ['index.html']
-       }))
-       .pipe(gulp.dest('./out'));
-});
-// Delete unused images
 
 
-
- // JS
+ // JS concat
 gulp.task('js', function() {
     gulp.src([
         'js/partials/jquery-2.0.0.min.js',
@@ -61,6 +50,15 @@ gulp.task('js', function() {
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('js/'));
+
+});
+    // Css concat
+gulp.task('css', function() {
+gulp.src('css/*.css')
+    .pipe(minifyCSS())
+    // .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+    .pipe(concat('style.min.css'))
+    .pipe(gulp.dest('uploads'));
 
 });
 

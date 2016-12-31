@@ -1,14 +1,3 @@
- // Validate email regex
-    function isEmail(email) {
-        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        return regex.test(email);
-    }
-
- // Validate phone number regex
-     function isNumber(number) {
-         var regex = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-         return regex.test(number);
-     }
 
      /*
      *  Bootstrap showing popup after popup fix
@@ -24,7 +13,24 @@
         });
     }
 
-$(document).ready(function() {
+
+     //this function is called when the input loads an image
+
+     function renderImage(file){
+
+         var reader = new FileReader();
+         reader.onload = function(event){
+             the_url = event.target.result;
+
+             $('#output-block').html("<img class='output-img' src='"+the_url+"' width='190px' height='110px' />");
+         };
+
+         //when the file is read it triggers the onload event above.
+         reader.readAsDataURL(file);
+     }
+
+
+     $(document).ready(function() {
 
     var md = new MobileDetect(window.navigator.userAgent);
 
@@ -40,52 +46,82 @@ $(document).ready(function() {
     });
 
 
-    // Validation email
 
-        $('#btn-email').on('click', function() {
-            var email = $('#email');
-            var send_text =  email.val();
-        if( isEmail(send_text)) {
-            email.removeClass('input-error');
-            email.addClass('input-ok');
-            $('#pop-email').modal('hide');
-            $('#pop-phone').modal('show');
-            setTimeout(function(){
+    //watch for change on the
+    $( "#file-img" ).change(function() {
+
+        if ( this.files.length != 0 ) {
+
+            renderImage(this.files[0]);
+
+            console.log("photo file has been chosen");
+            //grab the first image in the fileList
+            //in this example we are only loading one file.
+            console.log(this.files[0].size);
+
+            $('#pop-email').modal('show');
+            setTimeout(function () {
                 $('body').addClass('modal-open');
             }, 500);
         }
         else {
-            email.removeClass('input-ok');
-            email.addClass('input-error');
+            this.files.length = 0;
+        }
+
+    });
+
+
+
+    // Popup-size
+
+
+    // под каждый radio button выводим суму, заголовок и изображение положеного размера размера
+    var sizeTitle = $('.size');
+    var price = $('.price');
+    var output = $('#output-block');
+
+
+    $(".radio-size").change(function() {
+
+        if ($("#radio-1").is(":checked")) {
+
+            sizeTitle.text('30 х 40 см');
+            price.text(2013);
+
+            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='150px' height='90px' />");
+
+        }
+        if ($("#radio-2").is(":checked")) {
+            sizeTitle.text('40 х 60 см');
+            price.text(2014);
+            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='170px' height='100px' />");
+        }
+        if ($("#radio-3").is(":checked")) {
+            sizeTitle.text('50 х 70 см — Хит!');
+            price.text(3090);
+            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='190px' height='110px' />");
+        }
+        if ($("#radio-4").is(":checked")) {
+            sizeTitle.text('60 х 80 см');
+            price.text(2016);
+            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='200px' height='120px' />");
+        }
+        if ($("#radio-5").is(":checked")) {
+            sizeTitle.text('75 х 105 см');
+            price.text(2017);
+            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='240px' height='150px' />");
+        }
+        if ($("#radio-6").is(":checked")) {
+            sizeTitle.text('90 х 110 см');
+            price.text(2018);
+            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='260px' height='180px' />");
         }
     });
 
-    // Validation phone nubmer
 
-    // Phone mask
 
-    var number = $('#phone');
-    number.mask("+7(999) 999-9999");
 
-    $('#btn-phone').on('click', function() {
 
-        var send_number =  number.val();
-
-        if( isNumber(send_number) == true) {
-            number.removeClass('input-error');
-            number.addClass('input-ok');
-            $('#pop-phone').modal('hide');
-            $('#pop-size').modal('show');
-            setTimeout(function(){
-                $('body').addClass('modal-open');
-            }, 500);
-        }
-
-        else {
-            number.removeClass('input-ok');
-            number.addClass('input-error');
-        }
-    });
 
 
     // Calendar initialize
@@ -95,6 +131,7 @@ $(document).ready(function() {
             flat : true
         });
     });
+
 
     //  Fancybox gallery image
 
@@ -160,10 +197,8 @@ $(document).ready(function() {
 
 
     // Function hide and show popups
-
-    show_popup($('#btn-upload'), $('#upload-block')), $('#pop-email');
-    // show_popup($('#btn-email'), $('#pop-email'), $('#pop-phone'));
-    // show_popup($('#btn-phone'), $('#pop-phone'), $('#pop-size'));
+    show_popup($('#btn-email'), $('#pop-email'), $('#pop-phone'));
+    show_popup($('#btn-phone'), $('#pop-phone'), $('#pop-size'));
     show_popup($('#btn-size'), $('#pop-size'), $('#pop-type'));
     show_popup($('#btn-type'), $('#pop-type'), $('#pop-type-option'));
     show_popup($('#btn-type-option'), $('#pop-type-option'), $('#pop-krekelur'));

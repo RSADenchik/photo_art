@@ -1,13 +1,9 @@
 
 .examples {
   padding-top: 104px;
-  background: url('/img/example-right-img.png') right 60% no-repeat;
+  position: relative;
 
   @media #{$bootstrap-xs} {
-    background: none;
-  }
-  @media #{$bootstrap-xs} {
-    background-size: 36%;
     padding-top: 55px;
 
     .description {
@@ -22,6 +18,11 @@
       padding-bottom: 35px;
       line-height: 31px;
     }
+  }
+  .example-img-right {
+    position: absolute;
+    top: 40%;
+    right: 0;
   }
 
   .add-row-padding {
@@ -154,6 +155,7 @@
       margin-top: 20px;
       padding: 10px;
       border: 10px solid #926752;
+      background-color: white;
 
       @media #{$bootstrap-xs} {
         margin: 35px auto 20px;
@@ -162,33 +164,10 @@
         border-top: 10px solid #926752;
         border-bottom: 10px solid #926752;
       }
-      @media #{$bootstrap-nano} { width: 100%; }
-    }
-    .border-inside {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      &::before {
-        content: '';
-        position: absolute;
-        left: 14.16%;
-        top: 21.05%;
-        right: 6.16%;
-        bottom: 26.4%;
-        border: 11px solid #fff;
-        @media #{$bootstrap-md} {
-          left: 12%;
-          right: 7.88%;
-        }
-      }
-      @media #{$bootstrap-xs} {
-        display: none;
+      @media #{$bootstrap-nano} {
+        width: 100%;
       }
     }
-
-
     .btn-global {
       max-width: 230px;
       margin: 33px 75px 0 auto;

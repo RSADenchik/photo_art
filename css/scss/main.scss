@@ -38,6 +38,7 @@
   .fix-padding {
     padding: 0;
   }
+
   img, a, button {
     outline: none;
     &:hover {
@@ -179,7 +180,9 @@ $color-red: #de393d;
   font-size: 2.6em;
   line-height: 42px;
 
-  @media #{$bootstrap-md} { font-size: 2.2em; }
+  @media #{$bootstrap-md} {
+    font-size: 2.2em;
+  }
   @media #{$bootstrap-xs} {
     width: 85%;
     margin: 0 auto;
@@ -188,7 +191,10 @@ $color-red: #de393d;
     text-align: center;
     line-height: 34px;
   }
-  @media #{$bootstrap-nano} { font-size: 1.3em; width: 90%; }
+  @media #{$bootstrap-nano} {
+    font-size: 1.3em;
+    width: 90%;
+  }
 }
 
 // Orange line
@@ -213,7 +219,9 @@ $color-red: #de393d;
   font-size: 1.7em;
   line-height: 48px;
 
-  @media #{$bootstrap-md} { font-size: 1.5em; }
+  @media #{$bootstrap-md} {
+    font-size: 1.5em;
+  }
   @media #{$bootstrap-xs} {
     width: 70%;
     padding: 22px 0;
@@ -222,7 +230,10 @@ $color-red: #de393d;
     font-size: 1.3em;
     line-height: 27px;
   }
-  @media #{$bootstrap-nano} { font-size: 1.1em; width: 80%; }
+  @media #{$bootstrap-nano} {
+    font-size: 1.1em;
+    width: 80%;
+  }
 }
 
 // button global
@@ -254,13 +265,16 @@ $color-red: #de393d;
   &:focus {
     background-color: #de393d;
   }
-  @media #{$bootstrap-nano} { font-size: 1.1em; }
+  @media #{$bootstrap-nano} {
+    font-size: 1.1em;
+  }
 }
 
   /* Partials project */
 @import "partials/popups";
 @import "partials/header";
 @import "partials/navbar";
+@import "partials/mob-navbar";
 @import "partials/home";
 @import "partials/benefits";
 @import "partials/gallery";

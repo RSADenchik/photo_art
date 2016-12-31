@@ -113,74 +113,137 @@
      box-shadow: 1.8px 14.9px 43.7px 10.3px rgba(0, 0, 0, 0.1);
      z-index: 2;
 
-      @media #{$bootstrap-xs} {
-        width: 100%;
-        max-width: 440px;
-        left: 0;
-        margin: 75px auto 0;
-        padding-bottom: 49px;
+     @media #{$bootstrap-xs} {
+       width: 100%;
+       max-width: 440px;
+       left: 0;
+       margin: 75px auto 0;
+       padding-bottom: 49px;
 
-      }
-      @media #{$bootstrap-nano} { left: 0; }
+     }
+     @media #{$bootstrap-nano} {
+       left: 0;
+     }
 
-      .round-block {
-        width: 106px;
-        height: 106px;
-        margin: 0 auto;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -50px;
-        background-color: #085457;
-        border: 2px dashed #ffa947;
-        border-radius: 50%;
-        @media #{$bootstrap-xs} {
-          top: -55px;
-        }
+     .round-block {
+       width: 106px;
+       height: 106px;
+       margin: 0 auto;
+       position: absolute;
+       left: 0;
+       right: 0;
+       top: -50px;
+       background-color: #085457;
+       border: 2px dashed #ffa947;
+       border-radius: 50%;
+       @media #{$bootstrap-xs} {
+         top: -55px;
+       }
 
-      }
-      .round-img {
-        display: block;
-        margin: 0 auto;
-        padding-top: 25px;
-      }
-      .upload-content {
-        padding: 80px 0 19px;
-        text-align: center;
-        font-family: $gotham-pro-regular;
-        font-size: 1.28em;
-        line-height: 27px;
-        padding-bottom: 13px;
-        color: white;
+     }
+     .round-img {
+       display: block;
+       margin: 0 auto;
+       padding-top: 25px;
+     }
+     .upload-content {
+       padding: 80px 0 19px;
+       text-align: center;
+       font-family: $gotham-pro-regular;
+       font-size: 1.28em;
+       line-height: 27px;
+       padding-bottom: 13px;
+       color: white;
 
-        @media #{$bootstrap-md} {
-          font-size: 1.15em;
-        }
-        @media #{$bootstrap-xs} {
-          padding: 76px 0 20px;
-          line-height: 25px;
-          font-size: 1.15em;
-        }
-        @media #{$bootstrap-nano} {
-          font-size: 0.95em;
-        }
-      }
+       @media #{$bootstrap-md} {
+         font-size: 1.15em;
+       }
+       @media #{$bootstrap-xs} {
+         padding: 76px 0 20px;
+         line-height: 25px;
+         font-size: 1.15em;
+       }
+       @media #{$bootstrap-nano} {
+         font-size: 0.95em;
+       }
+     }
 
-      .btn-global {
-        max-width: 300px;
-        line-height: 74px;
+     .file-upload {
+       position: relative; /* Даем возможность делать позиционирование, внутри данного элемента */
+       overflow: hidden; /* Все что выходит за пределы - скрываем */
+       width: 100%;
+       max-width: 300px;
+       margin: 0 auto;
+       height: 74px;
+       font-family: $gotham-pro-regular;
+       text-align: center;
+       border: none;
+       border-radius: 5px;
+       border-bottom: 3px solid #d12f32;
+       box-shadow: 0 0 28.5px 3.5px rgba(0, 0, 0, 0.18);
+       color: white;
+       background-color: #de393d;
 
-        @media #{$bootstrap-xs} {
-          line-height: 74px;
-        }
-        @media #{$bootstrap-nano} {
-          max-width: 230px;
-        }
+       &:hover {
+         background-color: #de393d;
+         opacity: 0.8;
+       }
+       &:active {
+         background-color: #de393d;
+         opacity: 0.6;
+         outline: 0;
+       }
+       &:focus {
+         background-color: #de393d;
+       }
+       @media #{$bootstrap-xs} {
+         max-width: 240px;
+       }
+       @media #{$bootstrap-nano} {
+         font-size: 1.1em;
+       }
+     }
+     .label-upload {
+       /* Растягиваем label на всю возможную площадь блока .file-upload */
+       display: block;
+       position: absolute;
+       padding-top: 10px;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       cursor: pointer;
 
-        .button-cloud {
-          margin-right: 11px;
-        }
-      }
+       .button-cloud {
+         display: inline-block;
+         margin-right: 11px;
+       }
+       .text-upload {
+         padding: 15px 0;
+         font-family: $gotham-pro-bold;
+         font-size: 1.2em;
+         display: inline-block;
+       }
+     }
    }
- }
+     .file-upload input[type="file"] {
+       display: none;
+     }
+
+
+      //
+      //.btn-global {
+      //  max-width: 300px;
+      //  line-height: 74px;
+      //
+      //  @media #{$bootstrap-nano} {
+      //    max-width: 230px;
+      //  }
+      //
+      //  .button-cloud {
+      //    margin-right: 11px;
+      //  }
+      //}
+   }
+
 
