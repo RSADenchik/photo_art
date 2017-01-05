@@ -9,8 +9,8 @@
      background: url(/img/mobile/home-pic-mobile.png) top right no-repeat,
                  url(/img/mobile/home-left-img.png) bottom left no-repeat,
                  url(/img/mobile/home-bg-mobile.png) center top no-repeat;
-     background-position-y: -36px, 29%, -15%;
-     background-size: 75px 133px, 23% 23%, 100% 52%;
+     background-position-y: -36px, 28.5%, -15%;
+     background-size: 75px 133px, 23% 23%, 100% 52.5%;
      background-color: #f6f6f6;
    }
 
@@ -87,11 +87,11 @@
        left: -38px;
 
        @media #{$bootstrap-xs} {
-         width: 78%;
+         width: 83%;
          margin: 0 auto;
          display: block;
-         left: 0;
-         top: 20px;
+         left: -2px;
+         top: 19px;
        }
      }
    }
@@ -174,7 +174,7 @@
        width: 100%;
        max-width: 300px;
        margin: 0 auto;
-       height: 74px;
+       height: 80px;
        font-family: $gotham-pro-regular;
        text-align: center;
        border: none;
@@ -196,18 +196,16 @@
        &:focus {
          background-color: #de393d;
        }
-       @media #{$bootstrap-xs} {
-         max-width: 240px;
-       }
        @media #{$bootstrap-nano} {
-         font-size: 1.1em;
+         font-size: 0.95em;
+         max-width: 270px;
        }
      }
      .label-upload {
        /* Растягиваем label на всю возможную площадь блока .file-upload */
        display: block;
        position: absolute;
-       padding-top: 10px;
+       padding-top: 12px;
        top: 0;
        left: 0;
        width: 100%;
@@ -216,12 +214,13 @@
 
        .button-cloud {
          display: inline-block;
-         margin-right: 11px;
+         margin-left: 7px;
+         margin-right: 8px;
        }
        .text-upload {
-         padding: 15px 0;
+         padding: 10px 0;
          font-family: $gotham-pro-bold;
-         font-size: 1.2em;
+         font-size: 1.7em;
          display: inline-block;
        }
      }
@@ -230,20 +229,6 @@
        display: none;
      }
 
-
-      //
-      //.btn-global {
-      //  max-width: 300px;
-      //  line-height: 74px;
-      //
-      //  @media #{$bootstrap-nano} {
-      //    max-width: 230px;
-      //  }
-      //
-      //  .button-cloud {
-      //    margin-right: 11px;
-      //  }
-      //}
    }
 
 

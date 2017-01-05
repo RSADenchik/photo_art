@@ -189,13 +189,19 @@
   .modal-body {
     box-shadow: 0 0 47.3px 9.7px rgba(0, 0, 0, 0.1);
 
+    .width-nano {
+      @media #{$bootstrap-nano} {
+        width: 100%;
+      }
+    }
 
     // Picture width title and price
     .pic-type {
       text-align: center;
 
       &:hover {
-        outline: 3px solid #ffc27c;
+        border: 3px solid #ffc27c;
+        margin: -3px;
         box-shadow: 0 7px 34.8px 5.2px rgba(0, 0, 0, 0.1);
       }
 
@@ -205,10 +211,10 @@
         line-height: 51px;
         color: #141313;
 
-        @media #{$bootstrap-nano} {
-          font-size: 0.85em;
-          line-height: 40px;
+        @media #{$bootstrap-sm} {
+          font-size: 1.1em;
         }
+
       }
 
       .price-type {
@@ -216,24 +222,14 @@
         font-size: 1.7em;
         line-height: 68px;
         color: #f47c47;
-
-        @media #{$bootstrap-nano} {
-          font-size: 1em;
-          line-height: 44px;
-        }
       }
         // Hover efect background
 
       .img-hover-block {
-        width: 240px;
         height: 192px;
         display: inline-block;
         position: relative;
 
-        @media #{$bootstrap-xs} {
-          width: 90%;
-          height: auto;
-        }
       }
 
       .img-hover-block:hover .hover-bg,
@@ -319,9 +315,9 @@
 
   .modal-dialog {
     max-width: 559px;
-    //top: 20vh;
-    top: calc(50% - 220px);
+    top: 26vh;
     left: calc(50% - 277px);
+
   }
 
   .modal-title {
@@ -407,6 +403,10 @@
     //top: 20vh;
     top: calc(50% - 195px);
     left: calc(50% - 277px);
+
+    @media (max-width: 568px) and (orientation: landscape) {
+      top: 0;
+    }
   }
 
   .modal-title {
@@ -490,10 +490,7 @@
 
   .modal-dialog {
     max-width: 800px;
-    top: calc(50% - 290px);
     left: calc(50% - 400px);
-    //top: 3vh;
-    @media #{$bootstrap-nano} { top: 7vh; }
   }
 
   .modal-title {
@@ -681,14 +678,14 @@
  //Third Popup
 
 .pop-type {
-  .modal-open {
-    overflow: scroll;
-  }
+
   .modal-dialog {
     max-width: 898px;
     left: calc(50% - 450px);
-    top: 13vh;
-    @media #{$bootstrap-nano} { top: 20vh;}
+    top: 15%;
+    @media (max-width: 991px) and (orientation: landscape) {
+      top: 27%
+    }
   }
 
   .modal-title {
@@ -709,22 +706,20 @@
   .under-header {
 
     .price-sum {
-      @media #{$bootstrap-xs} { background-color: transparent; }
+      @media #{$bootstrap-xs} {
+        background-color: transparent;
+      }
     }
   }
 
   .modal-body {
     padding: 23px 52px 40px;
-    //max-height: calc(90vh - 170px);
-    //overflow-y: auto;
 
-
-    @media #{$bootstrap-xs} { padding: 40px 30px 52px; }
-    @media #{$bootstrap-nano} { padding: 40px 25px 52px; }
+    @media #{$bootstrap-xs} {
+      padding: 40px 30px 50px;
+    }
 
     .pic-type {
-
-
       &:nth-child(2) .price-type,
       &:nth-child(5) .price-type { color: #ff3a13; }
 
@@ -737,10 +732,6 @@
           height: 100%;
         }
         @media #{$bootstrap-xs} { width: 90% }
-      }
-
-      @media #{$bootstrap-nano} {
-        padding: 0;
       }
     }
 
@@ -760,8 +751,12 @@
     max-width: 898px;
     left: calc(50% - 450px);
     top: 13vh;
-    @media #{$bootstrap-xs} { top: 25vh;}
-    @media #{$bootstrap-nano} { top: 20vh;}
+    @media #{$bootstrap-xs} {
+      top: 25vh;
+    }
+    @media (max-width: 991px) and (orientation: landscape) {
+      top: 54%;
+    }
   }
 
   .modal-title {
@@ -793,25 +788,28 @@
 
   .modal-body {
     padding: 41px 174px 50px 165px;
-    //max-height: calc(90vh - 170px);
-    //overflow-y: auto;
-    @media #{$bootstrap-sm} {
-      padding: 41px 100px 50px;
-    }
+
     @media #{$bootstrap-xs} {
       padding: 41px 30px 35px;
     }
-    @media #{$bootstrap-nano}  {
-    padding: 30px 20px 35px;
+    @media #{$bootstrap-sm} {
+      padding: 41px 100px 50px;
     }
-    //@media #{$bootstrap-nano} { max-height: calc(71vh - 170px); }
 
     .pic-type {
       text-align: center;
 
-      @media #{$bootstrap-xs} { padding: 0; }
 
-      &:nth-child(2) .price-type { color: #ff3a13; }
+      &:nth-child(2) {
+        color: #ff3a13;
+      }
+
+      .img-hover-block {
+        width: 90%;
+        @media #{$bootstrap-nano} {
+          max-width: 80%;
+        }
+      }
 
       .type-img {
         width: 100%;
@@ -820,12 +818,15 @@
       }
 
       .type-title {
-        @media #{$bootstrap-xs}  { font-size: 0.9em; }
+
+        @media #{$bootstrap-xs}  {
+          font-size: 0.85em;
+        }
         @media #{$bootstrap-nano} {
-          width: 130px;
-          margin: 0 auto;
-          font-size: 0.95em;
-          line-height: 24px;
+          font-size: 1.1em;
+        }
+        @media #{$bootstrap-sm} {
+          font-size: 1.1em;
         }
       }
     }
@@ -851,8 +852,12 @@
     max-width: 898px;
     left: calc(50% - 450px);
     top: 13vh;
-    @media #{$bootstrap-xs} { top: 25vh;}
-    @media #{$bootstrap-nano} { top: 20vh;}
+    @media #{$bootstrap-xs} {
+      top: 25vh;
+    }
+    @media (max-width: 991px) and (orientation: landscape) {
+      top: 54%;
+    }
   }
 
   .modal-title {
@@ -882,32 +887,29 @@
 
   .modal-body {
     padding: 41px 174px 50px 165px;
-    //max-height: calc(90vh - 170px);
-    //overflow-y: auto;
-    @media #{$bootstrap-sm} { padding: 41px 100px 50px; }
-    @media #{$bootstrap-xs} { padding: 41px 30px 35px; }
-    //@media #{$bootstrap-nano} { max-height: calc(71vh - 170px); }
+
+    @media #{$bootstrap-sm} {
+      padding: 41px 100px 50px;
+    }
+    @media #{$bootstrap-xs} {
+      padding: 41px 30px 35px;
+    }
+
+    .width-nano {
+      @media #{$bootstrap-nano} {
+        margin: 0 auto;
+      }
+    }
 
     .pic-type {
       text-align: center;
 
-      @media #{$bootstrap-xs} { padding: 0; }
 
       &:nth-child(2) .price-type { color: #ff3a13; }
 
       .type-img {
-        width: 100%;
+        width: 240px;
         height: 100%;
-      }
-
-      .type-title {
-        @media #{$bootstrap-xs}  { font-size: 0.9em; }
-        @media #{$bootstrap-nano} {
-          width: 130px;
-          margin: 0 auto;
-          font-size: 0.95em;
-          line-height: 24px;
-        }
       }
     }
 
@@ -926,11 +928,15 @@
 .pop-baget {
 
   .modal-dialog {
-    max-width: 899px;
+    max-width: 898px;
     left: calc(50% - 450px);
     top: 13vh;
-    @media #{$bootstrap-xs} { top: 25vh;}
-    @media #{$bootstrap-nano} { top: 20vh;}
+    @media #{$bootstrap-xs} {
+      top: 25vh;
+    }
+    @media (max-width: 991px) and (orientation: landscape) {
+      top: 54%;
+    }
   }
 
   .modal-title { padding: 27px 0 0 60px; }
@@ -984,14 +990,26 @@
 
   .modal-body {
     padding: 40px 8px 31px 15px;
-    //max-height: calc(90vh - 170px);
-    //overflow-y: auto;
-    @media #{$bootstrap-sm} { padding: 40px 35px 31px; }
-    @media #{$bootstrap-xs} { padding: 40px 13px 31px; }
-    @media #{$bootstrap-nano} { padding: 15px 50px 31px;}
+    @media #{$bootstrap-sm} {
+      padding: 40px 35px 31px;
+    }
+    @media #{$bootstrap-xs} {
+      padding: 40px 13px 31px;
+    }
+    @media #{$bootstrap-nano} {
+      padding: 20px 15px 30px;
+    }
+
+
+
 
     .pic-type {
-      @media #{$bootstrap-nano} { width: 100%; }
+      @media #{$bootstrap-nano} {
+        &:hover {
+          margin: -3px 0;
+        }
+      }
+
 
       .img-hover-block {
         width: 220px;
@@ -1000,15 +1018,11 @@
 
       &:first-child .price-type {
         position: relative;
-        //top: 20px;
-        //@media #{$bootstrap-sm} { top: 6px; }
-        //@media #{$bootstrap-xs} { top: 10px; }
+
       }
 
       &:nth-child(2) .price-type { color: #ff3a13; }
 
-      // Bootstrap carousel  style
-      //Fix drag on slide move
       #carousel-1, #carousel-2, #carousel-3 {
         height: auto;
         width: auto;
@@ -1019,12 +1033,12 @@
         width: 100%;
         height: 192px;
         @media #{$bootstrap-xs} { height: 157px; }
-        @media #{$bootstrap-nano} { height: 125px; }
       }
 
       .icon-left {
         width: 43px;
         height: 45px;
+        z-index: 2;
         margin-top: 51px;
         margin-left: -17px;
 
@@ -1032,11 +1046,7 @@
         @media #{$bootstrap-xs} {
           width: 35px;
           height: 37px;
-          margin-top: 40px;
-          margin-left: -13px;
-        }
-        @media #{$bootstrap-nano} {
-          margin-top: 24px;
+          margin-top: 42px;
           margin-left: -14px;
         }
       }
@@ -1044,6 +1054,7 @@
       .icon-right {
         width: 43px;
         height: 45px;
+        z-index: 2;
         margin-top: 51px;
         margin-left: -27px;
 
@@ -1051,85 +1062,78 @@
         @media #{$bootstrap-xs} {
           width: 35px;
           height: 37px;
-          margin-top: 40px;
-          margin-left: -21px;
-        }
-        @media #{$bootstrap-nano} {
-          margin-top: 24px;
+          margin-top: 42px;
           margin-left: -22px;
         }
       }
     }
 
-    .for-nano {
-      @media #{$bootstrap-nano} { width: 100%; }
+    .button-true {
+      max-width: 300px;
+      margin: 45px 32px 21px -3px;
 
-      .button-true {
-        max-width: 300px;
-        margin: 45px 32px 21px -3px;
-
-        @media #{$bootstrap-sm} {
-          margin: 50px auto 20px;
-          display: block;
-        }
-        @media #{$bootstrap-xs} {
-          margin: 50px auto 20px;
-          display: block;
-          font-size: 1.1em;
-        }
-      }
-
-      .hover-block-small {
-        top: 49px;
-        right: 37px;
-        float: right;
-        position: relative;
-
-        @media #{$bootstrap-sm} {
-          margin: 0 auto;
-          left: 0;
-          float: none;
-          top: 5px;
-        }
-        @media #{$bootstrap-xs} {
-          margin: 0 auto;
-          left: 0;
-          top: 5px;
-          width: 95px;
-          float: none;
-        }
-      }
-
-      .hover-block-small:hover .hover-bg,
-      .hover-block-small:hover .hover-lypa {
+      @media #{$bootstrap-sm} {
+        margin: 50px auto 20px;
         display: block;
       }
-      .hover-bg, .hover-lypa {
-        position: absolute;
-        display: none;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
-      .hover-bg {
-        -moz-opacity: .7;
-        opacity: .7;
-        background-color: rgba(95, 115, 136, 0.7);
-        background-image: url("/img/popups/lypa-small.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        &::before {
-          content: '';
-          position: absolute;
-          left: 2.08%;
-          top: 2.08%;
-          right: 2.08%;
-          bottom: 2.08%;
-          border: 1px solid rgba(255, 255, 255, 0.4);
-        }
+      @media #{$bootstrap-xs} {
+        margin: 50px auto 20px;
+        display: block;
+        font-size: 1.1em;
       }
     }
+
+    .hover-block-small {
+      top: 49px;
+      right: 37px;
+      float: right;
+      position: relative;
+
+      @media #{$bootstrap-sm} {
+        margin: 0 auto;
+        left: 0;
+        float: none;
+        top: 5px;
+      }
+      @media #{$bootstrap-xs} {
+        margin: 0 auto;
+        left: 0;
+        top: 5px;
+        width: 95px;
+        float: none;
+      }
+    }
+
+    .hover-block-small:hover .hover-bg,
+    .hover-block-small:hover .hover-lypa {
+      display: block;
+    }
+    .hover-bg, .hover-lypa {
+      position: absolute;
+      display: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .hover-bg {
+      -moz-opacity: .7;
+      opacity: .7;
+      background-color: rgba(95, 115, 136, 0.7);
+      background-image: url("/img/popups/lypa-small.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 2.08%;
+        top: 2.08%;
+        right: 2.08%;
+        bottom: 2.08%;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+    }
+
   }
 }
  // Six popup package
@@ -1141,6 +1145,9 @@
     top: 15vh;
     @media #{$bootstrap-xs} {
       top: 25vh;
+    }
+    @media (max-width: 991px) and (orientation: landscape) {
+      top: 54%;
     }
   }
 
@@ -1168,8 +1175,7 @@
     .option-back {
       @media #{$bootstrap-nano} {
         left: 0;
-        right: 0;
-        top: -200px;
+        top: -130px;
         margin: 0 auto;
       }
     }
@@ -1190,36 +1196,39 @@
   }
 
   .modal-body {
-    padding: 73px 111px 50px 174px;
-    //max-height: calc(90vh - 170px);
-    //overflow-y: auto;
+    padding: 73px 111px 50px 100px;
 
-    @media #{$bootstrap-sm} { padding: 41px 75px 50px; }
     @media #{$bootstrap-xs} { padding: 41px 30px 35px; }
+    @media #{$bootstrap-sm} { padding: 41px 75px 50px; }
     @media #{$bootstrap-nano} { padding: 41px 45px 35px; }
+
+    .width-nano {
+      @media #{$bootstrap-xs} {
+        padding: 0;
+      }
+    }
 
     .pic-type {
       text-align: center;
       padding: 0;
-
       &:nth-child(2) .price-type {
         color: #ff3a13;
       }
-      @media #{$bootstrap-sm} { margin: 0; }
-      @media #{$bootstrap-xs} {  padding: 0 10px; margin: 0;  }
-      @media #{$bootstrap-nano} { width: 100%; }
 
       .type-img {
         width: 100%;
         height: 100%;
-
-        @media #{$bootstrap-xs} { width: 194px; height: 155px; }
       }
 
       .type-title {
         font-size: 1em;
 
-        @media #{$bootstrap-xs} { font-size: 0.85em; }
+        @media #{$bootstrap-sm} {
+          font-size: 1em;
+        }
+        @media #{$bootstrap-xs} {
+          font-size: 0.85em;
+        }
         @media #{$bootstrap-nano} {
           margin: 15px auto;
           font-size: 0.95em;
@@ -1401,17 +1410,17 @@
 
  .pop-stock {
 
-  .modal-dialog {
-    max-width: 900px;
-    left: calc(50% - 450px);
-    top: 13vh;
-    @media #{$bootstrap-xs} {
-      top: 25vh;
-    }
-    @media #{$bootstrap-nano} {
-      top: 20vh
-    }
-  }
+   .modal-dialog {
+     max-width: 898px;
+     left: calc(50% - 450px);
+     top: 15vh;
+     @media #{$bootstrap-xs} {
+       top: 25vh;
+     }
+     @media (max-width: 991px) and (orientation: landscape) {
+       top: 54%;
+     }
+   }
 
   .under-header {
 

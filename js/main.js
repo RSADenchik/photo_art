@@ -14,20 +14,6 @@
     }
 
 
-     //this function is called when the input loads an image
-
-     function renderImage(file){
-
-         var reader = new FileReader();
-         reader.onload = function(event){
-             the_url = event.target.result;
-
-             $('#output-block').html("<img class='output-img' src='"+the_url+"' width='190px' height='110px' />");
-         };
-
-         //when the file is read it triggers the onload event above.
-         reader.readAsDataURL(file);
-     }
 
 
      $(document).ready(function() {
@@ -47,17 +33,46 @@
 
 
 
+
+
     //watch for change on the
     $( "#file-img" ).change(function() {
 
-        if ( this.files.length != 0 ) {
+        var input_img = this.files[0];
 
-            renderImage(this.files[0]);
+        var output_img = $('#output_img');
+
+        var imageCompressor = new ImageCompressor;
+
+        var compressorSettings = {
+            toWidth : 100,
+            toHeight : 100,
+            mode : 'strict',
+            quality : 0.6
+        };
+
+        imageCompressor.run(input_img, compressorSettings, output_img);
+
+
+        var reader = new FileReader();
+        reader.onload = function(event){
+
+            the_url = event.target.result;
+            $('#output-block').html("<img id='output_img' class='output-img' src='"+the_url+"' width='190px' height='110px' />");
+        };
+
+
+
+        if ( input_img != 0 ) {
+
+
+            // renderImage(input_img);
 
             console.log("photo file has been chosen");
             //grab the first image in the fileList
             //in this example we are only loading one file.
-            console.log(this.files[0].size);
+            console.log(input_img.name);
+            console.log(input_img.size);
 
             $('#pop-email').modal('show');
             setTimeout(function () {
@@ -65,9 +80,12 @@
             }, 500);
         }
         else {
-            this.files.length = 0;
+            input_img.length = 0;
         }
 
+
+        //when the file is read it triggers the onload event above.
+        reader.readAsDataURL(input_img);
     });
 
 
@@ -117,9 +135,6 @@
             $('#output-block').html("<img class='output-img' src='"+the_url+"' width='260px' height='180px' />");
         }
     });
-
-
-
 
 
 
@@ -197,8 +212,8 @@
 
 
     // Function hide and show popups
-    show_popup($('#btn-email'), $('#pop-email'), $('#pop-phone'));
-    show_popup($('#btn-phone'), $('#pop-phone'), $('#pop-size'));
+    // show_popup($('#btn-email'), $('#pop-email'), $('#pop-phone'));
+    // show_popup($('#btn-phone'), $('#pop-phone'), $('#pop-size'));
     show_popup($('#btn-size'), $('#pop-size'), $('#pop-type'));
     show_popup($('#btn-type'), $('#pop-type'), $('#pop-type-option'));
     show_popup($('#btn-type-option'), $('#pop-type-option'), $('#pop-krekelur'));

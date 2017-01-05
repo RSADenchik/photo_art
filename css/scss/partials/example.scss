@@ -23,6 +23,10 @@
     position: absolute;
     top: 40%;
     right: 0;
+
+    @media #{$bootstrap-xs} {
+      display: none;
+    }
   }
 
   .add-row-padding {
