@@ -23,18 +23,21 @@
     height: 330px;
     padding: 10px;
     display: block;
-    position: relative;
-    object-fit: cover;
 
     @media #{$bootstrap-xs} {
-      height: 240px;
       padding: 0;
+    }
+    @media #{$bootstrap-nano} {
+      height: 240px;
     }
 
     .gallery-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+
+      @media #{$bootstrap-xs} {
+        object-fit: cover;
+      }
     }
   }
   .img-block:hover .hover-bg,

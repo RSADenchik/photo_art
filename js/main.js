@@ -33,33 +33,20 @@
 
 
 
-
-
     //watch for change on the
     $( "#file-img" ).change(function() {
 
         var input_img = this.files[0];
 
-        var output_img = $('#output_img');
-
-        var imageCompressor = new ImageCompressor;
-
-        var compressorSettings = {
-            toWidth : 100,
-            toHeight : 100,
-            mode : 'strict',
-            quality : 0.6
-        };
-
-        imageCompressor.run(input_img, compressorSettings, output_img);
-
-
-        var reader = new FileReader();
-        reader.onload = function(event){
-
-            the_url = event.target.result;
-            $('#output-block').html("<img id='output_img' class='output-img' src='"+the_url+"' width='190px' height='110px' />");
-        };
+        // var output_img = $('#output_img');
+        //
+        //
+        // var reader = new FileReader();
+        // reader.onload = function(event){
+        //
+        //     the_url = event.target.result;
+        //     $('#output-block').html("<img id='output_img' class='output-img' src='"+the_url+"' width='190px' height='110px' />");
+        // };
 
 
 
@@ -96,7 +83,7 @@
     // под каждый radio button выводим суму, заголовок и изображение положеного размера размера
     var sizeTitle = $('.size');
     var price = $('.price');
-    var output = $('#output-block');
+    // var output = $('#output-block');
 
 
     $(".radio-size").change(function() {
@@ -105,7 +92,6 @@
 
             sizeTitle.text('30 х 40 см');
             price.text(2013);
-
             $('#output-block').html("<img class='output-img' src='"+the_url+"' width='150px' height='90px' />");
 
         }
@@ -192,14 +178,6 @@
             }
             next.children(':first-child').clone().appendTo($(this));
 
-            for (var i = 0; i < 2; i++) {
-                next = next.next();
-                if (!next.length) {
-                    next = $(this).siblings(':first');
-                }
-
-                next.children(':first-child').clone().appendTo($(this));
-            }
         });
     }
     else {
