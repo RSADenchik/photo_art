@@ -41,11 +41,20 @@ gulp.task('js', function() {
         'js/partials/mobile-detect.min.js',
         'js/partials/jquery.easing.min.js',
         'js/partials/jquery.fadethis.min.js',
-        'js/partials/jquery.filterizr.js',
-        'js/partials/jquery.uploadfile.js',
-        'js/partials/jquery.googlemap.js',
-        'js/partials/responsiveslides.min.js',
-        'js/partials/main.js'
+        'js/partials/jquery.fancybox.js',
+        'js/partials/jquery.maskedinput.min.js',
+        'js/partials/jquery.scrollbar.js',
+        'js/partials/jquery.pushy.min.js',
+        'js/partials/pickmeup.js',
+        'js/partials/map.js'
+        // 'js/partials/validation.js',
+        // 'js/partials/catalog.js'
+        // 'js/partials/jquery.fadethis.min.js',
+        // 'js/partials/jquery.filterizr.js',
+        // 'js/partials/jquery.uploadfile.js',
+        // 'js/partials/jquery.googlemap.js',
+        // 'js/partials/responsiveslides.min.js',
+        // 'js/partials/main.js'
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
@@ -54,11 +63,20 @@ gulp.task('js', function() {
 });
     // Css concat
 gulp.task('css', function() {
-gulp.src('css/*.css')
-    .pipe(minifyCSS())
+// gulp.src('css/*.css')
+    gulp.src([
+        'css/partials/bootstrap.min.css',
+        'css/partials/jquery.fancybox.css',
+        'css/partials/jquery.scrollbar.css',
+        'css/partials/pickmeup.css',
+        'css/partials/pushy.css'
+    ])
+
+
+        .pipe(concat('partials.min.css'))
     // .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
-    .pipe(concat('style.min.css'))
-    .pipe(gulp.dest('uploads'));
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('css/'));
 
 });
 

@@ -128,16 +128,17 @@
     }
 
     .price-sum {
-      width: 217px;
+      padding-left: 20px;
       position: absolute;
-      top: -85px;
-      right: -2px;
+      top: -73px;
+      right: 0;
       font-family: $gotham-pro-regular;
       font-size: 1.7em;
-      line-height: 62px;
+      line-height: 50px;
       border: 1px solid #ddd;
       border-radius: 5px;
-      color: white;
+      color: #126b6e;
+      background-color: #ffffff;
 
       @media #{$bootstrap-sm} {
         margin: 0 auto;
@@ -162,7 +163,7 @@
       .price {
         vertical-align: middle;
         font-family: $gotham-pro-bold;
-        font-size: 1.35em;
+        font-size: 1em;
         color: #df3b3e;
       }
 
@@ -195,15 +196,25 @@
       }
     }
 
+    .pic-type-active {
+      border: 3px solid #ffc27c;
+      margin: -3px;
+      box-shadow: 0 7px 34.8px 5.2px rgba(0, 0, 0, 0.1);
+    }
     // Picture width title and price
     .pic-type {
       text-align: center;
 
-      &:hover {
-        border: 3px solid #ffc27c;
-        margin: -3px;
-        box-shadow: 0 7px 34.8px 5.2px rgba(0, 0, 0, 0.1);
-      }
+      //&:hover {
+      //  border: 3px solid #ffc27c;
+      //  margin: -3px;
+      //  box-shadow: 0 7px 34.8px 5.2px rgba(0, 0, 0, 0.1);
+      //}
+      //&:focus {
+      //  border: 3px solid #ffc27c;
+      //  margin: -3px;
+      //  box-shadow: 0 7px 34.8px 5.2px rgba(0, 0, 0, 0.1);
+      //}
 
       .type-title {
         font-family: $gotham-pro-regular;
@@ -314,30 +325,28 @@
 .pop-email {
 
   .modal-dialog {
-    max-width: 559px;
-    top: 26vh;
-    left: calc(50% - 277px);
+    max-width: 560px;
+    top: 11.6vh;
+    left: calc(50% - 285px);
 
   }
 
   .modal-title {
-    padding: 24px 0 22px 56px;
+    padding: 25px 0 20px 60px;
   }
 
   .up-header {
     width: 100%;
     position: absolute;
-    top: -85px;
-    font-size: 2.1em;
+    top: -52px;
+    font-size: 1.7em;
     color: #fff;
 
-    @media #{$bootstrap-nano} { font-size: 1.6em; }
-
-    img { margin-right: 20px; }
+    img { margin-right: 12px; }
   }
 
   .modal-body {
-    padding: 30px 0 54px 55px;
+    padding: 30px 0 42px 55px;
 
     @media #{$bootstrap-xs} {
       padding-left: 15px;
@@ -345,7 +354,7 @@
     }
 
     .form-email {
-      max-width: 370px;
+      max-width: 342px;
       font-family: $gotham-pro-regular;
 
       @media #{$bootstrap-xs} {
@@ -384,7 +393,7 @@
       }
 
       .button-true {
-        margin-top: 22px;
+        margin-top: 25px;
 
         .button-icon {
           padding-left: 15px;
@@ -399,10 +408,9 @@
 .pop-phone {
 
   .modal-dialog {
-    max-width: 559px;
-    //top: 20vh;
-    top: calc(50% - 195px);
-    left: calc(50% - 277px);
+    max-width: 560px;
+    top: 7.7vh;
+    left: calc(50% - 285px);
 
     @media (max-width: 568px) and (orientation: landscape) {
       top: 0;
@@ -411,17 +419,17 @@
 
   .modal-title {
     width: 80%;
-    padding: 20px 0 23px 60px;
-    line-height: 36px;
+    padding: 20px 0 15px 60px;
+    line-height: 32px;
   }
 
   .modal-body {
-    padding: 32px 0 45px 41px;
+    padding: 47px 0 48px 42px;
 
     @media #{$bootstrap-xs} { padding-left: 0; }
 
     .form-phone {
-      max-width: 370px;
+      max-width: 340px;
       font-family: $gotham-pro-regular;
 
       @media #{$bootstrap-xs} { margin: 0 auto; }
@@ -457,7 +465,7 @@
       }
 
       .button-true {
-        margin-top: 20px;
+        margin-top: 21px;
       }
     }
   }
@@ -468,11 +476,10 @@
 
   .modal-dialog::before {
     content: "Дизайнер уже получил файлы и начал работу!";
-    padding-bottom: 40px;
     display: block;
     font-family: $gotham-pro-bold;
-    font-size: 2.15em;
-    line-height: 38px;
+    font-size: 1.7em;
+    line-height: 43px;
     color: white;
 
     @media #{$bootstrap-sm} { text-align: center; }
@@ -490,11 +497,12 @@
 
   .modal-dialog {
     max-width: 800px;
-    left: calc(50% - 400px);
+    top: 7.5vh;
+    left: calc(50% - 385px);
   }
 
   .modal-title {
-    padding: 26px 0 26px 58px;
+    padding: 22px 0 22px 50px;
     line-height: 28px;
 
     @media #{$bootstrap-xs} {
@@ -507,9 +515,9 @@
     }
   }
   .modal-body {
-    padding: 36px 70px 58px 58px;
+    padding: 22px 70px 27px 46px;
     background: url(/img/popups/form-size-right.png) center right no-repeat;
-    background-position-y: -16px;
+    background-position: 94% 15%;
 
     @media #{$bootstrap-xs} {
       padding: 35px 15px 54px;
@@ -521,8 +529,6 @@
         width: 100%;
       }
     }
-
-
 
     .size-form {
 
@@ -589,7 +595,7 @@
     }
 
     .pic-size {
-      padding: 8px 0 0 25px;
+      padding: 32px 0 0 90px;
 
       @media #{$bootstrap-xs} {
         padding: 0 0 0 5px;
@@ -598,15 +604,6 @@
         padding: 0;
         width: 260px;
         margin: 0 auto;
-      }
-      .output-block {
-
-        width: 260px;
-
-        .output-img {
-          display: block;
-          margin: 0 auto;
-        }
       }
 
       .size::before {
@@ -629,12 +626,17 @@
           text-align: center;
         }
       }
+      .output-img {
+        display: block;
+        margin-bottom: -15px;
+      }
     }
 
     .price-size {
       width: 250px;
       display: inline-block;
-      padding: 22px 0 10px 20px;
+      vertical-align: top;
+      padding: 30px 0 13px 20px;
       border-bottom: 1px solid #ddd;
       font-family: $gotham-pro-regular;
       font-size: 1.25em;
@@ -656,6 +658,7 @@
         vertical-align: middle;
         font-family: $gotham-pro-bold;
         font-size: 1.8em;
+        padding-left: 2px;
         line-height: 27px;
         color: #ff8a04;
 
@@ -670,7 +673,7 @@
     }
     .button-true {
       max-width: 260px;
-      margin-top: 25px;
+      margin: 22px 55px 0 0;
       @media #{$bootstrap-nano} { width: 220px; }
     }
   }
@@ -680,17 +683,18 @@
 .pop-type {
 
   .modal-dialog {
-    max-width: 898px;
-    left: calc(50% - 450px);
-    top: 15%;
+    max-width: 1100px;
+    left: calc(50% - 550px);
+    top: 13.5%;
     @media (max-width: 991px) and (orientation: landscape) {
       top: 27%
     }
   }
 
   .modal-title {
-    padding: 26px 0 26px 60px;
-    line-height: 27px;
+    padding: 20px 0 24px 0;
+    line-height: 25px;
+    text-align: center;
 
     @media #{$bootstrap-sm} {
       padding-left: 0;
@@ -713,18 +717,27 @@
   }
 
   .modal-body {
-    padding: 23px 52px 40px;
+    padding: 30px 40px;
 
     @media #{$bootstrap-xs} {
       padding: 40px 30px 50px;
     }
 
     .pic-type {
-      &:nth-child(2) .price-type,
-      &:nth-child(5) .price-type { color: #ff3a13; }
+
+      .type-title {
+        font-size: 0.75em;
+        line-height: 32px;
+      }
+      .price-type {
+        font-size: 1.1em;
+        line-height: 40px;
+      }
+      //&:nth-child(2) .price-type,
+      //&:nth-child(5) .price-type { color: #ff3a13; }
 
       .type-img {
-        width: 100%;
+        width: 90%;
         height: 100%;
         @media #{$bootstrap-sm}  {
           padding: 15px;
@@ -737,7 +750,8 @@
 
     .button-true {
       max-width: 300px;
-      margin: 6px auto 0;
+      margin: 20px auto 0;
+      line-height: 63px;
       display: block;
     }
   }

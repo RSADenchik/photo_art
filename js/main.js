@@ -5,16 +5,13 @@
     function show_popup (button, modal_close, modal_show) {
 
         button.on('click', function(){
-            jQuery(modal_close).modal('hide'); // add jQuery to fix error with underfind
-            jQuery(modal_show).modal('show');
+            $(modal_close).modal('hide'); // add jQuery to fix error with underfind
+            $(modal_show).modal('show');
             setTimeout(function(){
                 $('body').addClass('modal-open');
             }, 600);
         });
     }
-
-
-
 
      $(document).ready(function() {
 
@@ -33,31 +30,17 @@
 
 
 
-    //watch for change on the
-    $( "#file-img" ).change(function() {
+         //watch for change on the
+
+     var fileInput = $( "#file-img" ); // input type=file
+
+         fileInput.change(function() {
 
         var input_img = this.files[0];
 
-        // var output_img = $('#output_img');
-        //
-        //
-        // var reader = new FileReader();
-        // reader.onload = function(event){
-        //
-        //     the_url = event.target.result;
-        //     $('#output-block').html("<img id='output_img' class='output-img' src='"+the_url+"' width='190px' height='110px' />");
-        // };
-
-
-
         if ( input_img != 0 ) {
 
-
-            // renderImage(input_img);
-
             console.log("photo file has been chosen");
-            //grab the first image in the fileList
-            //in this example we are only loading one file.
             console.log(input_img.name);
             console.log(input_img.size);
 
@@ -66,66 +49,184 @@
                 $('body').addClass('modal-open');
             }, 500);
         }
+
         else {
             input_img.length = 0;
         }
 
-
-        //when the file is read it triggers the onload event above.
-        reader.readAsDataURL(input_img);
+            fileInput.val("");
     });
 
 
 
-    // Popup-size
+
+
 
 
     // под каждый radio button выводим суму, заголовок и изображение положеного размера размера
-    var sizeTitle = $('.size');
-    var price = $('.price');
-    // var output = $('#output-block');
+
+ var radioPick = $('.radio-size'); // Radio buttons
+ var drawSize = $('.size'); // Выводит выбраный размер изображения
+
+ var beginPriceOutput = $('#startPrice'); // Выводит начальную сумму в popup-size
+ var typePriceOutput = $('#typePrice'); // Выводит сумму в popup-type
+
+ var picType = $('.pic-type');  // Тип картины
+ var picPrice = $('.price-type'); // Цена которая выводиться из массива выше за выбраный тип картины
+ //
+ var picOil = $('#picOil'); // Картина маслом
+ var priceOil = $('#priceOil'); // Цена на картину маслом ( исключение для размера 30 x 40)
+ //
+ //
+ var picSimple = $('#picSimple'); // Картина, простая печать
+ var priceSimple = $('#priceSimple'); // Цена на простую печать ( Для всех размеров = 0 )
+
+        // По изменению радио кнопок
+
+         radioPick.change(function() {
+
+             if ($(this).is(":checked")) {
+
+                 // Выводить изображения
+
+                 var width = $(this).data("width");
+                 var height = $(this).data("height");
+                 $(".output-img").attr("width", width).attr("height", height);
+
+                 // Выводит выбраный размер
+
+                 var size = $(this).data("size"); // Берет размеры с data атрибута
+                 drawSize.html(size); // Выводим размер над фотографией
 
 
-    $(".radio-size").change(function() {
+                 var startPrice = $(this).data("start-price");  // Берем из дата атрибута стартовую цену и записываем в переменную
+                 beginPriceOutput.html(startPrice);  // Выводим переменную со стартовой ценной в size-popup
+                 typePriceOutput.html(startPrice);  // Выводим переменную со стартовой ценной в type-popup
 
-        if ($("#radio-1").is(":checked")) {
+                 console.log("Start price"); // Выводим сообщение о стартовой цене в консоль
+                 console.log(startPrice);  // выводим значение стартовой цены в консоль
 
-            sizeTitle.text('30 х 40 см');
-            price.text(2013);
-            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='150px' height='90px' />");
+                 var typePrice = $(this).data("type-price"); // Берем из дата атрибута цену за картину и записываем в переменную
+                 
+                 picPrice.html(typePrice);
+                 priceSimple.html(0);
+                 priceOil.html(4490);
 
-        }
-        if ($("#radio-2").is(":checked")) {
-            sizeTitle.text('40 х 60 см');
-            price.text(2014);
-            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='170px' height='100px' />");
-        }
-        if ($("#radio-3").is(":checked")) {
-            sizeTitle.text('50 х 70 см — Хит!');
-            price.text(3090);
-            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='190px' height='110px' />");
-        }
-        if ($("#radio-4").is(":checked")) {
-            sizeTitle.text('60 х 80 см');
-            price.text(2016);
-            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='200px' height='120px' />");
-        }
-        if ($("#radio-5").is(":checked")) {
-            sizeTitle.text('75 х 105 см');
-            price.text(2017);
-            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='240px' height='150px' />");
-        }
-        if ($("#radio-6").is(":checked")) {
-            sizeTitle.text('90 х 110 см');
-            price.text(2018);
-            $('#output-block').html("<img class='output-img' src='"+the_url+"' width='260px' height='180px' />");
-        }
-    });
+                 console.log("Цена за тип картины");
+                 console.log(typePrice);
+             }
 
 
 
 
-    // Calendar initialize
+             picType.on('click', function() {
+
+                 if ($(this).hasClass('pic-type-active')) {
+                     $(this).removeClass('pic-type-active');
+                 }
+                 else {
+                     picType.removeClass('pic-type-active');
+                     $(this).addClass('pic-type-active');
+                 }
+
+
+                 var currentPrice = startPrice + typePrice;
+
+                 typePriceOutput.html(currentPrice);
+
+                 console.log("Сумма");
+                 console.log(currentPrice);
+
+
+             });
+         });
+
+
+
+
+
+
+
+
+
+ // Popup-type
+
+         $('#btn-type').on('click', function() {
+
+            if (picOil.hasClass('pic-type-active')) {
+
+                $('#pop-type').modal('hide');
+                $('#pop-krekelur').modal('show');
+                setTimeout(function(){
+                    $('body').addClass('modal-open');
+                }, 600);
+            }
+
+            else if (picSimple.hasClass('pic-type-active')) {
+
+                $('#pop-type').modal('hide');
+                $('#pop-type-option').modal('show');
+                setTimeout(function(){
+                    $('body').addClass('modal-open');
+                }, 600);
+             }
+
+            else {
+                $('#pop-type').modal('hide');
+                $('#pop-baget').modal('show');
+                setTimeout(function(){
+                    $('body').addClass('modal-open');
+                }, 600);
+            }
+         });
+
+
+
+     //   Krekelur-popup
+
+
+         $('btn-krek').on('click', function () {
+
+             var startPrice = result.data("start-price");
+             var addPrice = $(this).data("price");
+             var currentPrice = startPrice + addPrice;
+
+             console.log(startPrice);
+             console.log(addPrice);
+
+             result.html(currentPrice);
+             result.attr("data-start-price", currentPrice);
+         });
+
+
+         // Function hide and show popups
+         show_popup($('#btn-email'), $('#pop-email'), $('#pop-phone'));
+         show_popup($('#btn-phone'), $('#pop-phone'), $('#pop-size'));
+         show_popup($('#btn-size'), $('#pop-size'), $('#pop-type'));
+         // show_popup($('#btn-type'), $('#pop-type'), $('#pop-type-option'));
+         show_popup($('#btn-type-option'), $('#pop-type-option'), $('#pop-krekelur'));
+         show_popup($('#btn-krek'), $('#pop-krekelur'), $('#pop-baget'));
+         show_popup($('#btn-baget'), $('#pop-baget'), $('#pop-package'));
+         show_popup($('#btn-package'), $('#pop-package'), $('#pop-date'));
+         show_popup($('#btn-date'), $('#pop-date'), $('#pop-stock'));
+         show_popup($('#btn-stock-prepay'), $('#pop-stock'), $('#pop-prepay'));
+         show_popup($('#btn-stock-pay'), $('#pop-stock'), $('#pop-pay'));
+         show_popup($('.option-back'), $('#pop-type-option, #pop-krekelur, #pop-baget, #pop-package, #pop-stock'), $('#pop-type'));
+         show_popup($('#type-option-no'), $('#pop-type-option'), $('#pop-krekelur'));
+         show_popup($('#krekelur-no'), $('#pop-krekelur'), $('#pop-baget'));
+         show_popup($('#baget-no'), $('#pop-baget'), $('#pop-package'));
+         show_popup($('#package-no'), $('#pop-package'), $('#pop-date'));
+
+
+
+
+
+
+
+
+
+
+         // Calendar initialize
 
     addEventListener('DOMContentLoaded', function () {
         pickmeup('.single', {
@@ -184,28 +285,6 @@
 
         $('.item').addClass('display');
     }
-
-
-
-
-
-    // Function hide and show popups
-    // show_popup($('#btn-email'), $('#pop-email'), $('#pop-phone'));
-    // show_popup($('#btn-phone'), $('#pop-phone'), $('#pop-size'));
-    show_popup($('#btn-size'), $('#pop-size'), $('#pop-type'));
-    show_popup($('#btn-type'), $('#pop-type'), $('#pop-type-option'));
-    show_popup($('#btn-type-option'), $('#pop-type-option'), $('#pop-krekelur'));
-    show_popup($('#btn-krek'), $('#pop-krekelur'), $('#pop-baget'));
-    show_popup($('#btn-baget'), $('#pop-baget'), $('#pop-package'));
-    show_popup($('#btn-package'), $('#pop-package'), $('#pop-date'));
-    show_popup($('#btn-date'), $('#pop-date'), $('#pop-stock'));
-    show_popup($('#btn-stock-prepay'), $('#pop-stock'), $('#pop-prepay'));
-    show_popup($('#btn-stock-pay'), $('#pop-stock'), $('#pop-pay'));
-    show_popup($('.option-back'), $('#pop-type-option, #pop-krekelur, #pop-baget, #pop-package, #pop-stock'), $('#pop-type'));
-    show_popup($('#type-option-no'), $('#pop-type-option'), $('#pop-krekelur'));
-    show_popup($('#krekelur-no'), $('#pop-krekelur'), $('#pop-baget'));
-    show_popup($('#baget-no'), $('#pop-baget'), $('#pop-package'));
-    show_popup($('#package-no'), $('#pop-package'), $('#pop-date'));
 
 
     // Fix margin-right open modal popup
