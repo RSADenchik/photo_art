@@ -261,7 +261,7 @@
         -moz-opacity: .7;
         opacity: .7;
         background-color: rgba(95, 115, 136, 0.7);
-        background-image: url("/img/popups/lypa.png");
+        background-image: url("../img/popups/lypa.png");
         background-position: center center;
         background-repeat: no-repeat;
 
@@ -516,7 +516,7 @@
   }
   .modal-body {
     padding: 22px 70px 27px 46px;
-    background: url(/img/popups/form-size-right.png) center right no-repeat;
+    background: url(../img/popups/form-size-right.png) center right no-repeat;
     background-position: 94% 15%;
 
     @media #{$bootstrap-xs} {
@@ -1134,7 +1134,7 @@
       -moz-opacity: .7;
       opacity: .7;
       background-color: rgba(95, 115, 136, 0.7);
-      background-image: url("/img/popups/lypa-small.png");
+      background-image: url("../img/popups/lypa-small.png");
       background-position: center center;
       background-repeat: no-repeat;
       &::before {
@@ -1463,7 +1463,7 @@
 
   .modal-body {
     padding: 46px 85px 46px 60px;
-    background: url("/img/popups/limit-edition.png") right bottom no-repeat;
+    background: url("../img/popups/limit-edition.png") right bottom no-repeat;
     //max-height: calc(90vh - 170px);
     //overflow-y: auto;
 

@@ -2,7 +2,7 @@
   padding: 135px 0 146px;
   position: relative;
   background-color: whitesmoke;
-  background: url('/img/paints.png') left bottom no-repeat;
+  background: url('../img/paints.png') left bottom no-repeat;
 
   @media #{$bootstrap-md} {
     padding: 50px 0 100px;
@@ -11,7 +11,7 @@
     margin-top: 0;
     padding: 54px 0 98px;
     background-color: #f1f1f1;
-    background: url('/img/mobile/baget-mobile.png') top right no-repeat, url('/img/mobile/paint-mobile.png') bottom left no-repeat;
+    background: url('../img/mobile/baget-mobile.png') top right no-repeat, url('../img/mobile/paint-mobile.png') bottom left no-repeat;
   }
 
   .baget-img {
