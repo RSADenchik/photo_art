@@ -1,21 +1,21 @@
  .home {
    width: 100%;
    height: 545px;
-   background: #f6f6f6 url('/img/home-bg-main.png') center center no-repeat;
+   background: #f6f6f6 url('../img/home-bg-main.png') center center no-repeat;
    background-position-y: 33px;
    @media #{$bootstrap-xs} {
      height: auto;
      padding: 60px 0 86px;
-     background: url(/img/mobile/home-pic-mobile.png) top right no-repeat,
-                 url(/img/mobile/home-left-img.png) bottom left no-repeat,
-                 url(/img/mobile/home-bg-mobile.png) center top no-repeat;
+     background: url(../img/mobile/home-pic-mobile.png) top right no-repeat,
+                 url(../img/mobile/home-left-img.png) bottom left no-repeat,
+                 url(../img/mobile/home-bg-mobile.png) center top no-repeat;
      background-position-y: -36px, 28.5%, -15%;
      background-size: 75px 133px, 23% 23%, 100% 52.5%;
      background-color: #f6f6f6;
    }
 
    .home-image {
-     background: url(/img/home-center-pic.png) 56% 7% no-repeat;
+     background: url(../img/home-center-pic.png) 56% 7% no-repeat;
      @media #{$bootstrap-md} {
        background-size: 18%;
        background-position: 57% 7%;
